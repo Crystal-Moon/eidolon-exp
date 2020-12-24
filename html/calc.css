@@ -1,0 +1,64 @@
+
+.Input{
+	border: 2px solid blue;
+    border-radius: 0.4em;
+    background-color: #222;
+    color: white;
+    width: 4em;
+    text-align: center;
+    padding: 0.3em;
+    font-family: 'Jost', sans-serif;
+}
+
+section{
+	padding-top: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 2em;
+}
+.all{
+	width: 90%;
+	background-color: #222;
+	border-radius: 1em;
+}
+.head{
+	background-color: #131313;
+	border-top-left-radius: 1em;
+	/*padding: 1em;*/
+	/*text-align: center;*/
+	border-top-right-radius: 1em;
+}
+.desc{
+	padding: 1em;
+    text-align: center;
+}
+.body{
+	padding: 1em;
+}
+.body>div{
+	width: 60%;
+}
+.desc span{
+    margin: auto;
+    /* height: 1em; */
+    width: 80%;
+    text-align: center;
+}
+
+label.in-line{display: inline-block;}
+.lbl-wap{
+	margin-bottom: 0.6em;
+}
+
+/*******************************/
+.res{
+
+}
+.res tr{
+	padding: 0.4em;
+}
+
+
+
+/*********************************/
+.Btn{border: none;padding: 0.4em;border-radius: 0.3em;}
