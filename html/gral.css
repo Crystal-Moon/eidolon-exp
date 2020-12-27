@@ -24,21 +24,27 @@ html,body{
 	background-color:#333;
 	color: white;
 	font-family: 'Mada', sans-serif;
+	font-size: 1rem;
 }
 body *{display: block;}
 h1,h2,h3,h4,p,span{
-	display:block;
+	display: inline-block;
 	margin:0;
 	padding:0;
 }
 td{display: inline-block;}
-input{display: inline;}
-label{display: inline;}
+input{display: inline-block;}
+label{display: inline-block;height: 1em;/* padding: 0.3em; *//* box-sizing: border-box; */}
 .hc{
 	margin-left:auto;
 	margin-right: auto;
 }
+.f{display: flex;}
+.col{ flex-direction: column; }
+.row{ flex-direction:row; }
+.line{display:inline-block;margin-top:auto;margin-bottom:auto;margin-left: 0.4em;margin-right: 0.4em;}
 
+/************************************/
 .Header{
 	font-size:1em;
 	top: 0;
@@ -70,7 +76,7 @@ label{display: inline;}
 
 /************************************************/
 
-.Item{width: 2.2em;height: 2.2em;margin: 0.2em;}
+.Item{/* width: 2.2em; */height: 2.2em;margin: 0.2em;}
 .Item>img{
 	width: 2em;
 	height: 2em;
@@ -78,18 +84,31 @@ label{display: inline;}
 	border: 0.18rem solid;
 	border-radius: 0.3rem;
 }
+.Item>div{
+	margin:auto;
+}
+.name{
+	width:max-content;
+	margin-left: 0.3em;
+}
 
 
 /********************************************/
-.num-y{
+.num{
+	font-family: 'Jost', sans-serif;
+}
+/*.num-y{ color: #ffff45; }*/
+.num-y-game{
 	font-family: 'Jost', sans-serif;
 	color: #ffff45;
-	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-width: 1.5px;
 	-webkit-text-stroke-color:#d27400;
 }
 .num-min{
-	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-width: 0.5px;
 }
+
+/******************************************/
 
 .white{
 	color:white;

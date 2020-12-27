@@ -7,6 +7,7 @@
 	<title>calc</title>
 	<link rel="stylesheet" href="../gral.css">
 	<link rel="stylesheet" href="../calc.css">
+	<link rel="stylesheet" href="../input1.css">
 	<link rel="stylesheet" href="../calc-mobile.css">
 </head>
 <body>
@@ -38,7 +39,18 @@
 			<label>Nivel actual del eidolon:
 				<input class="Input" type="number" name="lvl_actual" value="1" min="1" max="99">
 			</label>
-			<label class="in-line">con <input class="Input" type="number" name="prc_actual" value="0" min="0" max="99"> %</label>
+		<span>con</span>	
+<div class="Input InputDoble" data-component="InputDouble">
+	<input type="number" name="test" class="in" value="" onkeyup="presed(this)" max="99999" min="0" onclick="mirada(event)">
+	<div class="input-fake input-cursor">
+		<span class="num-y">88</span><span class="num-y num-min dec">.888</span>
+	</div>
+	<div class="input-fake placeholder">
+		<span class="num-y">00</span><span class="num-y num-min dec">.000</span>
+	</div>
+</div>
+<span>%. (porcentaje opcional)</span>
+
 			</div>
 			<div class="lbl-wap">
 				
@@ -52,47 +64,60 @@
  		 </div>
 
 		
-		  <div class="hc">
-				<table class="res">
-					<thead>
-						<tr>
-							<th colspan="3">Necesitas CUALQUIERA de las siguientes opciones</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>opcion 1</td>
-							<td>
-								<div class="Item" data-component="Item">
-									<img class="blue" src="" alt="">
-									
-								</div>
-							</td>
-							<td>2500 unidadtes (25 packs)</td>
-						</tr>
-						<tr>
-							<td>opcion 2</td>
-							<td>
-								<div class="Item" data-component="Item">
-									<img class="blue" src="" alt="">
-									
-								</div>
-							</td>
-							<td>2500 unidadtes (25 packs)</td>
-						</tr>
-						<tr>
-							<td>opcion 3</td>
-							<td>
-								<div class="Item" data-component="Item">
-									<img class="green" src="" alt="">
-									
-								</div>
-							</td>
-							<td>2500 unidadtes (25 packs)</td>
-						</tr>
-					</tbody>
-				</table>
+		  <div class="Resultado hc" data-component="Resultado">
+		
+			<div class="Option m-row-r" data-component="Option">
+				
+				<div class="f row m-row-r" data-component="Unity">
+					<div class="f row">
+						<span class="mini-btn line">+</span><span class="mini-btn line">-</span>
+					</div>
+					<div class="f row">
+						<span class="num line uni">99</span><span class="line uni">Unidades</span>
+					</div>
+				</div>
+
+				<div class="">
+					<div class="Item f row" data-component="Item">
+						<img src="" alt="" class="ItemIcon">
+						<div>
+							<span class="line name">Nombre del Item</span>
+						</div>
+						
+					</div>
+		
+				</div>
+
 			</div>
+
+
+
+			<div class="Option m-row-r" data-component="Option">
+				
+				<div class="f row m-row-r" data-component="Unity">
+					<div class="f row">
+						<span class="mini-btn line">+</span><span class="mini-btn line">-</span>
+					</div>
+					<div class="f row">
+						<span class="num line uni">99</span><span class="line uni">Unidades</span>
+					</div>
+				</div>
+
+				<div class="">
+					<div class="Item f row" data-component="Item">
+						<img src="" alt="" class="ItemIcon">
+						<div>
+							<span class="line name">Nombre del Item</span>
+						</div>
+						
+					</div>
+		
+				</div>
+
+			</div>
+
+
+		  </div>
 
 
 

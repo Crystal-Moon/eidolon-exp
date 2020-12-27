@@ -1,0 +1,59 @@
+
+.InputDoble{
+	position:relative;
+	width: max-content;
+}
+.InputDoble *{
+	font-family: 'Jost', sans-serif;
+}
+.InputDoble input{opacity: 0;width: 3em;z-index: 200;position: relative;}
+.input-fake{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0.3em;
+	
+}
+
+.input-fake.input-cursor span{
+	background-color: #222;
+}
+.input-fake span{
+	display:inline;
+	z-index: 100;
+	position: relative;
+	/* -webkit-text-stroke-width: 1px; */
+}
+.int{
+
+}
+.dec{
+	font-size:0.5em;
+
+}
+.input-fake.placeholder span{
+	
+	z-index: 50;
+	
+	/* -webkit-text-stroke-width: 1px; */
+}
+.placeholder *{
+	color:grey;
+	-webkit-text-stroke-color: grey;
+}
+.input-cursor span:last-child:after{
+	content:'';
+	display: inline-block;
+	width: 1px;
+	height: 1em;
+	background-color:white;
+	font-family: 'Jost', sans-serif;
+	animation: blink-animation 1s steps(5, start) infinite; 
+    -webkit-animation: blink-animation 1s steps(5, start) infinite; 
+}
+@keyframes blink-animation {
+    to{ visibility: hidden; }
+}
+@-webkit-keyframes blink-animation {
+    to{ visibility: hidden; }
+}
