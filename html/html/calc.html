@@ -37,7 +37,7 @@
 		  		
 		  	
 			<label>Nivel actual del eidolon:
-				<input class="Input" type="number" name="lvl_actual" value="1" min="1" max="99">
+				<input class="Input" type="number" name="lvl_actual" value="" min="1" max="99" placeholder="1">
 			</label>
 		<span>con</span>	
 <div class="Input InputDoble" data-component="InputDouble">
@@ -56,7 +56,7 @@
 				
 			
 			<label>Quiero llegar al nivel 
-				<input class="Input" type="number" name="lvl_quiero" value="99">
+				<input class="Input" type="number" name="lvl_quiero" value="99" placeholder="99">
 			</label>
 			</div>
 			<button type="button" data-component="BtnCalcular" class="Btn hc">Calcular</button>
@@ -65,6 +65,10 @@
 
 		
 		  <div class="Resultado hc" data-component="Resultado">
+		  	<div class="head desc">
+		  		Necesitas todos los siguientes items. <br> 
+		  		<span style="font-size:0.7em;">Aumenta o disminuye las cantidades según tu inventario. El sistema calculará las equivalencias.</span>
+		  	</div>
 		
 			<div class="Option m-row-r" data-component="Option">
 				
@@ -78,7 +82,7 @@
 				</div>
 
 				<div class="">
-					<div class="Item f row" data-component="Item">
+					<div class="Item f row blue" data-component="Item">
 						<img src="" alt="" class="ItemIcon">
 						<div>
 							<span class="line name">Nombre del Item</span>
@@ -104,7 +108,7 @@
 				</div>
 
 				<div class="">
-					<div class="Item f row" data-component="Item">
+					<div class="Item f row blue" data-component="Item">
 						<img src="" alt="" class="ItemIcon">
 						<div>
 							<span class="line name">Nombre del Item</span>

@@ -54,7 +54,7 @@ label{display: inline-block;height: 1em;/* padding: 0.3em; *//* box-sizing: bord
 	height: 3.4em;
 	display:flex;
 	flex-direction: row;
-	background-color: #0c0c63;
+	background-color: #0b282a;
 	border-bottom: 2px solid white;
 }
 .Header img{
@@ -104,7 +104,7 @@ label{display: inline-block;height: 1em;/* padding: 0.3em; *//* box-sizing: bord
 	-webkit-text-stroke-width: 1.5px;
 	-webkit-text-stroke-color:#d27400;
 }
-.num-min{
+.num-min-game{
 	-webkit-text-stroke-width: 0.5px;
 }
 

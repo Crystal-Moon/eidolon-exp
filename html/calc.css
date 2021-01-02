@@ -30,6 +30,7 @@ section{
 	border-top-left-radius: 1em;
 	/*padding: 1em;*/
 	/*text-align: center;*/
+	font-size: 1.3em;
 	border-top-right-radius: 1em;
 }
 .desc{
@@ -65,11 +66,15 @@ label.in-line{display: inline-block;}
 
 
 /*********************************/
-.Btn{border: none;padding: 0.4em;border-radius: 0.3em;width: 40%;margin-top: 1em;margin-bottom: 1.3em;font-size: 1.3em;}
+.Btn{border: none;padding: 0.4em;border-radius: 0.3em;width: 40%;margin-top: 1em;margin-bottom: 1.3em;font-size: 1.3em;color: black;border: 2px solid #005d00;background-color: #96c55f;}
 
 
 /****************************/
-.Option{display: flex;width: 90%;margin: auto;margin-top: 0.3em;margin-bottom: 0.2em;border: 1px solid black;padding: 0.4em;/* justify-content: center; */padding-left: 1em;box-sizing: border-box;}
+.Resultado{
+
+}
+.Resultado .head{font-size: 1rem;}
+.Option{display: flex;/* width: 90%; */margin: auto;margin-top: 0.3em;margin-bottom: 0.2em;border: 1px solid black;padding: 0.4em;/* justify-content: center; */padding-left: 1em;box-sizing: border-box;}
 .Option>div{
 	/* display:block; */
 	width:max-content;
