@@ -1,0 +1,161 @@
+
+.config-container{
+	transition: max-width 0.4s ease;
+	background-color:pink;
+	position:absolute;
+	right: 0;
+	margin: 0;
+	margin-left: auto;
+	top: 1em;
+	overflow: hidden;
+	height: max-content;
+	/* width: max-content; */
+	max-width: 95%;
+	/* max-height: max-content; */
+}
+.config-container.hidden{
+	/* width: 4.5em; */
+	/* height: 3em; */
+	max-height: 3em;
+	max-width: 4.5em;
+}
+.config-container>div:last-child{
+	margin-bottom: 0.5em;
+}
+
+#config-icon{
+	width: 2em;
+	height: 2em;
+	display:block;
+	margin:0;
+	margin-top:0.5em;
+	margin-bottom: 0.5em;
+	border: 1px solid;
+	cursor: pointer;
+}
+
+
+
+
+
+/***********************************/
+.item-icon{
+	border: 0.18rem solid white;
+	border-radius: 0.2rem;
+	height: 2em;
+	width: 2em;
+	display: block;
+
+}
+.item-name{
+	margin-left: -0.7em;
+}
+
+.ItemConfig{
+	margin-left: 1.5em;
+	/* width: max-content; */
+	max-height: 50em;
+	overflow: auto;
+	overflow-x: hidden;
+	padding-top: 3px;
+	-moz-transition: 1s;
+	-ms-transition: 1s;
+	-o-transition: 1s;
+	-webkit-transition: 1s;
+	transition: 0.8s;
+}
+
+/****************************/
+.Zoom{
+	margin-top:0.2em;
+	margin-bottom:0.2em;
+	/* max-width: 19em; */
+}
+.Zoom button{
+	/* margin-left: 0.3em; */
+	/* margin-right: 0.3em; */
+}
+
+/******************************/
+.Lang{
+
+}
+.lang-flag{
+	display: block;
+	border: 1px solid black;
+	box-sizing: border-box;
+	height: 1.3em;
+	/*margin: 0.3em;*/
+	width: auto;
+}
+.lang-input{
+	position: absolute;
+    clip: rect(0,0,0,0);
+    pointer-events: none;
+}
+.lang-input:checked+.lang-lbl{
+	/* background: red; */
+	border: 0.2em solid;
+	border-color: var(--bs-primary);
+	margin:0;
+	padding-top: 0.1em;
+}
+.lang-lbl{
+	border: none;
+	box-sizing: border-box;
+	margin-left:0.3em;
+	margin-right:0.3em;
+	padding: 0.1em;
+	padding-top: 0.3em;
+	border-radius: 0.2rem;
+}
+.lang-lbl:last-child{
+	/* margin-right: 0; */
+}
+
+/*************************/
+.white{
+	color: white;
+	border-color: white;
+}
+.blue{
+	color: blue;
+	border-color: blue;
+}
+.green{
+	color: green;
+	border-color:green;
+}
+.orange{
+	color: orange;
+	border-color: orange;
+}
+
+/*********************************/
+.form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+.form-check{
+	/* width: max-content; */
+	margin-right: 1em;
+	height: auto;
+}
+
+.collapse{
+	/*transition: all 1s ease;*/
+	/*transition: max-height 0.4s ease;*/
+	/* max-height: 1px; */
+	/* height: auto; */
+}
+.collapse:not(.show) {
+    display: block;
+    /* height: 1px; */
+    /* max-height: 1px; */
+    /* overflow: hidden; */
+}
+
+.collapse.hidden{
+	max-height: 1px;
+	overflow:hidden;
+}
