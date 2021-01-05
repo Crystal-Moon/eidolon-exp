@@ -1,5 +1,5 @@
 
-.config-container{
+.Config{
 	transition: max-width 0.4s ease;
 	background-color:pink;
 	position:absolute;
@@ -9,17 +9,15 @@
 	top: 1em;
 	overflow: hidden;
 	height: max-content;
-	/* width: max-content; */
 	max-width: 95%;
-	/* max-height: max-content; */
 }
-.config-container.hidden{
+.Config.hidden{
 	/* width: 4.5em; */
 	/* height: 3em; */
 	max-height: 3em;
-	max-width: 4.5em;
+	max-width: 4em;
 }
-.config-container>div:last-child{
+.Config>div:last-child{
 	margin-bottom: 0.5em;
 }
 
@@ -52,19 +50,16 @@
 }
 
 .ItemConfig{
-	margin-left: 1.5em;
-	/* width: max-content; */
-	max-height: 50em;
-	overflow: auto;
-	overflow-x: hidden;
+	/* margin-left: 1.5em; */
 	padding-top: 3px;
-	-moz-transition: 1s;
-	-ms-transition: 1s;
-	-o-transition: 1s;
-	-webkit-transition: 1s;
-	transition: 0.8s;
 }
-
+.ItemConfig .accordion-button{
+	padding: .5rem 1rem;
+	padding-left: 0;
+}
+.ItemConfig .accordion-body{
+	padding:0;
+}
 /****************************/
 .Zoom{
 	margin-top:0.2em;
@@ -142,20 +137,16 @@
 	height: auto;
 }
 
-.collapse{
-	/*transition: all 1s ease;*/
-	/*transition: max-height 0.4s ease;*/
-	/* max-height: 1px; */
-	/* height: auto; */
-}
+/*
 .collapse:not(.show) {
     display: block;
     /* height: 1px; */
     /* max-height: 1px; */
-    /* overflow: hidden; */
-}
-
+    /* overflow: hidden; *//*
+}*/
+/*
 .collapse.hidden{
 	max-height: 1px;
 	overflow:hidden;
 }
+*/
