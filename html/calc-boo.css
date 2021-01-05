@@ -1,6 +1,6 @@
 
 .Config{
-	transition: max-width 0.4s ease;
+	transition: max-width 0.45s ease;
 	background-color:pink;
 	position:absolute;
 	right: 0;
@@ -12,8 +12,6 @@
 	max-width: 95%;
 }
 .Config.hidden{
-	/* width: 4.5em; */
-	/* height: 3em; */
 	max-height: 3em;
 	max-width: 4em;
 }
@@ -21,7 +19,7 @@
 	margin-bottom: 0.5em;
 }
 
-#config-icon{
+#ConfigIcon{
 	width: 2em;
 	height: 2em;
 	display:block;
@@ -30,10 +28,18 @@
 	margin-bottom: 0.5em;
 	border: 1px solid;
 	cursor: pointer;
+	animation: spin 3s infinite linear;
 }
 
+@keyframes spin{
+0% {
+    transform: rotate(0deg);
+}
 
-
+100% {
+    transform: rotate(1turn);
+}
+}
 
 
 /***********************************/
