@@ -1,0 +1,32 @@
+
+
+#floor{
+	height: 100%;
+	width: 25%;
+	background: red;
+	position: absolute;
+	bottom: 0;
+	transition: all 0.5s ease;
+	z-index:5;
+	/* margin-left: 25%;*/
+}
+/* el width y el margin sera en px segun lo q de getBoundReact() 
+ - tambien se le pude hacer cambio de color y se cambiara con el transiation :akn: */
+
+@media (max-width: 768px){ 
+/* hacer esto con sass (requiere npm de botstrap :/ ), 
+- pero puedo hacer mi propia clase de hiden :D */
+.expand-md-hidden {
+    display: none;
+}
+}
+
+.nav-link{
+ 	cursor: pointer;
+ 	z-index: 10;
+}
+
+.Navv{
+	transition: border-bottom 0.5s ease;
+	border-bottom: 2px solid red;
+}
