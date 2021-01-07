@@ -1,0 +1,11 @@
+
+.pack .badge{
+	color: yellow;
+}
+
+.need-btns{
+	flex-direction: row-reverse;
+}
+.need-btn{
+	border: none;
+}
