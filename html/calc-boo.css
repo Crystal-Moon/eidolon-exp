@@ -10,6 +10,7 @@
 	overflow: hidden;
 	height: max-content;
 	max-width: 95%;
+	z-index: 1000;
 }
 .Config.hidden{
 	max-height: 3em;
@@ -46,12 +47,11 @@
 
 /***********************************/
 .item_icon{
-	border: 0.18rem solid white;
+	border: 0.18rem solid;
 	border-radius: 0.2rem;
 	height: 2em;
 	width: 2em;
 	display: block;
-
 }
 .item_name{
 	margin-left: -0.7em;

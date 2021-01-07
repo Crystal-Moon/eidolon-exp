@@ -25,7 +25,7 @@ p{margin:0; padding: 0;}
 <body>
 
 	
-<header id="header" class="" data-component="Header">
+<header id="header" class="Header" data-component="Header">
  <nav class="Navv navbar navbar-expand-md navbar-light bg-light" data-component="Nav">
   <div class="container-fluid justify-content-start">
 
@@ -74,12 +74,12 @@ p{margin:0; padding: 0;}
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
-                  <div class="row" data-component="Item">
+                  <div class="row blue" data-component="Item">
                     <div class="col-sm-auto">
                       <img src="" alt="" class="item_icon" title="nombre item">
                     </div>
                     <div class="col-sm">
-                      <span class="item_name blue">Nombre del item</span>
+                      <span class="item_name">Nombre del item</span>
                     </div>
                   </div><!-- fin item -->
                 </label>
@@ -87,12 +87,12 @@ p{margin:0; padding: 0;}
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
-                  <div class="row" data-component="Item">
+                  <div class="row blue" data-component="Item">
                     <div class="col-sm-auto">
                       <img src="" alt="" class="item_icon" title="nombre item">
                     </div>
                     <div class="col-sm">
-                      <span class="item_name blue">Nombre del item que es muy largo para la pantalla del celular</span>
+                      <span class="item_name">Nombre del item que es muy largo para la pantalla del celular</span>
                     </div>  
                   </div><!-- fin item -->
                 </label>
@@ -140,15 +140,89 @@ p{margin:0; padding: 0;}
   </section>
 	
   <section class="SectionCalc row bg-image" data-component="SectionCalc">
-   <div class="container-content container-lg justify-content-around row bg-image-pa">
-      <div class="col-md-5 container-blur">
-        
-      </div>
-      <div class="col-md-5 container-blur">
-        
-      </div>
+  <div class="bg-image-pa row justify-content-center">
+    <div class="bg-image-pa col-12 justify-content-center row">
       
+      <div class="bg-image-pa container-content container-lg justify-content-around row">
+        <div class="col-lg-5 container-blur">
+
+          <div class="card card-calc text-light">
+            <div class="card-header text-center">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            </div>
+            <div class="card-body"> 
+              
+              <form>
+                <div class="row g-3 mb-2 align-items-center">
+                  <div class="col-auto">
+                    <label for="lvl" class="col-form-label">Nivel del Eidolon:</label>
+                  </div>
+                  <div class="col-sm-2">
+                    <input type="number" id="lvl" name="lvl" class="form-control">
+                  </div>
+                </div>
+  
+
+                <div class="row g-3 mb-2 align-items-center">
+                  <div class="col-auto">
+                    <label for="percent" class="col-form-label">Porcentaje del nivel:</label>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="input-group"> 
+                      <input type="number" id="percent" name="percent" class="form-control" aria-label="percent" aria-describedby="percent">
+                      <span class="input-group-text" id="percent">%</span>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <span id="passwordHelpInline" class="form-text">(opcional)</span>
+                  </div>
+                </div>
+
+                <div class="row g-3 mb-2 align-items-center">
+                  <div class="col-auto">
+                    <label for="percent" class="col-form-label">Porcentaje del nivel:</label>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="input-group"> 
+                      <input type="number" id="percent" name="percent" class="form-control" aria-label="percent" aria-describedby="percent">
+                      <span class="input-group-text" id="percent">%</span>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <span id="passwordHelpInline" class="form-text">(opcional)</span>
+                  </div>
+                </div>
+
+                <div class="row g-3 mb-2 align-items-center">
+                  <div class="col-auto">
+                    <label for="lvl-to" class="col-form-label">Nivel a alcanzar:</label>
+                  </div>
+                  <div class="col-sm-2">
+                    <input type="number" id="lvl-to" name="lvl-to" class="form-control">
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <button class="btn btn-primary" type="button">Calcular</button>
+                </div>
+              </form>
+
+              
+            </div>
+          </div>
+
+        </div>
+        <div class="col-lg-5 container-blur">
+        
+        </div>
+      
+      </div>
+
+
     </div>
+  </div>
+   
 	</section>
 
   <section class="SectionCompare" data-component="SectionCompare">

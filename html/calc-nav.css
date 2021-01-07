@@ -1,5 +1,31 @@
 
 
+@media (max-width: 768px){ 
+/* hacer esto con sass (requiere npm de botstrap :/ ), 
+- pero puedo hacer mi propia clase de hiden :D */
+.expand-md-hidden {
+    display: none;
+}
+}
+
+
+/******************************/
+.Header{
+	width:100%;
+	position: fixed;
+	top:0;
+	z-index:500;
+}
+.nav-link{
+ 	cursor: pointer;
+ 	z-index: 10;
+}
+
+.Navv{
+	transition: border-bottom 0.5s ease;
+	border-bottom: 2px solid red;
+	/* width: 100%; */
+}
 #floor{
 	height: 100%;
 	width: 25%;
@@ -13,24 +39,6 @@
 /* el width y el margin sera en px segun lo q de getBoundReact() 
  - tambien se le pude hacer cambio de color y se cambiara con el transiation :akn: */
 
-@media (max-width: 768px){ 
-/* hacer esto con sass (requiere npm de botstrap :/ ), 
-- pero puedo hacer mi propia clase de hiden :D */
-.expand-md-hidden {
-    display: none;
-}
-}
-
-.nav-link{
- 	cursor: pointer;
- 	z-index: 10;
-}
-
-.Navv{
-	transition: border-bottom 0.5s ease;
-	border-bottom: 2px solid red;
-}
-
 /*******************************************/
 main{
 	height:100%;
@@ -38,12 +46,15 @@ main{
 	position: fixed;
 	margin: 0!important;
 	padding: 0!important;
+	/* padding-top: 5em; */
 }
 section{
 	width:100%;
 	position: absolute;
 	margin:0 !important;
 	padding:0 !important;
+	padding-top: 5em!important;
+	overflow: auto;
 }
 .SectionManual{
 
@@ -70,7 +81,7 @@ section{
 
 .container-blur {
  /* width: 30rem; */
- height: 20rem;
+ height: auto;
  position: relative;
  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
  background: inherit;
@@ -80,7 +91,9 @@ section{
  /* position: absolute; */
  /* left: 50px; */
  /* top: 50px; */
- margin: 2em;
+ margin: 1em;
+ border-radius: 0.5em;
+ padding: 0;
 }
 
 .container-blur:before {
@@ -93,6 +106,7 @@ section{
   overflow: hidden;
   width: 110%;
   height: 110%;
+  z-index: 0;
   /* background-image: url(http://i.stack.imgur.com/l8bXw.jpg); */
   /* background-position: -50px -50px; */
   filter: blur(6px);
@@ -102,4 +116,13 @@ section{
 .container-content{
 	/* margin: 2em; */
 	/* width: 90%; */
+}
+
+/*****************************************/
+.card-calc{
+	height:100%;
+	background: rgba(0,0,0,0.3);
+}
+.card-calc .card-header{
+	background-color: rgba(0,0,0,.2);
 }
