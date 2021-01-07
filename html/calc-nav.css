@@ -58,8 +58,16 @@ section{
 }
 
 .bg-image{
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	align-items: center;
+	justify-content: center;height: 100%;
+}
+.bg-image-pa{
+	background: inherit;
+}
 
-  /* Keep the inherited background full size. */background-attachment: fixed;background-size: cover;background-repeat: no-repeat;/* display: grid; */align-items: center;justify-content: center;height: 100%;/* width: 100%; */}
 .container-blur {
  /* width: 30rem; */
  height: 20rem;
