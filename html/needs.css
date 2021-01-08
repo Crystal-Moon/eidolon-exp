@@ -23,3 +23,6 @@
 	background-color: rgba(17,17,17,0.8);
 	border-color: rgba(150,150,150,0.13);
 }
+.need-list-item .item_name{
+	font-size: .875em;
+}

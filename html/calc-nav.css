@@ -23,13 +23,16 @@
 
 .Navv{
 	transition: border-bottom 0.5s ease;
-	border-bottom: 2px solid red;
+	border-bottom: 2px solid;
+	background-color: antiquewhite;
 	/* width: 100%; */
 }
-#floor{
+
+
+.nav-floor{
 	height: 100%;
 	width: 25%;
-	background: red;
+	/* background: red; */
 	position: absolute;
 	bottom: 0;
 	transition: all 0.5s ease;
@@ -38,6 +41,31 @@
 }
 /* el width y el margin sera en px segun lo q de getBoundReact() 
  - tambien se le pude hacer cambio de color y se cambiara con el transiation :akn: */
+.Navv.manual{
+	border-color: var(--nav-manual);;
+}
+.Navv.manual .nav-floor{
+	background-color: var(--nav-manual);
+}
+.Navv.calculator{
+	border-color: var(--nav-calculator);;
+}
+.Navv.calculator .nav-floor{
+	background-color: var(--nav-calculator);
+}
+.Navv.calculator .nav-link.active{
+	/* color:white; */
+}
+.Navv.compare{
+	border-color: var(--nav-compare);
+}
+.Navv.compare .nav-floor{
+	background-color: var(--nav-compare);
+}
+.Navv.compare .nav-link.active{
+	/* color:white; */
+}
+
 
 /*******************************************/
 main{
@@ -143,7 +171,7 @@ section{
 	background-color: rgba(255,255,255,0.3);
 }
 .card-manual .card-header{
-	background-color: rgba(100,100,100,.2);
+	background-color: rgba(170,170,170,.2);
 }
 
 .card-compare{
