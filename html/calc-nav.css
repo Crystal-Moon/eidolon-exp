@@ -81,7 +81,7 @@ section{
 
 .container-blur {
  /* width: 30rem; */
- height: auto;
+ height: max-content;
  position: relative;
  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
  background: inherit;

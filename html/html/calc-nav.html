@@ -23,6 +23,7 @@ p{margin:0; padding: 0;}
   <link rel="stylesheet" type="text/css" href="../calc-nav.css">
   <link rel="stylesheet" type="text/css" href="../special-input.css">
   <link rel="stylesheet" type="text/css" href="../needs.css">
+  <link rel="stylesheet" type="text/css" href="../mobile.css">
 </head>
 <body>
 
@@ -86,8 +87,8 @@ p{margin:0; padding: 0;}
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" value="" id="name.replace(space)">
+                <label class="form-check-label" for="name.replace(space)">
                   <div class="row blue" data-component="Item">
                     <div class="col-auto col-sm-auto">
                       <img src="" alt="" class="item_icon" title="nombre item">
@@ -143,16 +144,17 @@ p{margin:0; padding: 0;}
   <section class="SectionCalc row bg-image" data-component="SectionCalc">
   <div class="bg-image-pa row justify-content-center">
     <div class="bg-image-pa col-12 justify-content-center row">
-      
       <div class="bg-image-pa container-content container-lg justify-content-around row">
         
         <div class="col-lg-5 container-blur" data-component="Calculator">
           <div class="card card-calc text-light">
             <div class="card-header text-center">
               <h5 class="card-title">Calculadora</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Completa donde estas y donde quieres llegar</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Calcula cuantos cristales necesitas</h6>
             </div>
             <div class="card-body"> 
+
+              <p>Indica el nivel actual del Eidolon y el nivel a cual quieres llegar para saber cuales y cuantos cristales necesitas</p>
               
               <form>
                 <div class="row g-3 mb-2 align-items-center">
@@ -167,7 +169,9 @@ p{margin:0; padding: 0;}
 
                 <div class="row g-3 mb-2 align-items-center">
                   <div class="col-auto">
-                    <label for="percent" class="col-form-label">Porcentaje del nivel:</label>
+                    <label for="percent" class="col-form-label">Porcentaje del nivel:
+                      <span id="passwordHelpInline" class="form-text">(opcional)</span>
+                    </label>
                   </div>
                   <div class="col-sm-5">
                     <div class="fake-input-container">
@@ -193,9 +197,9 @@ p{margin:0; padding: 0;}
                     </div>
                     
                   </div>
-                  <div class="col-auto">
+                  <!--<div class="col-auto">
                     <span id="passwordHelpInline" class="form-text">(opcional)</span>
-                  </div>
+                  </div>-->
                 </div>
 
                 <!-- <div class="row g-3 mb-2 align-items-center">
@@ -231,69 +235,57 @@ p{margin:0; padding: 0;}
           </div>
         </div>
 
-
         <div class="col-lg-5 container-blur" data-component="Needs">
           <div class="card card-calc text-light">
             <div class="card-header text-center">
-              <h5 class="card-title">Necesitas estos items</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Aumenta o disminuye según lo que ya tengas</h6>
+              <h5 class="card-title">Cristales necesarios</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Necesitarás todos los siguientes items para llegar al nivel deseado</h6>
             </div>
-            <div class="card-body"> 
-              
+            <div class="card-body">
+
+              <p>Aumenta o disminuye según lo que ya tengas en tu inventario, el sistema calculará nuevamente según tus preferencias.</p>
+
               <ul class="list-group">
-                <li class="list-group-item">
-                  <div class="row">
-                    
-                  <div class="col-md-2 col-sm-3">
-                    <div class="justify-content-around row need-btns">
-                      <button type="" class="col-auto need-btn btn-primary rounded-circle">+</button>
-                      <button type="" class="col-auto need-btn btn-primary rounded-circle">-</button>
+
+                <li class="list-group-item need-list-item" data-component="ItemNeed">
+                  <div class="align-items-center row"> 
+                    <div class="col-4">
+                      <div class="justify-content-around row need-btns">
+                        <button type="" class="btn col-auto col-sm-auto need-btn btn-primary">+</button>
+                        <button type="" class="btn col-auto col-sm-auto need-btn btn-primary">-</button>
+                      </div>
                     </div>
-                    
-                  </div>
                   
-                  <div class="col-md-3 col-sm-2 text-center pack">
-                    <span class="badge">2</span>
-                    <span class="badge">packs</span>
-                  </div>
-
-                  <div class="col-md-7 col-sm-7">
-                  <div class="row blue" data-component="Item">
-                    <div class="col-auto col-sm-auto">
-                      <img src="" alt="" class="item_icon" title="nombre item">
+                    <div class="col-8">
+                      <div class="justify-content-around align-items-center row">
+                        <div class="col-sm-3 text-center pack" data-component="United">
+                          <span class="badge">2</span>
+                          <span class="badge">stack</span>
+                        </div>
+                        <div class="col-sm-9">
+                          <div class="row blue" data-component="Item">
+                            <div class="col-auto col-sm-auto">
+                              <img src="https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02465.png" alt="" class="item_icon" title="nombre item">
+                            </div>
+                            <div class="col col-sm">
+                              <span class="item_name">Cristal de EXP de Eidolon Perfecto</span>
+                            </div>
+                          </div><!-- fin item -->
+                        </div>
+                      </div>
                     </div>
-                    <div class="col col-sm">
-                      <span class="item_name">Nombre del item</span>
-                    </div>
-                  </div><!-- fin item -->
-
                   </div>
-
-                  </div>
-                
-
-
-                  
-
-
-                </li>
-                <li class="list-group-item">
-                  
-                </li>
+                </li><!-- fin Itemneed -->
                 
               </ul>
 
             </div>
           </div>
-
-        </div>
+        </div><!-- fin needs -->
       
       </div>
-
-
     </div>
   </div>
-   
 	</section>
 
   <section class="SectionCompare" data-component="SectionCompare">

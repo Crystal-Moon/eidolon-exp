@@ -9,7 +9,7 @@
 	top: 1em;
 	overflow: hidden;
 	height: max-content;
-	max-width: 95%;
+	max-width: 50%;
 	z-index: 1000;
 }
 .Config.hidden{
@@ -48,11 +48,12 @@
 
 /***********************************/
 .item_icon{
-	border: 0.18rem solid;
+	border: 0.2rem solid;
 	border-radius: 0.2rem;
 	height: 2em;
 	width: 2em;
 	display: block;
+	background-color: #333;
 }
 .item_name{
 	margin-left: -0.7em;
@@ -124,8 +125,8 @@
 	border-color: white;
 }
 .blue{
-	color: blue;
-	border-color: blue;
+	color: #116dfb;
+	border-color: #116dfb;
 }
 .green{
 	color: green;
@@ -150,6 +151,10 @@
 
 .accordion-item:last-of-type .accordion-collapse{
 	border-bottom-width: 0px;
+}
+
+.form-control:focus{
+	box-shadow: 0 0 0 0.25rem rgba(115, 115, 115, 0.41);
 }
 /*
 .collapse:not(.show) {
