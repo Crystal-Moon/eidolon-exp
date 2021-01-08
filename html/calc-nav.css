@@ -85,7 +85,7 @@ section{
 
 .SectionCompare{
 	background-image: url('../src/assets/imgs/bg-compare.jpg');
-	background-position: left center;
+	background-position: 23% center;
 }
 
 /********************************************/
@@ -142,6 +142,14 @@ section{
 .card-manual{
 	background-color: rgba(255,255,255,0.3);
 }
-.card-calc .card-header{
+.card-manual .card-header{
 	background-color: rgba(100,100,100,.2);
+}
+
+.card-compare{
+	background-color: rgba(76, 175, 80, 0.3);
+}
+.card-compare .card-header{
+	background-color: rgba(100,100,100,.2);
+	color: black;
 }
