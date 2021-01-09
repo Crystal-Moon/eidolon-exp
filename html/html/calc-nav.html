@@ -24,6 +24,7 @@ p{/* margin:0; *//* padding: 0; */}
   <link rel="stylesheet" type="text/css" href="../calc-nav.css">
   <link rel="stylesheet" type="text/css" href="../special-input.css">
   <link rel="stylesheet" type="text/css" href="../needs.css">
+  <link rel="stylesheet" type="text/css" href="../compare.css">
   <link rel="stylesheet" type="text/css" href="../mobile.css">
 </head>
 <body>
@@ -266,7 +267,7 @@ p{/* margin:0; *//* padding: 0; */}
 
               <ul class="list-group">
 
-                <li class="list-group-item need-list-item" data-component="ItemNeed">
+                <li class="ItemNeed list-group-item need-list-item" data-component="ItemNeed">
                   <div class="align-items-center row"> 
                     <div class="col-3">
                       <div class="justify-content-around row need-btns">
@@ -277,9 +278,11 @@ p{/* margin:0; *//* padding: 0; */}
                   
                     <div class="col-9">
                       <div class="justify-content-around align-items-center row">
-                        <div class="col-sm-3 text-center pack" data-component="United">
-                          <span class="badge">2</span>
-                          <span class="badge">stack</span>
+                        <div class="col-sm3">
+                          <div class="text-center pack" data-component="United">
+                            <span class="badge">2</span>
+                            <span class="badge">stack</span>
+                          </div>
                         </div>
                         <div class="col-sm-9">
                           <div class="row blue" data-component="Item">
@@ -312,7 +315,8 @@ p{/* margin:0; *//* padding: 0; */}
 
       <div class="bg-image-pa justify-content-center row">
         <div class="bg-image-pa col-12">
-          <div class="container-blur" data-component="Compare">
+          
+          <div class="Compare container-blur" data-component="Compare">
             <div class="card card-compare text-dark">
               <div class="card-header text-center">
                 <h5 class="card-title">Comparar</h5>
@@ -321,26 +325,130 @@ p{/* margin:0; *//* padding: 0; */}
               <div class="card-body">
                 <p>Indica el nivel actual del Eidolon y el nivel a cual quieres llegar para saber cuales y cuantos cristales necesitas (emoji)</p>
                 <p>Distintos p con explcaciones</p>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="input-group mb-3">
+                      <input type="number" class="form-control col-md-2 col-sm-2">
+                      <div class="col-md-3 col-sm-3">
+                        <select class="form-select rounded-0 h-100" id="inputGroupSelect01">
+                          <option selected>Unidades</option>
+                          <option value="pack">Packs</option>
+                        </select>
+                      </div>
+                      <div class="col-md-7 col-sm-7 btn-group">
+                        
+                        <div class="btn-group w-100" data-component="ComboboxItems">
+                          <button class="btn btn-sm btn-select-item dropdown-toggle rounded-0 rounded-end" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="select-item small">
+                            
+                              <div class="row blue" data-component="Item">
+                                <div class="col-auto col-sm-auto">
+                                  <img src="https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02465.png" alt="" class="item_icon" title="nombre item">
+                                </div>
+                                <div class="col col-sm">
+                                  <span class="item_name">Cristal de EXP de Eidolon Perfecto</span>
+                                </div>
+                              </div><!-- fin item -->
+
+                            </div>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li class="dropdown-item small">
+                            
+                              <div class="row blue" data-component="Item">
+                                <div class="col-auto col-sm-auto">
+                                  <img src="https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02465.png" alt="" class="item_icon" title="nombre item">
+                                </div>
+                                <div class="col col-sm">
+                                  <span class="item_name">Cristal de EXP de Eidolon Perfecto</span>
+                                </div>
+                              </div><!-- fin item -->
+
+                            </li>
+                            <li class="dropdown-item small">
+                            </li>
+                          </ul>
+                        </div><!-- fin combobox -->
+
+                      </div> 
+                    </div>
+                  </div> 
+
+                  <div class="col-md-1"></div>
+                  
+                  <div class="col-md-5">
+                    <div class="input-group mb-3">
+                      <div class="input-group-text col-md-3 col-sm-3">
+                        
+                        <div class="text-center pack" data-component="United">
+                          <span class="badge">2</span>
+                          <span class="badge">stack</span>
+                        </div>
+
+                      </div>
+                      <div class="col-md-9 col-sm-9 btn-group">
+                        
+                        <div class="btn-group w-100" data-component="ComboboxItems">
+                          <button class="btn btn-sm btn-select-item dropdown-toggle rounded-0 rounded-end" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="select-item small">
+                            
+                              <div class="row blue" data-component="Item">
+                                <div class="col-auto col-sm-auto">
+                                  <img src="https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02465.png" alt="" class="item_icon" title="nombre item">
+                                </div>
+                                <div class="col col-sm">
+                                  <span class="item_name">Cristal de EXP de Eidolon Perfecto</span>
+                                </div>
+                              </div><!-- fin item -->
+
+                            </div>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li class="dropdown-item small">
+                            
+                              <div class="row blue" data-component="Item">
+                                <div class="col-auto col-sm-auto">
+                                  <img src="https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02465.png" alt="" class="item_icon" title="nombre item">
+                                </div>
+                                <div class="col col-sm">
+                                  <span class="item_name">Cristal de EXP de Eidolon Perfecto</span>
+                                </div>
+                              </div><!-- fin item -->
+
+                            </li>
+                            <li class="dropdown-item small">
+                            </li>
+                          </ul>
+                        </div><!-- fin combobox -->
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </div><!-- fin compare -->
+
         </div>
       </div>
 
       <div class="bg-image-pa justify-content-center row">
         <div class="bg-image-pa col-12">
-          <div class="container-blur" data-component="Compare">
+          
+          <div class="container-blur" data-component="CompareGral">
             <div class="card card-compare text-dark">
               <div class="card-header text-center">
-                <h5 class="card-title">Comparar</h5>
-                <h6 class="card-subtitle mb-2">Puedes calcular equivalencias entre cristales</h6>
+                <h5 class="card-title">Generales</h5>
+                <h6 class="card-subtitle mb-2">Tabla de comparativas generales</h6>
               </div>
               <div class="card-body">
                 <p>Indica el nivel actual del Eidolon y el nivel a cual quieres llegar para saber cuales y cuantos cristales necesitas (emoji)</p>
                 <p>Distintos p con explcaciones</p>
               </div>
             </div>
-          </div>
+          </div><!-- fin comparegral -->
+          
         </div>
       </div>
 

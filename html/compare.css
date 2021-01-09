@@ -1,0 +1,35 @@
+
+
+.Compare .Item{
+	font-size: .875em;
+}
+
+.select-item{
+	display: inline-block;
+}
+
+.btn-select-item{
+	background: aliceblue;
+    color: blue;
+    border-color: #ced4da;
+}
+
+.btn-select-item:hover{
+	background-color:#e9ecef;
+	color: blue;
+}
+
+.Compare.container-blur{
+	overflow: visible;
+}
+.Compare.container-blur:before{
+	height:100%;
+	
+}
+.Compare .pack .badge{
+	color:black;
+}
+
+.Compare .dropdown-item.active, .dropdown-item:active{
+	background-color:#73c1ff;
+}
