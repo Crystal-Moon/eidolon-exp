@@ -33,3 +33,20 @@
 .Compare .dropdown-item.active, .dropdown-item:active{
 	background-color:#73c1ff;
 }
+
+.IsEqualsTo{
+    padding-bottom: .3em;
+    color: #3737b9;
+}
+.equals-to-img{}
+.equals-to-text{
+    padding-left: 0;
+    padding-right: 0;
+}
+.equals-to-arrow{
+	height: 2em;
+	width: 2em;
+	margin-bottom: .5em;
+}
+.equals-to-arrow-down{display: none;margin: auto;}
+.equals-to-arrow-right{}

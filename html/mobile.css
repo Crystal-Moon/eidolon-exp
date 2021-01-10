@@ -29,6 +29,7 @@
 	.CompareGral .table .item_name{
 		display: none;
 	}
+	.IsEqualsTo .equals-to-arrow-down{display: block;}
 }
 
 /* Landscape phones and down */
