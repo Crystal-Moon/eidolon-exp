@@ -7,16 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
 	<title>calc</title>
-	<style type="text/css">
-/*		html,body{
-	margin:0;
-	padding:0;
-	position:relative;
-	width:100%;
-	height:100%;
-}*/
-p{/* margin:0; *//* padding: 0; */}
-	</style>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../myVars.css">
@@ -78,7 +68,7 @@ p{/* margin:0; *//* padding: 0; */}
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
-                  <div class="row blue" data-component="Item">
+                  <div class="row blue" title="nombre item" data-component="Item">
                     <div class="col-auto col-sm-auto">
                       <img src="" alt="" class="item_icon" title="nombre item">
                     </div>
@@ -91,7 +81,7 @@ p{/* margin:0; *//* padding: 0; */}
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="name.replace(space)">
                 <label class="form-check-label" for="name.replace(space)">
-                  <div class="row blue" data-component="Item">
+                  <div class="row blue" title="nombre item" data-component="Item">
                     <div class="col-auto col-sm-auto">
                       <img src="" alt="" class="item_icon" title="nombre item">
                     </div>
@@ -285,7 +275,7 @@ p{/* margin:0; *//* padding: 0; */}
                           </div>
                         </div>
                         <div class="col-sm-9">
-                          <div class="row blue" data-component="Item">
+                          <div class="row blue" title="nombre item" data-component="Item">
                             <div class="col-auto col-sm-auto">
                               <img src="https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02465.png" alt="" class="item_icon" title="nombre item">
                             </div>
@@ -342,7 +332,7 @@ p{/* margin:0; *//* padding: 0; */}
                           <button class="btn btn-sm btn-select-item dropdown-toggle rounded-0 rounded-end" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="select-item small">
                             
-                              <div class="row blue" data-component="Item">
+                              <div class="row blue" title="nombre item" data-component="Item">
                                 <div class="col-auto col-sm-auto">
                                   <img src="https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02465.png" alt="" class="item_icon" title="nombre item">
                                 </div>
@@ -356,7 +346,7 @@ p{/* margin:0; *//* padding: 0; */}
                           <ul class="dropdown-menu">
                             <li class="dropdown-item small">
                             
-                              <div class="row blue" data-component="Item">
+                              <div class="row blue" title="nombre item" data-component="Item">
                                 <div class="col-auto col-sm-auto">
                                   <img src="https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02465.png" alt="" class="item_icon" title="nombre item">
                                 </div>
@@ -379,7 +369,7 @@ p{/* margin:0; *//* padding: 0; */}
                   
                   <div class="col-md-5">
                     <div class="input-group mb-3">
-                      <div class="input-group-text col-md-3 col-sm-3">
+                      <div class="input-group-text col-md-4 col-sm-4">
                         
                         <div class="text-center pack" data-component="United">
                           <span class="badge">2</span>
@@ -387,13 +377,13 @@ p{/* margin:0; *//* padding: 0; */}
                         </div>
 
                       </div>
-                      <div class="col-md-9 col-sm-9 btn-group">
+                      <div class="col-md-8 col-sm-8 btn-group">
                         
                         <div class="btn-group w-100" data-component="ComboboxItems">
                           <button class="btn btn-sm btn-select-item dropdown-toggle rounded-0 rounded-end" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="select-item small">
                             
-                              <div class="row blue" data-component="Item">
+                              <div class="row blue" title="nombre item" data-component="Item">
                                 <div class="col-auto col-sm-auto">
                                   <img src="https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02465.png" alt="" class="item_icon" title="nombre item">
                                 </div>
@@ -407,7 +397,7 @@ p{/* margin:0; *//* padding: 0; */}
                           <ul class="dropdown-menu">
                             <li class="dropdown-item small">
                             
-                              <div class="row blue" data-component="Item">
+                              <div class="row blue" title="nombre item" data-component="Item">
                                 <div class="col-auto col-sm-auto">
                                   <img src="https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02465.png" alt="" class="item_icon" title="nombre item">
                                 </div>
@@ -436,19 +426,58 @@ p{/* margin:0; *//* padding: 0; */}
       <div class="bg-image-pa justify-content-center row">
         <div class="bg-image-pa col-12">
           
-          <div class="container-blur" data-component="CompareGral">
+          <div class="CompareGral container-blur" data-component="CompareGral">
             <div class="card card-compare text-dark">
               <div class="card-header text-center">
                 <h5 class="card-title">Generales</h5>
-                <h6 class="card-subtitle mb-2">Tabla de comparativas generales</h6>
               </div>
               <div class="card-body">
-                <p>Indica el nivel actual del Eidolon y el nivel a cual quieres llegar para saber cuales y cuantos cristales necesitas (emoji)</p>
-                <p>Distintos p con explcaciones</p>
+                <p>Aqui tienes algunas equivalencias generales (emoji) (?</p>
+                <div class="table-responsive table-responsive-md">
+                  <table class="table table-dark">
+                    <thead>
+                      <tr>
+                        <td colspan="5" class="text-muted small">*Las cantidades se  expresan en unidades</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="badge">10 x</span></td>
+                        <td>
+
+                          <div class="row blue" title="nombre item" data-component="Item">
+                            <div class="col-auto col-sm-auto">
+                              <img src="https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02465.png" alt="" class="item_icon" title="nombre item">
+                            </div>
+                            <div class="col col-sm">
+                              <span class="item_name">Cristal de EXP de Eidolon Perfecto</span>
+                            </div>
+                          </div><!-- fin item -->
+
+                        </td>
+                        <td><b>=</b></td>
+                        <td><span class="badge">100 x</span></td>
+                        <td>
+
+                          <div class="row blue" title="nombre item" data-component="Item">
+                            <div class="col-auto col-sm-auto">
+                              <img src="https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02465.png" alt="" class="item_icon" title="nombre item">
+                            </div>
+                            <div class="col col-sm">
+                              <span class="item_name">Cristal de EXP de Eidolon Perfecto</span>
+                            </div>
+                          </div><!-- fin item -->
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
               </div>
             </div>
           </div><!-- fin comparegral -->
-          
+
         </div>
       </div>
 
@@ -466,16 +495,6 @@ p{/* margin:0; *//* padding: 0; */}
 
 <script>
 
-var exampleEl = document.getElementById('example')
-var tooltip = new bootstrap.Tooltip(exampleEl)
-
-
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})
-
-console.log(tooltipList)
 
 </script>
 

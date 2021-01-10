@@ -25,6 +25,10 @@
 	.Config.hidden {
     	max-width: 4em;
 	}
+
+	.CompareGral .table .item_name{
+		display: none;
+	}
 }
 
 /* Landscape phones and down */
