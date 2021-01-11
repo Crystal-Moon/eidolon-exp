@@ -1,12 +1,12 @@
 
 .Config{
 	transition: max-width 0.45s ease;
-	background-color: #faeba6;
+	background-color: black;
 	position:absolute;
 	right: 0;
 	margin: 0;
 	margin-left: auto;
-	top: 1em;
+	top: 2em;
 	overflow: hidden;
 	height: max-content;
 	max-width: 50%;

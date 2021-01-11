@@ -1,18 +1,11 @@
 
 
-@media (max-width: 768px){ 
-/* hacer esto con sass (requiere npm de botstrap :/ ), 
-- pero puedo hacer mi propia clase de hiden :D */
-.expand-md-hidden {
-    display: none;
-}
-}
 
 
 /******************************/
 .Header{
 	width:100%;
-	position: fixed;
+	position: relative;
 	top:0;
 	z-index:500;
 }
@@ -75,14 +68,16 @@ main{
 	margin: 0!important;
 	padding: 0!important;
 	/* padding-top: 5em; */
+	position: relative;
 }
 section{
 	width:100%;
-	position: absolute;
+	/* position: absolute; */
 	margin:0 !important;
 	padding:0 !important;
-	padding-top: 5em!important;
+	padding-top: 2em!important;
 	overflow: auto;
+	padding-bottom: 3em!important;
 }
 
 

@@ -15,6 +15,12 @@
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+	.Header{
+		position:fixed;;
+	}
+	section{
+		padding-top: 5em!important;
+	}
 	.expand-md-hidden {
     	display: none;
 	}

@@ -15,8 +15,14 @@
   <link rel="stylesheet" type="text/css" href="../special-input.css">
   <link rel="stylesheet" type="text/css" href="../needs.css">
   <link rel="stylesheet" type="text/css" href="../compare.css">
+  <link rel="stylesheet" type="text/css" href="../footer.css">
   <link rel="stylesheet" type="text/css" href="../mobile.css">
   <style>
+
+  html,body{ /* necesario u.u */
+  height: 100%;
+  width:100%;
+}
     *[data-lang="en"],*[data-lang="fr"],*[data-lang="de"],*[data-lang="br"]{
       display: none;
     }
@@ -64,7 +70,7 @@
         <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
       </svg>
 		</div>
-		<div class="row list-group">
+		<div class="row list-group rounded-0">
       <div class="ItemConfig accordion accordion-flush container list-group-item" id="accordionConfigItem" data-component="ItemConfig">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headOne">
@@ -315,9 +321,8 @@
    </div>
 	</section>
 
-  <section class="SectionCompare bg-image" data-component="SectionCompare">
+  <section class="SectionCompare bg-image" data-component="SectionCompare" style="display:none;">
     <div class="container-xl bg-image-pa">
-
       <div class="bg-image-pa justify-content-center row">
         <div class="bg-image-pa col-12">
           
@@ -553,10 +558,73 @@
 
     </div>
   </section>
-
 </main>
-<footer data-component="Footer" class="">
-	
+<footer data-component="Footer" class="Footer">
+  <div class="nav navbar">
+	  <div class="container">
+      <div data-lang="es">
+        <p>Todo el contenido y los activos del juego son marcas comerciales y derechos de autor de X-Legend&reg; o Aeria Games&reg;. Este sitio no está afiliado a X-Legend o Aeria Games.</p>
+        <p>Toda información es tomada de <a href="https://www.aurakingdom-db.com/">aurakingdom-db.com</a></p>
+      </div>
+      <div data-lang="en">
+        <p>All game content and assets are trademarks and copyrights of X-Legend&reg; or Aeria Games&reg;. This site is not affiliated with X-Legend or Aeria Games.</p>
+      </div>
+      <div data-lang="fr">
+        <p></p>
+      </div>
+      <div data-lang="de">
+        <p></p>
+      </div>
+      <div data-lang="br">
+        <p></p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-md-4 mb-3">
+        <div class="contador-container">
+          <span>Numero de visitas:</span>
+          <div class="contador" id="elContadorEnSi">
+            <img src="https://www.contadorvisitasgratis.com/cache_image/584.png" alt="" style="height:24px;width:64px;border:1px solid black;">
+          </div>
+
+          
+
+          <span>Gracias &#128156;!</span>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div data-lang="es">
+          <p>Las traducciones de este sitio fueron realizadas con herramientas de internet. Cualquier inconsitencia que encuentres no dudes reportarla a <span style="color:#673AB7;">crystal.marino345@gmail.com</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer_me small">
+    <div class="nav navbar">
+      <div class="container-fluid">
+        <div class="col-auto">
+          <span>Made with &#10084; by</span>
+          <img class="icon_logo cm_logo" src="../../src/assets/imgs/CM_logo.svg" alt="CM">
+          <span class="name_logo">CrystaIMoon [AKES]</span>
+        </div>
+        <div class="col-auto">
+          <span class="expand-sm-hidden">Powered By </span>
+          <img class="icon_logo" src="../../src/assets/imgs/React.svg" alt="⚛" title="ReactJS">
+          <img class="icon_logo" src="../../src/assets/imgs/Bootstrap.svg" alt="B" title="Bootstrap">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--
+<div id="sfckj3hrfmdd23u7s48fyuxp1ajsj1eg5me" class="contador"></div><script type="text/javascript" src="https://counter8.stat.ovh/private/counter.js?c=kj3hrfmdd23u7s48fyuxp1ajsj1eg5me&down=async&FCS_coef=0.8&FCS_type=176" async></script><noscript><a href="https://www.contadorvisitasgratis.com" title="contador web"><img src="https://counter8.stat.ovh/private/contadorvisitasgratis.php?c=kj3hrfmdd23u7s48fyuxp1ajsj1eg5me" border="0" title="contador web" alt="contador web"></a></noscript>
+
+parametro: https://www.contadorvisitasgratis.com/instructions-modif.php
+diseños: https://www.contadorvisitasgratis.com/step_1.php
+
+-->
+
+
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" type="text/javascript"></script>
