@@ -40,8 +40,7 @@ class CompareGral extends Component {
                       <span className="badge">10 x</span>
                     </td>
                     <td>
-                      <Item></Item>
-                      {}
+                      <Item item={{}}></Item>
                     </td>
                     <td>
                       <b style={{color:'white'}}>=</b>
@@ -50,8 +49,7 @@ class CompareGral extends Component {
                       <span className="badge">100 x</span>
                     </td>
                     <td>
-                      <Item></Item>
-                      {}
+                      <Item item={{}}></Item>
                     </td>
                   </tr>
                 </tbody>

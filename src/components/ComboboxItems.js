@@ -14,14 +14,12 @@ class ComboboxItems extends Component {
           aria-expanded="false"
         >
           <div className="select-item small">
-            <Item></Item>
-            {}
+            <Item item={{}}></Item>
           </div>
         </button>
         <ul className="dropdown-menu">
           <li className="dropdown-item small">
-            <Item></Item>
-            {}
+            <Item item={{}}></Item>
           </li>
           <li className="dropdown-item small"></li>
         </ul>

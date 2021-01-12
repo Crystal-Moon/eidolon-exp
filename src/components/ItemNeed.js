@@ -32,8 +32,7 @@ class ItemNeed extends Component {
                 <United></United>
               </div>
               <div className="col-sm-9">
-                <Item></Item>
-                {}
+                <Item item={{}}></Item>
               </div>
             </div>
           </div>
