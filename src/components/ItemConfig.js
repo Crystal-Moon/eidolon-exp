@@ -63,7 +63,7 @@ class ItemConfig extends Component {
                 <input
                   className="form-check-input"
                   type="checkbox"
-                  checked={i.selected}
+                  checked={Boolean(i.selected)}
                   id={"flexCheckDefault"+i.id}
                   value={i.id}
                 />
