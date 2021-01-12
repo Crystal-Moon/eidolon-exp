@@ -1,6 +1,7 @@
-import React from "react";
 
-class Nav extends React.Component {
+import { Component } from 'react';
+
+class Nav extends Component {
   render() {
     return (
       <nav className="Navv navbar navbar-expand-md navbar-light">

@@ -1,6 +1,7 @@
-import React from "react";
 
-class IsEqualsTo extends React.Component {
+import { Component } from 'react';
+
+class IsEqualsTo extends Component {
   render() {
     return (
       <div className="IsEqualsTo text-center mb-2 mt-2">

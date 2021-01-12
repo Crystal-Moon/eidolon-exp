@@ -1,7 +1,9 @@
-import React from "react";
+
+import { Component } from 'react';
+
 import Item from "./Item";
 
-class ItemConfig extends React.Component {
+class ItemConfig extends Component {
   render() {
     return (
       <div

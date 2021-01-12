@@ -1,7 +1,9 @@
-import React from "react";
+
+import { Component } from 'react';
+
 import Item from "./Item";
 
-class CompareGral extends React.Component {
+class CompareGral extends Component {
   render() {
     return (
       <div className="CompareGral container-blur">
@@ -11,8 +13,8 @@ class CompareGral extends React.Component {
           </div>
           <div className="card-body">
             <p>Aqui tienes algunas equivalencias generales (emoji) (?</p>
-            <div className="table-responsive-md">
-              <table className="table table-dark">
+            <div className="table-responsive-md" style={{backgroundColor: 'rgb(14,18,19,0.9)'}}>
+              <table className="table">
                 <thead>
                   <tr>
                     <td data-lang="es" colSpan={5} className="text-muted small">
@@ -42,7 +44,7 @@ class CompareGral extends React.Component {
                       {}
                     </td>
                     <td>
-                      <b>=</b>
+                      <b style={{color:'white'}}>=</b>
                     </td>
                     <td>
                       <span className="badge">100 x</span>

@@ -1,0 +1,26 @@
+.Footer{
+	height: max-content;
+	width:100%;
+	background-color: #e7b8ff;
+	font-size: .8em;
+	border-top: 2px solid white;
+}
+
+.icon_logo{
+	height:1em;
+	width:auto;
+}
+.name_logo{color: #62beca;}
+.cm_logo{
+	margin-left: 0.4em;
+	margin-right: 0.2em;
+}
+.footer_me{
+	background-color: black;
+	color:white;
+}
+.contador-container>*{display: inline-block;}
+.contador{
+	margin:0.2em;
+	margin-right:0.5em;
+}

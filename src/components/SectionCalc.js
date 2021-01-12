@@ -1,8 +1,14 @@
-import React from "react";
-import Calculator from "./Calculator";
-import Needs from "./Needs";
 
-class SectionCalc extends React.Component {
+import { Component } from 'react';
+
+// style
+import '../assets/css/calculator.css';
+
+// component
+import Calculator from './Calculator';
+import Needs from './Needs';
+
+class SectionCalc extends Component {
   render() {
     return (
       <section

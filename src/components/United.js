@@ -1,6 +1,7 @@
-import React from "react";
 
-class United extends React.Component {
+import { Component } from 'react';
+
+class United extends Component {
   render() {
     return (
       <div className="text-center pack">

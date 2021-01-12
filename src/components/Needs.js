@@ -1,7 +1,9 @@
-import React from "react";
-import ItemNeed from "./ItemNeed";
 
-class Needs extends React.Component {
+import { Component } from 'react';
+
+import ItemNeed from './ItemNeed';
+
+class Needs extends Component {
   render() {
     return (
       <div className="col-lg-5 container-blur">

@@ -1,11 +1,12 @@
-import React from "react";
 
-class Item extends React.Component {
+import { Component } from 'react';
+
+class Item extends Component {
   render() {
     return (
       <div className="row blue">
         <div className="col-auto col-sm-auto">
-          <img src alt className="item_icon" title="nombre item" />
+          <img src="https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00464.png" alt className="item_icon" title="nombre item" />
         </div>
         <div className="col col-sm">
           <span data-lang="es" className="item_name">

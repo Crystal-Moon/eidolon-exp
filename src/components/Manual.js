@@ -1,6 +1,10 @@
-import React from "react";
 
-class Manual extends React.Component {
+import { Component } from 'react';
+
+// style
+import '../assets/css/manual.css';
+
+class Manual extends Component {
   render() {
     return (
       <div className="col-lg-10 col-md-11 col-sm-12 container-blur">

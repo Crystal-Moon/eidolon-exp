@@ -1,9 +1,12 @@
-import React from "react";
+
+import { Component } from 'react';
+
+// component
 import ComboboxItems from "./ComboboxItems";
 import IsEqualsTo from "./IsEqualsTo";
 import United from "./United";
 
-class Compare extends React.Component {
+class Compare extends Component {
   render() {
     return (
       <div className="Compare container-blur">
@@ -90,7 +93,7 @@ class Compare extends React.Component {
               </div>
               <div className="col-md-5">
                 <div className="input-group">
-                  <div className="input-group-text col-md-4 col-sm-4">
+                  <div className="input-group-text col-md-4 col-sm-4" style={{backgroundColor:'white'}}>
                     <United></United>
                   </div>
                   <div className="col-md-8 col-sm-8 btn-group">

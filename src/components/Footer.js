@@ -1,6 +1,15 @@
-import React from "react";
 
-class Footer extends React.Component {
+import { Component } from 'react';
+
+// style
+import '../assets/css/Footer.css';
+
+// components
+import cm_logo from '../assets/imgs/CM_logo.svg';
+import bootstrap_logo from '../assets/imgs/Bootstrap.svg';
+import react_logo from '../assets/imgs/React.svg';
+
+class Footer extends Component {
   render() {
     return (
       <footer className="Footer">
@@ -40,16 +49,15 @@ class Footer extends React.Component {
                 <span>Numero de visitas:</span>
                 <div className="contador" id="elContadorEnSi">
                   <img
-                    src="https://www.contadorvisitasgratis.com/cache_image/584.png"
+                    src="https://www.contadorvisitasgratis.com/cache_image/176.png"
                     alt
                     style={{
                       height: "24px",
-                      width: "64px",
-                      border: "1px solid black"
+                      width: "64px"
                     }}
                   />
                 </div>
-                <span>Gracias 💜!</span>
+                <span>Gracias &#128156;!</span>
               </div>
             </div>
             <div className="col-md-6">
@@ -74,10 +82,10 @@ class Footer extends React.Component {
           <div className="nav navbar">
             <div className="container-fluid">
               <div className="col-auto">
-                <span>Made with ❤ by</span>
+                <span>Made with &#10084; by</span>
                 <img
                   className="icon_logo cm_logo"
-                  src="../../src/assets/imgs/CM_logo.svg"
+                  src={cm_logo}
                   alt="CM"
                 />
                 <span className="name_logo">CrystaIMoon [AKES]</span>
@@ -86,13 +94,13 @@ class Footer extends React.Component {
                 <span className="expand-sm-hidden">Powered By </span>
                 <img
                   className="icon_logo"
-                  src="../../src/assets/imgs/React.svg"
+                  src={react_logo}
                   alt="\u269B"
                   title="ReactJS"
                 />
                 <img
                   className="icon_logo"
-                  src="../../src/assets/imgs/Bootstrap.svg"
+                  src={bootstrap_logo}
                   alt="B"
                   title="Bootstrap"
                 />

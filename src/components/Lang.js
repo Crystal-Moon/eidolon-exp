@@ -1,6 +1,7 @@
-import React from "react";
 
-class Lang extends React.Component {
+import { Component } from 'react';
+
+class Lang extends Component {
   render() {
     return (
       <div className="Lang container list-group-item">

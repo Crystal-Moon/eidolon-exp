@@ -1,7 +1,9 @@
-import React from "react";
+
+import { Component } from 'react';
+
 import Item from "./Item";
 
-class ComboboxItems extends React.Component {
+class ComboboxItems extends Component {
   render() {
     return (
       <div className="btn-group w-100">

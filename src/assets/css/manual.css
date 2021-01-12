@@ -1,0 +1,12 @@
+
+.SectionManual{
+	background-image: url('../imgs/bg-manual.png');
+	background-position: right center;
+}
+
+.card-manual{
+	background-color: rgba(255,255,255,0.3);
+}
+.card-manual .card-header{
+	background-color: rgba(170,170,170,.2);
+}

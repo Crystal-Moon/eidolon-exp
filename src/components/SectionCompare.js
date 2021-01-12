@@ -1,8 +1,14 @@
-import React from "react";
-import Compare from "./Compare";
-import CompareGral from "./CompareGral";
 
-class SectionCompare extends React.Component {
+import { Component } from 'react';
+
+// style
+import '../assets/css/compare.css';
+
+// component
+import Compare from './Compare';
+import CompareGral from './CompareGral';
+
+class SectionCompare extends Component {
   render() {
     return (
       <section

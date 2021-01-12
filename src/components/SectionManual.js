@@ -1,7 +1,13 @@
-import React from "react";
-import Manual from "./Manual";
 
-class SectionManual extends React.Component {
+import { Component } from 'react';
+
+// style
+import '../assets/css/manual.css';
+
+// component
+import Manual from './Manual';
+
+class SectionManual extends Component {
   render() {
     return (
       <section

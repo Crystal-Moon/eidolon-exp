@@ -1,8 +1,14 @@
-import React from "react";
-import Nav from "./Nav";
-import Config from "./Config";
 
-class Header extends React.Component {
+import { Component } from 'react';
+
+// style
+import '../assets/css/Header.css';
+
+// components
+import Nav from './Nav';
+import Config from './Config';
+
+class Header extends Component {
   render() {
     return (
       <header id="header" className="Header">

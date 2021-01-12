@@ -1,6 +1,7 @@
-import React from "react";
 
-class Calculator extends React.Component {
+import { Component } from 'react';
+
+class Calculator extends Component {
   render() {
     return (
       <div className="col-lg-5 container-blur">
@@ -37,9 +38,7 @@ class Calculator extends React.Component {
                 <div className="col-auto">
                   <label htmlFor="percent" className="col-form-label">
                     Porcentaje del nivel:
-                    <span id="passwordHelpInline" className="form-text">
-                      (opcional)
-                    </span>
+                    <span id="passwordHelpInline" className="small"> (opcional)</span>
                   </label>
                 </div>
                 <div className="col-sm-5">

@@ -1,8 +1,11 @@
-import React from "react";
+
+import { Component } from 'react';
+
+// component
 import United from "./United";
 import Item from "./Item";
 
-class ItemNeed extends React.Component {
+class ItemNeed extends Component {
   render() {
     return (
       <li className="ItemNeed list-group-item need-list-item">
