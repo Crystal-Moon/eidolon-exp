@@ -1,6 +1,8 @@
 
 import { Component } from 'react';
 
+import SpecialInput from './SpecialInput';
+
 class Calculator extends Component {
   render() {
     return (
@@ -42,54 +44,9 @@ class Calculator extends Component {
                   </label>
                 </div>
                 <div className="col-sm-5">
-                  <div className="fake-input-container">
-                    <div className="input-group">
-                      <input
-                        type="number"
-                        id="percent"
-                        name="percent"
-                        className="form-control input-dark fake-input-input"
-                        aria-label="percent"
-                        aria-describedby="percent"
-                        defaultValue={88345}
-                      />
-                      <span
-                        className="input-group-text input-dark"
-                        id="percent"
-                      >
-                        %
-                      </span>
-                    </div>
-                    <div className="input-group fake-input">
-                      <div className="form-control input-dark fake-input-placeholder">
-                        <span className="int">00</span>
-                        <span className="dec">.000</span>
-                        {}
-                      </div>
-                      <span
-                        className="input-group-text input-dark"
-                        id="percent"
-                      >
-                        %
-                      </span>
-                    </div>
-                    <div className="input-group fake-input">
-                      <div className="form-control input-dark fake-input-value input-cursor">
-                        <span className="int">88</span>
-                        <span className="dec">.345</span>
-                      </div>
-                      <span
-                        className="input-group-text input-dark"
-                        id="percent"
-                      >
-                        %
-                      </span>
-                    </div>
-                  </div>
+                  <SpecialInput />
                 </div>
-                {}
               </div>
-              {}
               <div className="row g-3 mb-3 align-items-center">
                 <div className="col-auto">
                   <label htmlFor="lvl-to" className="col-form-label">
