@@ -8,7 +8,7 @@ class Calculator extends Component {
         <div className="card card-calc text-light">
           <div className="card-header text-center">
             <h5 className="card-title">Calculadora</h5>
-            <h6 className="card-subtitle mb-2 text-muted">
+            <h6 className="card-subtitle mb-2 small">
               Calcula cuantos cristales necesitas
             </h6>
           </div>

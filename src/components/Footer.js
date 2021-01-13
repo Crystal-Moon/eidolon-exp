@@ -3,6 +3,7 @@ import { Component } from 'react';
 
 // style
 import '../assets/css/Footer.css';
+import '../assets/css/mobile.css';
 
 // components
 import cm_logo from '../assets/imgs/CM_logo.svg';

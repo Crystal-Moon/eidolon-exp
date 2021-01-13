@@ -7,7 +7,7 @@ class CompareGral extends Component {
   render() {
     return (
       <div className="CompareGral container-blur">
-        <div className="card card-compare text-dark">
+        <div className="card card-compare">
           <div className="card-header text-center">
             <h5 className="card-title">Generales</h5>
           </div>

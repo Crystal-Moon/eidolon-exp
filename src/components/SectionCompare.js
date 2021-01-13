@@ -21,13 +21,11 @@ class SectionCompare extends Component {
           <div className="bg-image-pa justify-content-center row">
             <div className="bg-image-pa col-12">
               <Compare></Compare>
-              {}
             </div>
           </div>
           <div className="bg-image-pa justify-content-center row">
             <div className="bg-image-pa col-12">
               <CompareGral></CompareGral>
-              {}
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 
 // styles
 import './assets/css/gral.css';
-import './assets/css/mobile.css';
+//import './assets/css/mobile.css'; // se fue al footer
 
 // componenst
 import Header from './components/Header';

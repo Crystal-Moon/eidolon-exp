@@ -10,7 +10,7 @@ class Compare extends Component {
   render() {
     return (
       <div className="Compare container-blur">
-        <div className="card card-compare text-dark">
+        <div className="card card-compare">
           <div className="card-header text-center">
             <h5 data-lang="es" className="card-title">
               Comparar
@@ -27,19 +27,19 @@ class Compare extends Component {
             <h5 data-lang="br" className="card-title">
               Comparar
             </h5>
-            <h6 data-lang="es" className="card-subtitle mb-2">
+            <h6 data-lang="es" className="card-subtitle mb-2 small">
               Puedes calcular equivalencias entre cristales
             </h6>
-            <h6 data-lang="en" className="card-subtitle mb-2">
+            <h6 data-lang="en" className="card-subtitle mb-2 small">
               Puedes calcular equivalencias entre cristales
             </h6>
-            <h6 data-lang="fr" className="card-subtitle mb-2">
+            <h6 data-lang="fr" className="card-subtitle mb-2 small">
               Puedes calcular equivalencias entre cristales
             </h6>
-            <h6 data-lang="de" className="card-subtitle mb-2">
+            <h6 data-lang="de" className="card-subtitle mb-2 small">
               Puedes calcular equivalencias entre cristales
             </h6>
-            <h6 data-lang="br" className="card-subtitle mb-2">
+            <h6 data-lang="br" className="card-subtitle mb-2 small">
               Puedes calcular equivalencias entre cristales
             </h6>
           </div>

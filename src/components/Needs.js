@@ -10,7 +10,7 @@ class Needs extends Component {
         <div className="card card-calc text-light">
           <div className="card-header text-center">
             <h5 className="card-title">Cristales necesarios</h5>
-            <h6 className="card-subtitle mb-2 text-muted">
+            <h6 className="card-subtitle mb-2 small">
               Necesitarás todos los siguientes items para llegar al nivel
               deseado
             </h6>

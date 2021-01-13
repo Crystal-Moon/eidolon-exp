@@ -6,10 +6,12 @@
 
 .card-compare{
 	background-color: rgba(76, 175, 80, 0.3);
+	background-color: rgba(0,0,0,0.3);
+	color: white;
 }
 .card-compare .card-header{
 	background-color: rgba(100,100,100,.2);
-	color: black;
+	/* color: black; */
 }
 
 .Compare .Item{
