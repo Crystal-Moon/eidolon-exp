@@ -1,6 +1,7 @@
 
 import { Component } from 'react';
 import { Event } from '../util/Event';
+import db from '../util/db';
 
 import SpecialInput from './SpecialInput';
 
@@ -12,7 +13,7 @@ class Calculator extends Component {
     this.setPercernt = this.setPercernt.bind(this);
     this.state = {
       lvl: '',
-      percent: '',
+      percent: 0,
       lvlTo: ''
     }
     Event.on('percent', this.setPercernt);
@@ -31,10 +32,76 @@ class Calculator extends Component {
     this.setState({ [name]: value })
   }
 
-  handlerSubmit(e){
+  async handlerSubmit(e){
     e.preventDefault();
     //console.log('el target en submit', e.target);
     console.log('el json', this.state)
+
+    /*
+    db.getCrystalsUser()
+      .then(user=> new Promise(d=>d({ user, exp: db.getExp().then(a=>a) })))
+      .then(({ user, exp})=>{
+
+        console.log('el user', user)
+        console.log('el exp', exp)
+        */
+      /*
+      
+      */
+//    let { user, exp } = await db.getCrystalsUser().then(async user=>({ user, exp: await db.getExp().then(x=>x) }))
+      let user = await db.getCrystalsUser().then(u=>u);
+      let exp = await db.getExp().then(x=>x);
+      
+      let lvl = this.state.lvl || 1;
+      let lvlTo = this.state.lvlTo || 1;
+      let percent = this.state.percent;
+
+
+    console.log('el user', user)
+        //console.log('el exp', exp)
+
+      let expTotalEido = exp[String(lvl)].total + ( exp[String(parseInt(lvl)+1)].xp / 100 * percent );
+      let expNecesaria = exp[String(lvlTo)].total - expTotalEido;
+      let expNecesaria1 = expNecesaria;
+      let N = {};
+
+      let key='';
+      let c=0
+      for (; expNecesaria > 0;){
+        //console.log('el user c',user[c])
+      if(!user[c]){
+        console.log('no hay user c',c, user[c])
+
+        if(N[key].cant) N[key].cant++
+        else N[key].pack++
+        expNecesaria=0;
+      }else{
+        key=String(user[c].id);
+
+
+        if(!N[key]) N[key] = { cant: 0, pack: 0 };
+        if(expNecesaria >= user[c].xp){
+          N[key].cant++;
+          expNecesaria -= user[c].xp;
+          if(N[key].cant>=100){
+            N[key].pack++;
+            N[key].cant=0;
+          }
+        }else if(N[key].cant>0 && N[key].pack){
+          expNecesaria += user[c].xp * N[key].cant
+          N[key].cant=0;
+          c++
+        }else c++
+        //console.log('N en cada vuelta',N, expNecesaria)
+      }
+    }
+
+      console.log('despues del for')
+      console.log(expTotalEido, expNecesaria1)
+      console.log(N)
+  
+
+
 
   }
 

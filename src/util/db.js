@@ -1,6 +1,10 @@
+
+import userConfig from './userConfig';
+
+//--------------------------------------------------------------
 /*
 const GO = (file) => new Promise(done=>{
-	fetch(`https://raw.githubusercontent.com/Crystal-Moon/eidolon-exp/database/${file}.json`)
+	fetch(`https://raw.githubusercontent.com/Crystal-Moon/eidolon-exp/master/database/${file}.json`)
 	.then(r=> done(r.json()))
 });
 
@@ -13,18 +17,23 @@ import crystals from '../test_db/crystals.json';
 import compare from '../test_db/compare-gral.json';
 import exp from '../test_db/exp.json';
 
-const CRYSTALS = Promise.resolve(crystals);
-const COMPARE_GRAL = Promise.resolve(compare);
-const EXP = Promise.resolve(exp);
+const CRYSTALS = Promise.resolve(crystals); // GO('crystals')
+const COMPARE_GRAL = Promise.resolve(compare); // GO('')
+const EXP = Promise.resolve(exp); // GO('exp')
 //const SPIRITS = Promise.resolve('');
+//----------------------------------------------------------------
 
 export default {
 	getCrystals: () => CRYSTALS,
 
 	getCrystalsUser: () => CRYSTALS.then(cc=>{
-		let ids = (localStorage.getItem('crystals') || '').split(',');
-		return cc.filter(c=> ids.include(String(c.id)))
+		let ids = userConfig.getCrystals();
+		let crystals = cc.filter(c=> ids.includes(String(c.id))).sort((a,b)=> b.id - a.id)
+		//console.log('los crys del user', crystals)
+		return crystals;
 	}),
+
+	getExp: ()=> EXP,
 
 /*
 	getById: id => ITEMS.then(d=>{

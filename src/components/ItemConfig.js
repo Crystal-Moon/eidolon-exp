@@ -20,6 +20,7 @@ class ItemConfig extends Component {
     let lang = userConfig.get('lang');
     db.getCrystals().then(items=>{
       items.forEach(c=>{ c.selected = ids.includes(String(c.id)) });
+      items=items.sort((a,b)=> b.id - a.id)
       //console.log('items para lista', items)
       this.setState({ items, lang })
     })
@@ -27,8 +28,8 @@ class ItemConfig extends Component {
 
   handlerItem(e){
     let id = e.currentTarget.value;
-    //console.log('el id elejido',id)
-    userConfig.setCrystals(id)
+    console.dir(e.currentTarget.checked)
+    userConfig.setCrystals(id, e.currentTarget.checked)
     
     let items = this.state.items;
     items.forEach(i=>{

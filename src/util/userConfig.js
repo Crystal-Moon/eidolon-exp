@@ -1,7 +1,7 @@
 
 const DEFAULTS = {
 	lang: 'br',
-	crystals: '',
+	crystals: '6,7,8,9,10',
 
 }
 
@@ -10,12 +10,19 @@ export default {
 	
 	set: (key, value) => localStorage.setItem(key, value),
 
-	getCrystals: () => (localStorage.getItem('crystals') || '').split(','),
+	getCrystals: () => (localStorage.getItem('crystals') || DEFAULTS.crystals).split(','),
 
-	setCrystals: (id) => {
+	setCrystals: (id, put) => {
 
-		let ids = (localStorage.getItem('crystals') || '').split(',')
+		let ids = (localStorage.getItem('crystals') || DEFAULTS.crystals).split(',')
+		/*
 		if(ids.includes(id)){
+			
+			ids.splice(ids.indexOf(id), 1)
+		}else {
+			ids.push(id)
+		}*/
+		if(!put){
 			
 			ids.splice(ids.indexOf(id), 1)
 		}else {
