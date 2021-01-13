@@ -1,5 +1,6 @@
 
 import { Component, createRef } from 'react';
+import { Event } from '../util/Event';
 
 class SpecialInput extends Component{
   constructor(){
@@ -10,7 +11,6 @@ class SpecialInput extends Component{
 	this.inputCursor = createRef();
 	this.state = {
 		value: '',
-		
 		int: '',
 		dec: ''
 	}
@@ -31,14 +31,14 @@ class SpecialInput extends Component{
   }
 
   handlerInput(e){
-  	console.log('el value sin repl', e.target.value)
+  	//console.log('el value sin repl', e.target.value)
 
   	//let value = e.target.value//.replace(/[\.\,\-\_]/g,'');
   	//e.target.value = value;
 
   	let value = (e.target.validity.valid) ? e.target.value : this.state.value;
 
-  	console.log('el value c/ rpl', value, value.length)
+  	//console.log('el value c/ rpl', value, value.length)
 
 	let int='';
 	let dec='';
@@ -65,10 +65,11 @@ class SpecialInput extends Component{
 		dec=this.state.dec;
 	}
 
-	console.log('value final', value, int, dec)
+	//console.log('value final', value, int, dec)
 
 
   	this.setState({ value, int, dec });
+  	Event.emit('percent',{ percent: value })
 
 
 
