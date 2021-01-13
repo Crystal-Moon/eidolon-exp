@@ -2,8 +2,8 @@
   {
   	"id": 1,
   	"name":{
-  		"es": "Polvo de EXP de Eidolon",
-      "br": "Polvo de EXP de Eidolon",
+  		"es": "Polvo de Cristal EXP",
+      "br": "Polvo de Cristal EXP",
   		"en": "Crystallized Experience Dust",
   		"fr": "Cristal pulvérisé d'EXP pour Eidolon",
   		"de": "polvo en alemna"
@@ -15,8 +15,8 @@
   {
     "id": 2,
     "name":{
-      "es": "Fragmento de crystal de EXP de Eidolon",
-      "br": "Fragmento de crystal de EXP de Eidolon",
+      "es": "Fragmento de Cristal de Experiencia",
+      "br": "Fragmento de Cristal de Experiencia",
       "en": "Crystallized Experience Fragments",
       "fr": "Cristal fragmenté d'EXP pour Eidolon",
       "de": "frags en aleman"
@@ -28,8 +28,8 @@
   {
     "id": 3,
     "name":{
-      "es": "Crystal de Eidolon Pequeño",
-      "br": "Crystal de Eidolon Pequeño",
+      "es": "Cristal EXP de Eidolon Pequeño",
+      "br": "Cristal EXP de Eidolon Pequeño",
       "en": "Small Experience Crystal",
       "fr": "Cristal (P) d'EXP pour Eidolon",
       "de": "Eidolon-EP-Kristall (S)"
@@ -41,8 +41,8 @@
   {
     "id": 4,
     "name":{
-      "es": "Cristal de Eidolon mediano",
-      "br": "Cristal de Eidolon mediano",
+      "es": "Cristal EXP de Eidolons mediano",
+      "br": "Cristal EXP de Eidolons mediano",
       "en": "Medium Experience Crystal",
       "fr": "Cristal (M) d'EXP pour Eidolon",
       "de": "Eidolon-EP-Kristall (M)"
@@ -54,8 +54,8 @@
   {
     "id": 5,
     "name":{
-      "es": "Cristal de Eidolon Grande",
-      "br": "Cristal de Eidolon Grande",
+      "es": "Cristal EXP de Eidolons Grande",
+      "br": "Cristal EXP de Eidolons Grande",
       "en": "Large Experience Crystal",
       "fr": "Cristal (G) d'EXP pour Eidolon",
       "de": "Eidolon-EP-Kristall (G)"
@@ -67,8 +67,8 @@
   {
     "id": 6,
     "name":{
-      "es": "Crystal de EXP de Eidolon Perfecto",
-      "br": "Crystal de EXP de Eidolon Perfecto",
+      "es": "Crystal EXP Eidolon Perfecto",
+      "br": "Crystal EXP Eidolon Perfecto",
       "en": "Pure Experience Crystal",
       "fr": "Cristal parfait d'EXP pour Eidolon",
       "de": "Eidolon-EP-Kristall (100%)"
@@ -80,8 +80,8 @@
   {
     "id": 7,
     "name":{
-      "es": "Cristal de EXP de Eidolon Brillante",
-      "br": "Cristal de EXP de Eidolon Brillante",
+      "es": "Cristal EXP de Eidolon Brillante",
+      "br": "Cristal EXP de Eidolon Brillante",
       "en": "Dazzling Eidolon XP Crystal",
       "fr": "Cristal d'EXP éclatant pour Eidolon",
       "de": "Funkelnder Eidolon-EP-Kristall"

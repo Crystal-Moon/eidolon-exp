@@ -8,7 +8,7 @@ import Item from "./Item";
 class ItemConfig extends Component {
   constructor(){
     super();
-
+    this.handlerItem = this.handlerItem.bind(this);
     this.state = {
       items: [],
       lang: 'es'
@@ -16,16 +16,25 @@ class ItemConfig extends Component {
   }
 
   componentDidMount(){
-    let ids = userConfig.get('crystals').split(',');
+    let ids = userConfig.getCrystals();
     let lang = userConfig.get('lang');
     db.getCrystals().then(items=>{
-      items.forEach(c=>{
-        c.selected = ids.includes(String(c.id));
-        
-      });
-      console.log('items para lista', items)
+      items.forEach(c=>{ c.selected = ids.includes(String(c.id)) });
+      //console.log('items para lista', items)
       this.setState({ items, lang })
     })
+  }
+
+  handlerItem(e){
+    let id = e.currentTarget.value;
+    //console.log('el id elejido',id)
+    userConfig.setCrystals(id)
+    
+    let items = this.state.items;
+    items.forEach(i=>{
+      if(i.id==id) i.selected= !i.selected;
+    });
+    this.setState({ items })
   }
 
   render() {
@@ -63,16 +72,13 @@ class ItemConfig extends Component {
                 <input
                   className="form-check-input"
                   type="checkbox"
-                  checked={Boolean(i.selected)}
+                  checked={i.selected}
                   id={"flexCheckDefault"+i.id}
                   value={i.id}
+                  onChange={this.handlerItem}
                 />
                 <label className="form-check-label" htmlFor={"flexCheckDefault"+i.id}>
-                  
                   <Item item={i} lang={this.state.lang} />
-                  
-                  
-
                 </label>
               </div>
               )}

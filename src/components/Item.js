@@ -6,7 +6,7 @@ class Item extends Component {
     super();
   }
   render() {
-    console.log('props',this.props)
+    //console.log('props',this.props)
     const { icon='', name={}, id=0, qlty='white' } = this.props.item;
     const lang = this.props.lang || 'en';
 
