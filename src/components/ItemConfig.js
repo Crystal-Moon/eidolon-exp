@@ -73,18 +73,18 @@ class ItemConfig extends Component {
               <div class="alert-container">
                 <div class="alert-div">
                   <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <span data-lang="es">Debes tener al menos un item seleccionado.</span>
-                    <span data-lang="en">Debes tener al menos un item seleccionado.</span>
-                    <span data-lang="de">Debes tener al menos un item seleccionado.</span>
-                    <span data-lang="fr">Debes tener al menos un item seleccionado.</span>
-                    <span data-lang="br">Debes tener al menos un item seleccionado.</span>
+                    <span data-lang="es">Debes seleccionar al menos un item.</span>
+                    <span data-lang="en">You must select at least one item.</span>
+                    <span data-lang="de">Sie müssen mindestens einen Artikel auswählen.</span>
+                    <span data-lang="fr">Vous devez sélectionner au moins un élément.</span>
+                    <span data-lang="br">Você deve selecionar pelo menos um item.</span>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>
                 </div>
               </div>
               : <div></div>
               }
-              
+
               { this.state.items.map((i,k)=>
               <div className="form-check" key={k}>
                 <input

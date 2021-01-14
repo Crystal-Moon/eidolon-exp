@@ -2,6 +2,7 @@
 import { Component } from 'react';
 import { Event } from '../util/Event';
 import db from '../util/db';
+import calculator from '../util/calculator';
 
 import SpecialInput from './SpecialInput';
 
@@ -10,16 +11,19 @@ class Calculator extends Component {
     super();
     this.handlerSubmit = this.handlerSubmit.bind(this);
     this.handlerInput = this.handlerInput.bind(this);
-    this.setPercernt = this.setPercernt.bind(this);
+    this.setPercent = this.setPercent.bind(this);
     this.state = {
       lvl: '',
       percent: 0,
       lvlTo: ''
     }
-    Event.on('percent', this.setPercernt);
+    Event.on('percent', this.setPercent);
   }
 
-  setPercernt({ percent }){
+  setPercent({ value }){
+    //console.log('el valuee q llega', value, typeof value, value.length)
+    let percent = parseInt(value.split('').concat(new Array(5 - value.length).fill('0')).join(''))
+    //console.log('el value a state', percent)
     this.setState({ percent })
   }
 
@@ -36,6 +40,23 @@ class Calculator extends Component {
     e.preventDefault();
     //console.log('el target en submit', e.target);
     console.log('el json', this.state)
+    let lvl = this.state.lvl;
+    let lvlTo = this.state.lvlTo;
+    let percent = this.state.percent;
+
+    const exp = await db.getExp().then(x=>x);
+
+    let expTotalEido = exp[String(lvl)].total + ( exp[String(parseInt(lvl)+1)].xp / 100000 * percent );
+    let expNecesaria = exp[String(lvlTo)].total - expTotalEido;
+    let expNecesaria1 = expNecesaria;
+
+    let obj = await calculator({ 
+      xpEido: expTotalEido, 
+      xpNeed: expNecesaria, 
+      //percent: this.state.percent
+    })
+
+    Event.emit('needs', obj);
 
     /*
     db.getCrystalsUser()
@@ -48,7 +69,7 @@ class Calculator extends Component {
       /*
       
       */
-//    let { user, exp } = await db.getCrystalsUser().then(async user=>({ user, exp: await db.getExp().then(x=>x) }))
+/*
       let user = await db.getCrystalsUser().then(u=>u);
       let exp = await db.getExp().then(x=>x);
       
@@ -60,7 +81,7 @@ class Calculator extends Component {
     console.log('el user', user)
         //console.log('el exp', exp)
 
-      let expTotalEido = exp[String(lvl)].total + ( exp[String(parseInt(lvl)+1)].xp / 100 * percent );
+      let expTotalEido = exp[String(lvl)].total + ( exp[String(parseInt(lvl)+1)].xp / 100000 * percent );
       let expNecesaria = exp[String(lvlTo)].total - expTotalEido;
       let expNecesaria1 = expNecesaria;
       let N = {};
@@ -70,16 +91,17 @@ class Calculator extends Component {
       for (; expNecesaria > 0;){
         //console.log('el user c',user[c])
       if(!user[c]){
-        console.log('no hay user c',c, user[c])
+        console.log('no hay user c',c, user[c], user[c-1])
 
-        if(N[key].cant) N[key].cant++
-        else N[key].pack++
+        //if(N[key].cant) N[key].cant++
+        //else N[key].pack++
+        N[key].cant++
         expNecesaria=0;
       }else{
         key=String(user[c].id);
 
 
-        if(!N[key]) N[key] = { cant: 0, pack: 0 };
+        if(!N[key]) N[key] = { cant: 0, pack: 0, item: user[c] };
         if(expNecesaria >= user[c].xp){
           N[key].cant++;
           expNecesaria -= user[c].xp;
@@ -100,8 +122,9 @@ class Calculator extends Component {
       console.log(expTotalEido, expNecesaria1)
       console.log(N)
   
-
-
+*/
+    console.log('el obj', obj)
+      //Event.emit('needs', { N, xpEido: expTotalEido, xpNeed: expNecesaria1 });
 
   }
 
@@ -132,23 +155,23 @@ class Calculator extends Component {
           <div className="card-body">
             <p data-lang="es">Indica el nivel actual del Eidolon y el nivel a cual quieres
               llegar para saber cuales y cuantos cristales necesitas (emoji)</p>
-            <p data-lang="en">Indica el nivel actual del Eidolon y el nivel a cual quieres
-              llegar para saber cuales y cuantos cristales necesitas (emoji)</p>
-            <p data-lang="fr">Indica el nivel actual del Eidolon y el nivel a cual quieres
-              llegar para saber cuales y cuantos cristales necesitas (emoji)</p>
-            <p data-lang="de">Indica el nivel actual del Eidolon y el nivel a cual quieres
-              llegar para saber cuales y cuantos cristales necesitas (emoji)</p>
-            <p data-lang="br">Indica el nivel actual del Eidolon y el nivel a cual quieres
-              llegar para saber cuales y cuantos cristales necesitas (emoji)</p>
+            <p data-lang="en">Indicate the current level of the Eidolon and the level you want 
+              to reach to know which and how many crystals you need (emoji)</p>
+            <p data-lang="fr">Indiquez le niveau actuel de l'Eidolon et le niveau que vous 
+            souhaitez atteindre pour savoir de quels cristaux et combien de cristaux vous avez besoin (emoji)</p>
+            <p data-lang="de">Geben Sie die aktuelle Stufe des Eidolons und die Stufe an, 
+              die Sie erreichen möchten, um zu wissen, welche und wie viele Kristalle Sie benötigen (emoji)</p>
+            <p data-lang="br">Indique o nível atual do Eidolon e o nível que você deseja atingir 
+              para saber quais e quantos cristais você precisa (emoji)</p>
             <form onSubmit={this.handlerSubmit}>
               <div className="row g-3 mb-2 align-items-center">
                 <div className="col-auto">
                   <label htmlFor="lvl" className="col-form-label">
                     <span data-lang="es">Nivel del Eidolon:</span>
-                    <span data-lang="en">Nivel del Eidolon:</span>
-                    <span data-lang="de">Nivel del Eidolon:</span>
-                    <span data-lang="fr">Nivel del Eidolon:</span>
-                    <span data-lang="br">Nivel del Eidolon:</span>
+                    <span data-lang="en">Level of Eidolon:</span>
+                    <span data-lang="de">Eidolon-Spiegel:</span>
+                    <span data-lang="fr">Niveau d'Eidolon:</span>
+                    <span data-lang="br">Nível de Eidolon:</span>
                   </label>
                 </div>
                 <div className="col-sm-3">

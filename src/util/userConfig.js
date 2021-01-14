@@ -1,7 +1,7 @@
 
 const DEFAULTS = {
 	lang: 'br',
-	crystals: '6,7,8,9,10',
+	crystals: '6,7,8,9',
 
 }
 

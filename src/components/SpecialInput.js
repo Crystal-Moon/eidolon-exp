@@ -69,7 +69,7 @@ class SpecialInput extends Component{
 
 
   	this.setState({ value, int, dec });
-  	Event.emit('percent',{ percent: value })
+  	Event.emit('percent',{ value })
 
 
 
