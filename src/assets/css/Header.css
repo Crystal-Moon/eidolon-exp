@@ -102,6 +102,15 @@
 }
 }
 
+.alert-container{
+	position: absolute;
+    height: 100%;
+    right: 0.7em;
+}
+.alert-div{
+	position: sticky;
+	top:0;
+}
 /****************************/
 .Zoom{
 	margin-top:0.2em;

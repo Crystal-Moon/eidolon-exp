@@ -146,6 +146,9 @@ section{
 	height: auto;
 }
 
+.accordion-body{
+	position:relative;
+}
 .accordion-item:last-of-type .accordion-collapse{
 	border-bottom-width: 0px;
 }

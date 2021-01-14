@@ -11,7 +11,8 @@ class ItemConfig extends Component {
     this.handlerItem = this.handlerItem.bind(this);
     this.state = {
       items: [],
-      lang: 'es'
+      lang: 'es',
+      empty_arr: 0
     }
   }
 
@@ -28,14 +29,14 @@ class ItemConfig extends Component {
 
   handlerItem(e){
     let id = e.currentTarget.value;
-    console.dir(e.currentTarget.checked)
-    userConfig.setCrystals(id, e.currentTarget.checked)
-    
+    let empty_arr = userConfig.setCrystals(id, e.currentTarget.checked)
     let items = this.state.items;
+
     items.forEach(i=>{
       if(i.id==id) i.selected= !i.selected;
+      if(i.id==empty_arr) i.selected=true;
     });
-    this.setState({ items })
+    this.setState({ items, empty_arr })
   }
 
   render() {
@@ -68,6 +69,22 @@ class ItemConfig extends Component {
             data-bs-parent="#accordionConfigItem"
           >
             <div className="accordion-body">
+              { this.state.empty_arr?
+              <div class="alert-container">
+                <div class="alert-div">
+                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <span data-lang="es">Debes tener al menos un item seleccionado.</span>
+                    <span data-lang="en">Debes tener al menos un item seleccionado.</span>
+                    <span data-lang="de">Debes tener al menos un item seleccionado.</span>
+                    <span data-lang="fr">Debes tener al menos un item seleccionado.</span>
+                    <span data-lang="br">Debes tener al menos un item seleccionado.</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                </div>
+              </div>
+              : <div></div>
+              }
+              
               { this.state.items.map((i,k)=>
               <div className="form-check" key={k}>
                 <input

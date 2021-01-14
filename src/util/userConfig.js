@@ -15,6 +15,7 @@ export default {
 	setCrystals: (id, put) => {
 
 		let ids = (localStorage.getItem('crystals') || DEFAULTS.crystals).split(',')
+		//console.log('los ids traidos',ids)
 		/*
 		if(ids.includes(id)){
 			
@@ -29,8 +30,16 @@ export default {
 			ids.push(id)
 		}
 
-		localStorage.setItem('crystals', ids.join())
-		return ids;
+
+		//console.log('el arr despues del put', ids)
+		if(!ids.length) return id;
+		else{
+			localStorage.setItem('crystals', ids.join())
+			return 0;
+		}
+
+		
+		
 	}
 
 }
