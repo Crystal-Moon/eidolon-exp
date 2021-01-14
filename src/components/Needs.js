@@ -145,11 +145,11 @@ class Needs extends Component {
                   <div className="col-3">
                     <div className="justify-content-around row need-btns">
                       <button
-                        type="button" data-action={i.cant>100?100:1} data-id={i.id} onClick={this.handlerBtn}
+                        type="button" data-action={i.cant>=100?100:1} data-id={i.id} onClick={this.handlerBtn}
                         className="btn col-auto col-sm-auto need-btn btn-primary"
                       >+{i.cant}</button>
                       <button
-                        type="button" data-action={(i.cant>=100?(100):(1))*(-1)} data-id={i.id} onClick={this.handlerBtn}
+                        type="button" data-action={(i.cant>100?(100):(1))*(-1)} data-id={i.id} onClick={this.handlerBtn}
                         className="btn col-auto col-sm-auto need-btn btn-primary"
                       >-{i.cant}</button>
                     </div>

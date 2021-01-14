@@ -42,6 +42,7 @@ export default async({ xpEido, xpNeed, limits }) =>{
           }
         }else if(N[key].cant>100){
         	let resto = N[key].cant % 100;
+        	console.log('el resto', resto)
         	N[key].cant -= resto;
 
           	xpNeed += user[c].xp * resto
