@@ -39,7 +39,7 @@ class Calculator extends Component {
   async handlerSubmit(e){
     e.preventDefault();
     //console.log('el target en submit', e.target);
-    console.log('el json', this.state)
+    //console.log('el json', this.state)
     let lvl = this.state.lvl;
     let lvlTo = this.state.lvlTo;
     let percent = this.state.percent;
@@ -48,7 +48,7 @@ class Calculator extends Component {
 
     let expTotalEido = exp[String(lvl)].total + ( exp[String(parseInt(lvl)+1)].xp / 100000 * percent );
     let expNecesaria = exp[String(lvlTo)].total - expTotalEido;
-    let expNecesaria1 = expNecesaria;
+    
 
     let obj = await calculator({ 
       xpEido: expTotalEido, 
@@ -56,7 +56,15 @@ class Calculator extends Component {
       //percent: this.state.percent
     })
 
-    Event.emit('needs', obj);
+    let need = []
+    let N=obj.need;
+    for (let k in N){
+      need.push({ id: k, cant: N[k].cant, pack: N[k].pack, item: N[k].item })
+    }
+
+    console.log('el need ue va desde calcul a need', need)
+
+    Event.emit('needs', { need, xpEido: expTotalEido, xpNeed:expNecesaria });
 
     /*
     db.getCrystalsUser()

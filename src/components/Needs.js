@@ -18,30 +18,58 @@ class Needs extends Component {
       xpEido: 0,
       xpNeed: 0,
       needMore: 0,
-      limits: {}
+      limits: {
+        '1':0,
+        '2':0,
+        '3':0,
+        '4':0,
+        '5':0,
+        '6':0,
+        '7':0,
+        '8':0,
+        '9':0,
+        '10':0,
+        '11':0,
+      }
     }
 
     Event.on('needs', this.needConst);
 
   }
 
-  async handlerBtn({ target }){
+  handlerBtn({ target }){
     let action = parseInt(target.dataset.action);
     let id = target.dataset.id;
 
     let limits = this.state.limits;
  
-    limits[id].cant += action
+    limits[String(id)].cant += action
 
     console.log('el limits en btn', limits)
+    this.reCalculate({ limits, id })
+
+  }
+
+  needConst({ need, xpEido, xpNeed }){
+    //let need = []
+    //for (let k in N){
+    //  need.push({ id: k, cant: N[k].cant, pack: N[k].pack, item: N[k].item })
+    //}
+    //console.log('el need a state', need)
+    this.setState({ need, xpNeed, xpEido })
+  }
+
+  async reCalculate({ limits, id }){
+
+
     let obj = await calculator({ 
       xpEido: this.state.xpEido, 
       xpNeed: this.state.xpNeed, 
-      limits
+      limits, toq:id
     })
     //this.reCalculate({ limits })
 
-    console.log('el need de state', this.state.need)
+    //console.log('el need de state', this.state.need)
     console.log('el obj  de calc', obj)
 
     let need = []
@@ -50,57 +78,10 @@ class Needs extends Component {
       need.push({ id: k, cant: N[k].cant, pack: N[k].pack, item: N[k].item })
     }
 
+    let { ...limits1 } = limits
+    console.log('el limit que se seta', limits1)
+    this.setState({ limits: limits1, need })
 
-    this.setState({ limits, need })
-
-  }
-
-  needConst({ need: N, xpEido, xpNeed }){
-    let need = []
-    for (let k in N){
-      need.push({ id: k, cant: N[k].cant, pack: N[k].pack, item: N[k].item })
-    }
-    //console.log('el need a state', need)
-    this.setState({ need, xpNeed, xpEido, limits: N })
-  }
-
-  reCalculate({ limits }){
-
-    //console.log('el limits', limits)
-/*
-    let key='';
-    let c=0
-      
-    for (; expNecesaria > 0;){
-        //console.log('el user c',user[c])
-      if(!user[c]){
-        console.log('no hay user c',c, user[c], user[c-1])
-
-        //if(N[key].cant) N[key].cant++
-        //else N[key].pack++
-        N[key].cant++
-        expNecesaria=0;
-      }else{
-        key=String(user[c].id);
-
-
-        if(!N[key]) N[key] = { cant: 0, pack: 0, item: user[c] };
-        if(expNecesaria >= user[c].xp){
-          N[key].cant++;
-          expNecesaria -= user[c].xp;
-          if(N[key].cant>=100){
-            N[key].pack++;
-            N[key].cant=0;
-          }
-        }else if(N[key].cant>0 && N[key].pack){
-          expNecesaria += user[c].xp * N[key].cant
-          N[key].cant=0;
-          c++
-        }else c++
-        //console.log('N en cada vuelta',N, expNecesaria)
-      }
-    }
-*/
 
   }
 
