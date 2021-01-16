@@ -7,7 +7,7 @@ export default async({ xpEido, xpNeed, limits, toq }) =>{
   //const exp = await db.getExp().then(x=>x);
       
  
-    //console.log('el user', user)
+    console.log('el user', user)
     console.log('los limit q llegan al calcul',limits)
         //console.log('el exp', exp)
 
@@ -37,6 +37,7 @@ export default async({ xpEido, xpNeed, limits, toq }) =>{
           N[key].cant++;
           xpNeed -= user[c].xp;
           //if(limits) console.log('el limits key en cada vuelta', limits[key])
+          /*
           if(limits && N[key].cant>=limits[key].cant){
             //N[key].pack++;
             //N[key].cant=0;
@@ -53,7 +54,7 @@ export default async({ xpEido, xpNeed, limits, toq }) =>{
 
 
           	c++;
-          }
+          }*/
         }else if(N[key].cant>100){
         	let resto = N[key].cant % 100;
         	console.log('el resto', resto)

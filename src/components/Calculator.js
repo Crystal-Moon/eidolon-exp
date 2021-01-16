@@ -61,6 +61,7 @@ class Calculator extends Component {
     for (let k in N){
       need.push({ id: k, cant: N[k].cant, pack: N[k].pack, item: N[k].item })
     }
+    need.sort((a,b)=>b.id - a.id)
 
     console.log('el need ue va desde calcul a need', need)
 
