@@ -2,6 +2,7 @@
 import { Component } from 'react';
 import { Event } from '../util/Event';
 import calculator from '../util/calculator';
+import db from '../util/db';
 
 // component
 import United from "./United";
@@ -17,9 +18,8 @@ class Needs extends Component {
       need: [],
       xpEido: 0,
       xpNeed: 0,
-      needMore: 0,
-      limits: { 
-      /*  tag: 0,
+      needMore: false,
+      limits: {
         '1': 0,
         '2': 0,
         '3': 0,
@@ -29,13 +29,18 @@ class Needs extends Component {
         '7': 0,
         '8': 0,
         '9': 0,
-        '10': 0 */
+        '10': 0 
        },
-      change: {}
+      change: {},
+      user: []
     }
 
     Event.on('needs', this.needConst);
 
+  }
+
+  componentDidMount(){
+    db.getCrystalsUser().then(user=> this.setState({ user }));
   }
 
   needConst({ need, xpEido, xpNeed, limits }){
@@ -48,8 +53,10 @@ class Needs extends Component {
   }
 
   handlerBtn({ target }){
+    /*
     let action = parseInt(target.dataset.action);
     let id = String(target.dataset.id);
+    console.dir('el limits de state', this.state.limits)
 
     let limits = this.state.limits;
     console.log('el limits de state en btn', limits)
@@ -60,14 +67,40 @@ class Needs extends Component {
 
     console.log('el change en btn', change)
     console.log('el limits de state en btn', limits)
-    this.setState({ change })
-    this.reCalculate({ limits, id, change })
+    this.setState({ change, limits })
+    //this.reCalculate({ limits, id, change })
+    this.reCalculate()
+    */
+    let action = parseInt(target.dataset.action);
+    let id = String(target.dataset.id);
+    console.log('el limits de state', this.state.limits)
+
+    let limits = this.state.limits;
+    //console.log('el limits de state en btn', limits)
+ 
+    let change ={} // seguro se borre todo change
+    
+    /*
+    for(let l in limits) {
+      if(parseInt(l)<parseInt(id)) limits[l]=Infinity;
+    }
+    */
+
+    limits[id] += action
+    
+
+    //console.log('el change en btn', change)
+    console.log('el limits de state en btn', limits)
+    this.setState({ change, limits })
+    //this.reCalculate({ limits, id, change })
+    this.reCalculate(id)
 
   }
 
-  async reCalculate({ limits, id, change }){
+  async reCalculate(/*{ limits, id, change }*/changeId){
 
 
+    /*
     let obj = await calculator({ 
       xpEido: this.state.xpEido, 
       xpNeed: this.state.xpNeed, 
@@ -78,7 +111,95 @@ class Needs extends Component {
 
     //console.log('el need de state', this.state.need)
     console.log('el obj  de calc', obj)
+    */
+    //-----------------------------------------
+    console.log('el state con que empiezo recalculate ', this.state)
+    let { user, change } = this.state; 
+  //const exp = await db.getExp().then(x=>x);
+    let { ...limits } = this.state.limits;
+    let needMore = this.state.needMore;
+    let xpNeed = this.state.xpNeed;
 
+      
+    for(let l in limits) {
+      if(parseInt(l)<parseInt(changeId)) limits[l]=Infinity;
+    }
+ 
+    //console.log('el user', user)
+  //console.log('ell change q llega', change)
+    //console.log('los limit q llegan al calcul',limits)
+        //console.log('el exp', exp)
+
+  //  let expTotalEido = exp[String(lvl)].total + ( exp[String(parseInt(lvl)+1)].xp / 100000 * percent );
+  //  let expNecesaria = exp[String(lvlTo)].total - expTotalEido;
+    //let expNecesaria1 = xpNeed;
+    let N = {};
+
+    let k='';
+    let c=0;
+   // needMore = false;
+
+    while(xpNeed > 0){
+        //console.log('el user c',user[c])
+      if(!user[c]){
+        console.log('entro al ultima vuelta', xpNeed, 'la k', k)
+        console.log('el N es',N)
+        xpNeed -= user[c-1].xp
+        
+        //N[k].cant++;
+       // if(N[k].cant < limits[k]) N[k].cant++;
+        //else needMore=true;
+        needMore = Boolean(xpNeed > 0)
+        
+        console.log('sumo uno y resto la xp', xpNeed)
+
+        //needMore = Boolean(xpNeed > 0)
+        console.log('llege al final ', needMore)
+        xpNeed=0;
+      }else{
+        k=String(user[c].id);
+
+        if(!N[k]) N[k] = { id: k, cant: 0, item: user[c] };
+        //if(xpNeed >= user[c].xp || (change && N[k].cant <= change.cant)){
+        if(xpNeed >= user[c].xp || N[k].cant < limits[k]){
+          N[k].cant++;
+          xpNeed -= user[c].xp;
+
+        
+        
+        }else if(N[k].cant>100){
+          let resto = N[k].cant % 100;
+          //console.log('el resto', resto)
+          N[k].cant -= resto;
+
+            xpNeed += user[c].xp * resto
+          //N[k].cant=0;
+            c++
+        //}else if(change && change.cant > N[k].cant && change.id==k){
+          //console.log('en el if',change)
+       //   N[k].cant = change.cant;
+        //  c++;
+
+        }else c++
+        //console.log('N en cada vuelta',N, expNecesaria)
+      }
+      //console.log('N en vuelta',N)
+    }
+
+/*
+    if(change && change.cant > N[change.id].cant && change.id == k){
+      console.log('en el if final',change)
+      N[change.id].cant=change.cant;
+    }
+*/
+      //console.log('despues del for')
+      ///console.log(xpEido, expNecesaria1)
+      console.log('N',N)
+  
+  //---------------------------------------------
+
+    let need = Object.values(N);
+/*
     let need = [], limits1 = {}
     let N = obj.need;
     for (let k in N){
@@ -86,12 +207,22 @@ class Needs extends Component {
       console.log('el limits en cada vuelta', limits1)
       need.push({ id: k, cant: N[k].cant, pack: N[k].pack, item: N[k].item })
     }
+    */
     need.sort((a,b)=>b.id - a.id)
-
+    let newLimits = {}
+    for (let k in N){
+      newLimits[k]=N[k].cant;
+    //  console.log('el limits en cada vuelta', limits1)
+     // need.push({ id: k, cant: N[k].cant, pack: N[k].pack, item: N[k].item })
+    }
     //let { ...limits1 } = limits
-    console.log('el limit que se seta', limits1)
-    this.setState({ limits: limits1, need })
+    //console.log('el limit que se seta', limits1)
+    console.log('el need a setear', need, needMore, xpNeed)
+    console.log('la exp de state', this.state.xpNeed)
+    console.log('newLimits', newLimits)
+    this.setState({ need, needMore, limits: newLimits })
 
+    //console.log('el lkimist del state', this.state.limits)
 
   }
 
@@ -138,11 +269,11 @@ class Needs extends Component {
                       <button
                         type="button" data-action={i.cant>=100?100:1} data-id={i.id} onClick={this.handlerBtn}
                         className="btn col-auto col-sm-auto need-btn btn-primary"
-                      >+{i.cant}</button>
+                      >+{i.cant>=100?100:1}</button>
                       <button
                         type="button" data-action={(i.cant>100?(100):(1))*(-1)} data-id={i.id} onClick={this.handlerBtn}
                         className="btn col-auto col-sm-auto need-btn btn-primary"
-                      >-{i.cant}</button>
+                      >-{(i.cant>100?(100):(1))*(-1)}</button>
                     </div>
                   </div>
                   <div className="col-9">

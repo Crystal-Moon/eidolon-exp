@@ -43,31 +43,94 @@ class Calculator extends Component {
     let lvlTo = this.state.lvlTo;
     let percent = this.state.percent;
 
+    const user = await db.getCrystalsUser().then(u=>u);
     const exp = await db.getExp().then(x=>x);
 
-    let expTotalEido = exp[String(lvl)].total + ( exp[String(parseInt(lvl)+1)].xp / 100000 * percent );
-    let expNecesaria = exp[String(lvlTo)].total - expTotalEido;
-    
+    let xpEido = exp[String(lvl)].total + ( exp[String(parseInt(lvl)+1)].xp / 100000 * percent );
+    let xpNeed = exp[String(lvlTo)].total - xpEido;
+    let expNecesaria = xpNeed;
+    let N = {};
 
-    let obj = await calculator({ 
-      xpEido: expTotalEido, 
+    let key='';
+    let c=0;
+    let needMore = false;
+
+    while(xpNeed > 0){
+      if(!user[c]){
+        xpNeed -= user[c-1].xp
+         N[key].cant++;
+         needMore = Boolean(xpNeed > 0)
+         xpNeed=0;
+      }else{
+        key=String(user[c].id);
+        if(!N[key]) N[key] = { cant: 0, pack: 0, item: user[c] };
+        //if(xpNeed >= user[c].xp || (change && N[key].cant <= change.cant)){
+        if(xpNeed >= user[c].xp){
+          N[key].cant++;
+          xpNeed -= user[c].xp;
+
+        //  if(change && N[key].cant >= change.cant && parseInt(change.id) >= parseInt(key)) c++;
+         // else if(change && N[key].cant < change.cant && key == change.id){
+       //   console.log('el el nuevo if', key, change)
+          //N[key].cant = change.cant;
+          //c++;
+       // }
+          //if(limits) console.log('el limits key en cada vuelta', limits[key])
+          /*
+          if(limits && N[key].cant>=limits[key].cant){
+            //N[key].pack++;
+            //N[key].cant=0;
+            console.log('dentro de resto',limits[key])
+            console.log('el key',key)
+            console.log('echi string +1 ', (user[c+1]||user[c]).id)
+            limits[String((user[c+1]||user[c]).id)].cant=100;
+            
+            let resto = N[key].cant % 100;
+          console.log('el resto', resto)
+          N[key].cant -= resto;
+
+            xpNeed += user[c].xp * resto;
+
+
+            c++;
+          }*/
+        }else if(N[key].cant>100){
+          let resto = N[key].cant % 100;
+          //console.log('el resto', resto)
+          N[key].cant -= resto;
+
+            xpNeed += user[c].xp * resto
+          //N[key].cant=0;
+            c++
+        //}else if(change && change.cant > N[key].cant && change.id==key){
+          //console.log('en el if',change)
+       //   N[key].cant = change.cant;
+        //  c++;
+
+        }else c++
+        //console.log('N en cada vuelta',N, expNecesaria)
+      }
+    }
+
+    /*let obj = await calculator({ 
+      xpEido: xpEido, 
       xpNeed: expNecesaria, 
       //percent: this.state.percent
-    })
+    })*/
 
-    console.log('el objs en calculator', obj)
+  //  console.log('el objs en calculator', obj)
     let need = [], limits={}
-    let N=obj.need;
+  //  let N=obj.need;
     for (let k in N){
-      limits[N[k].id] = N[k].cant;
+      limits[String(k)] = N[k].cant;
       console.log('limits  en vueltta, calculator', limits)
       need.push({ id: k, cant: N[k].cant, pack: N[k].pack, item: N[k].item })
     }
     need.sort((a,b)=>b.id - a.id)
 
-    console.log('el need ue va desde calcul a need', need, limits)
+    console.log('el need ue va desde calcul a need',{ need, limits, needMore})
 
-    Event.emit('needs', { need, xpEido: expTotalEido, xpNeed:expNecesaria, limits: limits });
+    Event.emit('needs', { need, xpEido, xpNeed: expNecesaria, limits });
   }
 
   render() {
