@@ -63,8 +63,8 @@ main{
 	height:100%;
 	width:100%;
 	position: fixed;
-	margin: 0!important;
-	padding: 0!important;
+	margin: 0 !important;
+	padding: 0 !important;
 	/* padding-top: 5em; */
 	position: relative;
 }
@@ -73,9 +73,9 @@ section{
 	/* position: absolute; */
 	margin:0 !important;
 	padding:0 !important;
-	padding-top: 2em!important;
+	padding-top: 10% !important;
 	overflow: auto;
-	padding-bottom: 3em!important;
+	padding-bottom: 3em !important;
 }
 
 
