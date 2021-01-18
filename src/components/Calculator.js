@@ -55,17 +55,19 @@ class Calculator extends Component {
       //percent: this.state.percent
     })
 
+    console.log('el objs en calculator', obj)
     let need = [], limits={}
     let N=obj.need;
     for (let k in N){
-      limits[k] = N[k].cant;
+      limits[N[k].id] = N[k].cant;
+      console.log('limits  en vueltta, calculator', limits)
       need.push({ id: k, cant: N[k].cant, pack: N[k].pack, item: N[k].item })
     }
     need.sort((a,b)=>b.id - a.id)
 
-    //console.log('el need ue va desde calcul a need', need)
+    console.log('el need ue va desde calcul a need', need, limits)
 
-    Event.emit('needs', { need, xpEido: expTotalEido, xpNeed:expNecesaria, limits });
+    Event.emit('needs', { need, xpEido: expTotalEido, xpNeed:expNecesaria, limits: limits });
   }
 
   render() {

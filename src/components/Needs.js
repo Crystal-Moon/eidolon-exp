@@ -79,17 +79,18 @@ class Needs extends Component {
     //console.log('el need de state', this.state.need)
     console.log('el obj  de calc', obj)
 
-    let need = []//, limits = {}
+    let need = [], limits1 = {}
     let N = obj.need;
     for (let k in N){
-      limits[k]=N[k].cant;
+      limits1[k]=N[k].cant;
+      console.log('el limits en cada vuelta', limits1)
       need.push({ id: k, cant: N[k].cant, pack: N[k].pack, item: N[k].item })
     }
     need.sort((a,b)=>b.id - a.id)
 
     //let { ...limits1 } = limits
-    console.log('el limit que se seta', limits)
-    this.setState({ limits: limits, need })
+    console.log('el limit que se seta', limits1)
+    this.setState({ limits: limits1, need })
 
 
   }

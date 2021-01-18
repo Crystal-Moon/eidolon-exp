@@ -27,7 +27,8 @@ export default async({ xpEido, xpNeed, limits, toq, change }) =>{
 
         //if(N[key].cant) N[key].cant++
         //else N[key].pack++
-        N[key].cant++
+        N[key].cant++;
+        console.log('no alcanza')
         xpNeed=0;
       }else{
         key=String(user[c].id);
@@ -35,7 +36,7 @@ export default async({ xpEido, xpNeed, limits, toq, change }) =>{
 
         if(!N[key]) N[key] = { cant: 0, pack: 0, item: user[c] };
         //if(xpNeed >= user[c].xp || (change && N[key].cant <= change.cant)){
-        if(xpNeed >= user[c].xp || (change && N[key].cant <= change.cant)){
+        if(xpNeed >= user[c].xp || (change && change.id==key && N[key].cant <= change.cant)){
           N[key].cant++;
           xpNeed -= user[c].xp;
 
@@ -92,7 +93,7 @@ export default async({ xpEido, xpNeed, limits, toq, change }) =>{
       console.log('N',N)
   
 
-  	return ({ need: N, xpNeed: expNecesaria1, xpEido: xpEido })
+  	return ({ need: N/*, xpNeed: expNecesaria1, xpEido: xpEido*/ })
 
 
 	
