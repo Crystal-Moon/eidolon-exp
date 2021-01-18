@@ -18,69 +18,78 @@ class Needs extends Component {
       xpEido: 0,
       xpNeed: 0,
       needMore: 0,
-      limits: {
-        '1':0,
-        '2':0,
-        '3':0,
-        '4':0,
-        '5':0,
-        '6':0,
-        '7':0,
-        '8':0,
-        '9':0,
-        '10':0,
-        '11':0,
-      }
+      limits: { 
+      /*  tag: 0,
+        '1': 0,
+        '2': 0,
+        '3': 0,
+        '4': 0,
+        '5': 0,
+        '6': 0,
+        '7': 0,
+        '8': 0,
+        '9': 0,
+        '10': 0 */
+       },
+      change: {}
     }
 
     Event.on('needs', this.needConst);
 
   }
 
-  handlerBtn({ target }){
-    let action = parseInt(target.dataset.action);
-    let id = target.dataset.id;
-
-    let limits = this.state.limits;
- 
-    limits[String(id)].cant += action
-
-    console.log('el limits en btn', limits)
-    this.reCalculate({ limits, id })
-
-  }
-
-  needConst({ need, xpEido, xpNeed }){
+  needConst({ need, xpEido, xpNeed, limits }){
     //let need = []
     //for (let k in N){
     //  need.push({ id: k, cant: N[k].cant, pack: N[k].pack, item: N[k].item })
     //}
-    //console.log('el need a state', need)
-    this.setState({ need, xpNeed, xpEido })
+    console.log('lo que llega en needCons', { need, limits })
+    this.setState({ need, xpNeed, xpEido, limits })
   }
 
-  async reCalculate({ limits, id }){
+  handlerBtn({ target }){
+    let action = parseInt(target.dataset.action);
+    let id = String(target.dataset.id);
+
+    let limits = this.state.limits;
+    console.log('el limits de state en btn', limits)
+ 
+    let change = { id, cant: limits[id] + action }
+    limits[id] += action
+    
+
+    console.log('el change en btn', change)
+    console.log('el limits de state en btn', limits)
+    this.setState({ change })
+    this.reCalculate({ limits, id, change })
+
+  }
+
+  async reCalculate({ limits, id, change }){
 
 
     let obj = await calculator({ 
       xpEido: this.state.xpEido, 
       xpNeed: this.state.xpNeed, 
-      limits, toq:id
+      limits, toq:id,
+      change
     })
     //this.reCalculate({ limits })
 
     //console.log('el need de state', this.state.need)
     console.log('el obj  de calc', obj)
 
-    let need = []
+    let need = []//, limits = {}
     let N = obj.need;
     for (let k in N){
+      limits[k]=N[k].cant;
       need.push({ id: k, cant: N[k].cant, pack: N[k].pack, item: N[k].item })
     }
+    need.sort((a,b)=>b.id - a.id)
 
-    let { ...limits1 } = limits
-    console.log('el limit que se seta', limits1)
-    this.setState({ limits: limits1, need })
+    //let { ...limits1 } = limits
+    console.log('el limit que se seta', limits)
+    this.setState({ limits: limits, need })
 
 
   }
