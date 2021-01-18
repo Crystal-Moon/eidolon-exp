@@ -97,7 +97,7 @@ class Needs extends Component {
 
   }
 
-  async reCalculate(/*{ limits, id, change }*/changeId){
+  async reCalculate(changeId){
 
 
     /*
@@ -114,7 +114,7 @@ class Needs extends Component {
     */
     //-----------------------------------------
     console.log('el state con que empiezo recalculate ', this.state)
-    let { user, change } = this.state; 
+    let { user } = this.state; 
   //const exp = await db.getExp().then(x=>x);
     let { ...limits } = this.state.limits;
     let needMore = this.state.needMore;
@@ -161,7 +161,7 @@ class Needs extends Component {
 
         if(!N[k]) N[k] = { id: k, cant: 0, item: user[c] };
         //if(xpNeed >= user[c].xp || (change && N[k].cant <= change.cant)){
-        if(xpNeed >= user[c].xp || N[k].cant < limits[k]){
+        if((xpNeed >= user[c].xp && N[k].cant < limits[k])|| N[k].cant < limits[k]){
           N[k].cant++;
           xpNeed -= user[c].xp;
 
@@ -219,6 +219,7 @@ class Needs extends Component {
     //console.log('el limit que se seta', limits1)
     console.log('el need a setear', need, needMore, xpNeed)
     console.log('la exp de state', this.state.xpNeed)
+    console.log('los limit del state', this.state.limits)
     console.log('newLimits', newLimits)
     this.setState({ need, needMore, limits: newLimits })
 
@@ -295,10 +296,10 @@ class Needs extends Component {
               <div class="alert-div">
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                   <span data-lang="es">Estos cristales no serán suficientes para el nivel que buscas.</span>
-                  <span data-lang="en"></span>
-                  <span data-lang="de"></span>
-                  <span data-lang="fr"></span>
-                  <span data-lang="br"></span>
+                  <span data-lang="en">Estos cristales no serán suficientes para el nivel que buscas.</span>
+                  <span data-lang="de">Estos cristales no serán suficientes para el nivel que buscas.</span>
+                  <span data-lang="fr">Estos cristales no serán suficientes para el nivel que buscas.</span>
+                  <span data-lang="br">Estos cristales no serán suficientes para el nivel que buscas.</span>
                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
               </div>
