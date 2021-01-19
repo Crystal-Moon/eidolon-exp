@@ -1,14 +1,132 @@
 [
   {
-  	"id": 1,
-  	"name":{
-  		"es": "",
-      "br": "es igual al es",
-  		"en": "",
-  		"fr": "",
-  		"de": ""
-  	},
-  	"icon": "http",
-  	"qlty": "blue"
+    "id": 1,
+    "name":{
+      "es": "Polvo de Cristal EXP",
+      "br": "Polvo de Cristal EXP",
+      "en": "Crystallized Experience Dust",
+      "fr": "Cristal pulvérisé d'EXP pour Eidolon",
+      "de": "polvo en alemna"
+    },
+    "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00478.png",
+    "qlty": "blue",
+    "xp": 3000
+  },
+  {
+    "id": 2,
+    "name":{
+      "es": "Fragmento de Cristal de Experiencia",
+      "br": "Fragmento de Cristal de Experiencia",
+      "en": "Crystallized Experience Fragments",
+      "fr": "Cristal fragmenté d'EXP pour Eidolon",
+      "de": "frags en aleman"
+    },
+    "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00479.png",
+    "qlty": "blue",
+    "xp": 6000
+  },
+  {
+    "id": 3,
+    "name":{
+      "es": "Cristal EXP de Eidolon Pequeño",
+      "br": "Cristal EXP de Eidolon Pequeño",
+      "en": "Small Experience Crystal",
+      "fr": "Cristal (P) d'EXP pour Eidolon",
+      "de": "Eidolon-EP-Kristall (S)"
+    },
+    "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00480.png",
+    "qlty": "blue",
+    "xp": 8000
+  },
+  {
+    "id": 4,
+    "name":{
+      "es": "Cristal EXP de Eidolons mediano",
+      "br": "Cristal EXP de Eidolons mediano",
+      "en": "Medium Experience Crystal",
+      "fr": "Cristal (M) d'EXP pour Eidolon",
+      "de": "Eidolon-EP-Kristall (M)"
+    },
+    "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00481.png",
+    "qlty": "blue",
+    "xp": 10000
+  },
+  {
+    "id": 5,
+    "name":{
+      "es": "Cristal EXP de Eidolons Grande",
+      "br": "Cristal EXP de Eidolons Grande",
+      "en": "Large Experience Crystal",
+      "fr": "Cristal (G) d'EXP pour Eidolon",
+      "de": "Eidolon-EP-Kristall (G)"
+    },
+    "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00469.png",
+    "qlty": "blue",
+    "xp": 15000
+  },
+  {
+    "id": 6,
+    "name":{
+      "es": "Cristal EXP Eidolon Perfecto",
+      "br": "Cristal EXP Eidolon Perfecto",
+      "en": "Pure Experience Crystal",
+      "fr": "Cristal parfait d'EXP pour Eidolon",
+      "de": "Eidolon-EP-Kristall (100%)"
+    },
+    "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00464.png",
+    "qlty": "blue",
+    "xp": 20000
+  },
+  {
+    "id": 7,
+    "name":{
+      "es": "Cristal EXP de Eidolon Brillante",
+      "br": "Cristal EXP de Eidolon Brillante",
+      "en": "Dazzling Eidolon XP Crystal",
+      "fr": "Cristal d'EXP éclatant pour Eidolon",
+      "de": "Funkelnder Eidolon-EP-Kristall"
+    },
+    "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I01677.png",
+    "qlty": "blue",
+    "xp": 40000
+  },
+  {
+    "id": 8,
+    "name":{
+      "es": "Cristal de EXP de Eidolon Esplendido",
+      "br": "Cristal de EXP de Eidolon Esplendido",
+      "en": "Gorgeous Eidolons XP Crystal",
+      "fr": "Cristal d'EXP pour Eidolon (Splendide)",
+      "de": "Zauberhafter-Eidolon-EP-Kristall"
+    },
+    "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02464.png",
+    "qlty": "blue",
+    "xp": 400000
+  },
+  {
+    "id": 9,
+    "name":{
+      "es": "Cristal de EXP de Eidolon Arcoiris",
+      "br": "Cristal de EXP de Eidolon Arcoiris",
+      "en": "Eidolon XP Rainbow Crystal",
+      "fr": "Cristal d'EXP Arc-en-ciel pour Eidolon",
+      "de": "Eidolon-EP-Regenbogenkristall"
+    },
+    "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02465.png",
+    "qlty": "blue",
+    "xp": 4000000
+  },
+  {
+    "id": 10,
+    "name":{
+      "es": "Piedra de EXP de Eidolon",
+      "br": "Piedra de EXP de Eidolon",
+      "en": "Eidolon XP Stone",
+      "fr": "Pierre d'EXP pour Eidolon",
+      "de": "Eidolon-EP-Stein"
+    },
+    "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02466.png",
+    "qlty": "blue",
+    "xp": 40000000
   }
 ]
