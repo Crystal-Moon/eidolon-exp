@@ -47,7 +47,9 @@ class Compare extends Component {
     itemB = crystals.find(c=>c.id==itemB);
     cant = unit=='pack'? cant*100 : cant;
 
-    let cantFinal = cant * itemA.xp / itemB.xp;
+    let cantB = cant * itemA.xp / itemB.xp;
+    let cantFinal = cantB.toString().match(/(\d*.\d{0,2})/)[0];
+
     this.setState({ cantFinal })
   }
 

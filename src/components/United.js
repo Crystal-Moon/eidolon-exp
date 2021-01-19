@@ -15,12 +15,12 @@ function United(props) {
       :
       <div className="text-center">
         <span className="badge">{cant}</span>
-        <span>
-          <span className="badge" data-lang="es">unidades</span>
-          <span className="badge" data-lang="en">units</span>
-          <span className="badge" data-lang="de">einheiten</span>
-          <span className="badge" data-lang="fr">unités</span>
-          <span className="badge" data-lang="br">unidades</span>
+        <span className="badge">
+          <span data-lang="es">unidades</span>
+          <span data-lang="en">units</span>
+          <span data-lang="de">einheiten</span>
+          <span data-lang="fr">unités</span>
+          <span data-lang="br">unidades</span>
         </span>
       </div>
     );

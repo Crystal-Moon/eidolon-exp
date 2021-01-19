@@ -37,33 +37,29 @@ class SpecialInput extends Component{
   	//e.target.value = value;
 
   	let value = (e.target.validity.valid) ? e.target.value : this.state.value;
-
-  	//console.log('el value c/ rpl', value, value.length)
-
-	let int='';
-	let dec='';
+	  let int='', dec='';
   	
 
   	if(value.length<=5){
 		//let int='';
 		//let dec='';
 	//plcSpan.style.opacity = '0'
-	  if(value.length<=2) int=value;
-	  else if(value.length>=3){
-		int=value.substr(0,2);
-		dec='.'+value.substr(2,value.length)
-	  }
+	    if(value.length<=2) int=value;
+	    else if(value.length>=3){
+		    int=value.substr(0,2);
+		    dec='.'+value.substr(2,value.length)
+	    }
 
       
 	
 
 	//intSpan.innerText=int;
 	//decSpan.innerText=dec;
-	}else{
-		value = value.slice(0,5); 
-		int=this.state.int;
-		dec=this.state.dec;
-	}
+	  }else{
+		  value = value.slice(0,5); 
+		  int=this.state.int;
+		  dec=this.state.dec;
+	  }
 
 	//console.log('value final', value, int, dec)
 
@@ -78,7 +74,7 @@ class SpecialInput extends Component{
   }
 
   render(){
-	return(
+	 return(
 	  <div className="fake-input-container">
         <div className="input-group">
           <input
@@ -106,7 +102,7 @@ class SpecialInput extends Component{
           <span className="input-group-text input-dark">%</span>
         </div>
       </div>
-	)
+	 )
   }
 }
 

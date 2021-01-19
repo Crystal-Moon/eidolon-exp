@@ -42,6 +42,7 @@
 }
 .Compare .pack .badge, .Compare .badge{
 	color:black;
+	font-size: 1em;
 }
 
 .Compare .dropdown-item.active, .dropdown-item:active{

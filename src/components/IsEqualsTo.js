@@ -1,8 +1,8 @@
 
-import { Component } from 'react';
+//import { Component } from 'react';
 
-class IsEqualsTo extends Component {
-  render() {
+function IsEqualsTo() {
+  //render() {
     return (
       <div className="IsEqualsTo text-center mb-2 mt-2">
         <span data-lang="es" className="badge equals-to-text">
@@ -39,7 +39,7 @@ class IsEqualsTo extends Component {
         </svg>
       </div>
     );
-  }
+  //}
 }
 
 export default IsEqualsTo;
