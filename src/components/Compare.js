@@ -12,64 +12,55 @@ class Compare extends Component {
   constructor(props){
     super(props);
     this.handlerChange = this.handlerChange.bind(this);
-    //this.setItemSelected = this.setItemSelected.bind(this);
+    this.setItemSelected = this.setItemSelected.bind(this);
     this.state = {
       items: [],
-      cant: 0,
-      unit: 'unit',
-      item: 10
+      cant: 1,
+      unit: 'pack',
+      cantFinal: 100,
+      itemA: 10,
+      itemB: 10
     }
 
-    //Event.on('selected', this.setItemSelected);
+    Event.on('selected', this.setItemSelected);
   }
 
   componentDidMount(){
-    this.setState({ items: this.props.items })
-    console.log('los items q llegan a compare', this.props)
-
-    db.getCrystals().then(items=>{ 
-      //console.log('el user_gral', items)
-      this.setState({ items })
-    })
-
+    db.getCrystals().then(items=> this.setState({ items }))
   }
 
-  /* sobra y no se porq :/ funciona sin esto
   setItemSelected({ item, lado }){
-    this.setState({ item: item.id })
+    this.setState({ ['item'+lado]: item.id })
+    this.calculate();
   }
-  */
 
   handlerChange(e){
-    let name=e.target.name;
-    let value=e.target.value;
+    let name = e.target.name;
+    let value = (e.target.validity.valid) ? e.target.value : this.state[name];
+    this.setState({ [name]: value }, this.calculate)
+  }
 
-    console.log('el name y value', name, value);
-    this.setState({ [name]:value })
+  async calculate(){
+    let { itemA, itemB, cant, unit } = this.state;
+    let crystals = await db.getCrystals().then(cc=>cc);
+    itemA = crystals.find(c=>c.id==itemA);
+    itemB = crystals.find(c=>c.id==itemB);
+    cant = unit=='pack'? cant*100 : cant;
 
+    let cantFinal = cant * itemA.xp / itemB.xp;
+    this.setState({ cantFinal })
   }
 
   render() {
-    //const { items=[] } = this.props;
     return (
       <div className="Compare container-blur">
         <div className="card card-compare">
           <div className="card-header text-center">
-            <h5 data-lang="es" className="card-title">
-              Comparar
-            </h5>
-            <h5 data-lang="en" className="card-title">
-              Comparar
-            </h5>
-            <h5 data-lang="fr" className="card-title">
-              Comparar
-            </h5>
-            <h5 data-lang="de" className="card-title">
-              Comparar
-            </h5>
-            <h5 data-lang="br" className="card-title">
-              Comparar
-            </h5>
+            <h5 data-lang="es" className="card-title">Comparar</h5>
+            <h5 data-lang="en" className="card-title">Comparar</h5>
+            <h5 data-lang="fr" className="card-title">Comparar</h5>
+            <h5 data-lang="de" className="card-title">Comparar</h5>
+            <h5 data-lang="br" className="card-title">Comparar</h5>
             <h6 data-lang="es" className="card-subtitle mb-2 small">
               Puedes calcular equivalencias entre cristales
             </h6>
@@ -96,15 +87,17 @@ class Compare extends Component {
               <div className="col-md-6">
                 <div className="input-group">
                   <input
-                    type="number"
-                    className="form-control col-md-2 col-sm-2"
+                    type="tel"
+                    pattern="[0-9]{0,4}"
                     name="cant"
+                    className="form-control col-md-2 col-sm-2"
+                    placeholder={10}
+                    value={this.state.cant}
                     onChange={this.handlerChange}
                   />
                   <div className="col-md-3 col-sm-3">
                     <select
                       className="form-select rounded-0 h-100"
-                      id="inputGroupSelect01"
                       name="unit"
                       onChange={this.handlerChange}
                     >
@@ -122,12 +115,12 @@ class Compare extends Component {
                 </div>
               </div>
               <div className="col-md-1">
-                <IsEqualsTo></IsEqualsTo>
+                <IsEqualsTo />
               </div>
               <div className="col-md-5">
                 <div className="input-group">
                   <div className="input-group-text col-md-4 col-sm-4" style={{backgroundColor:'white'}}>
-                    <United />
+                    <United cant={this.state.cantFinal}/>
                   </div>
                   <div className="col-md-8 col-sm-8 btn-group">
                     <ComboboxItems items={this.state.items} lado="B"/>

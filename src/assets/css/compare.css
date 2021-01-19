@@ -40,7 +40,7 @@
 	height:100%;
 	
 }
-.Compare .pack .badge{
+.Compare .pack .badge, .Compare .badge{
 	color:black;
 }
 
@@ -52,6 +52,10 @@
     padding-bottom: .3em;
     color: #3737b9;
 }
+.IsEqualsTo .badge{
+	color: white;
+}
+
 .equals-to-img{}
 .equals-to-text{
     padding-left: 0;
