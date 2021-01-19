@@ -27,8 +27,8 @@ class Compare extends Component {
     this.setState({ items: this.props.items })
     console.log('los items q llegan a compare', this.props)
 
-    db.getCrystalsUser().then(items=>{ 
-      console.log('el user_gral', items)
+    db.getCrystals().then(items=>{ 
+      //console.log('el user_gral', items)
       this.setState({ items })
     })
 
