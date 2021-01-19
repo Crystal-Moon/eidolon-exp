@@ -11,7 +11,7 @@ import Needs from './Needs';
 class SectionCalc extends Component {
   render() {
     return (
-      <section className="SectionCalc align-items-start bg-image row">
+      <section className="SectionCalc align-items-start bg-image row" style={{ display: "none" }}>
         <div className="bg-image-pa row justify-content-center">
           <div className="bg-image-pa col-12 justify-content-center row">
             <div className="bg-image-pa container-content container-lg justify-content-around row">

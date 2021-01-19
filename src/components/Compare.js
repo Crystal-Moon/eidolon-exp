@@ -1,5 +1,7 @@
 
 import { Component } from 'react';
+import { Event } from '../util/Event';
+import db from '../util/db';
 
 // component
 import ComboboxItems from "./ComboboxItems";
@@ -7,7 +9,48 @@ import IsEqualsTo from "./IsEqualsTo";
 import United from "./United";
 
 class Compare extends Component {
+  constructor(props){
+    super(props);
+    this.handlerChange = this.handlerChange.bind(this);
+    //this.setItemSelected = this.setItemSelected.bind(this);
+    this.state = {
+      items: [],
+      cant: 0,
+      unit: 'unit',
+      item: 10
+    }
+
+    //Event.on('selected', this.setItemSelected);
+  }
+
+  componentDidMount(){
+    this.setState({ items: this.props.items })
+    console.log('los items q llegan a compare', this.props)
+
+    db.getCrystalsUser().then(items=>{ 
+      console.log('el user_gral', items)
+      this.setState({ items })
+    })
+
+  }
+
+  /* sobra y no se porq :/ funciona sin esto
+  setItemSelected({ item, lado }){
+    this.setState({ item: item.id })
+  }
+  */
+
+  handlerChange(e){
+    let name=e.target.name;
+    let value=e.target.value;
+
+    console.log('el name y value', name, value);
+    this.setState({ [name]:value })
+
+  }
+
   render() {
+    //const { items=[] } = this.props;
     return (
       <div className="Compare container-blur">
         <div className="card card-compare">
@@ -55,50 +98,39 @@ class Compare extends Component {
                   <input
                     type="number"
                     className="form-control col-md-2 col-sm-2"
+                    name="cant"
+                    onChange={this.handlerChange}
                   />
                   <div className="col-md-3 col-sm-3">
                     <select
                       className="form-select rounded-0 h-100"
                       id="inputGroupSelect01"
+                      name="unit"
+                      onChange={this.handlerChange}
                     >
-                      <option value="unit" data-lang="es">
-                        Unidades
-                      </option>
-                      <option value="unit" data-lang="en">
-                        Units
-                      </option>
-                      <option value="unit" data-lang="fr">
-                        Unités
-                      </option>
-                      <option value="unit" data-lang="de">
-                        Einheiten
-                      </option>
-                      <option value="unit" data-lang="br">
-                        Unidades
-                      </option>
-                      <option value="pack" selected>
-                        Packs
-                      </option>
+                      <option value="unit" data-lang="es">Unidades</option>
+                      <option value="unit" data-lang="en">Units</option>
+                      <option value="unit" data-lang="fr">Unités</option>
+                      <option value="unit" data-lang="de">Einheiten</option>
+                      <option value="unit" data-lang="br">Unidades</option>
+                      <option value="pack" selected>Packs</option>
                     </select>
                   </div>
                   <div className="col-md-7 col-sm-7 btn-group">
-                    <ComboboxItems></ComboboxItems>
-                    {}
+                    <ComboboxItems items={this.state.items} lado="A"/>
                   </div>
                 </div>
               </div>
               <div className="col-md-1">
                 <IsEqualsTo></IsEqualsTo>
-                {}
               </div>
               <div className="col-md-5">
                 <div className="input-group">
                   <div className="input-group-text col-md-4 col-sm-4" style={{backgroundColor:'white'}}>
-                    <United></United>
+                    <United />
                   </div>
                   <div className="col-md-8 col-sm-8 btn-group">
-                    <ComboboxItems></ComboboxItems>
-                    {}
+                    <ComboboxItems items={this.state.items} lado="B"/>
                   </div>
                 </div>
               </div>

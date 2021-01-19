@@ -1,10 +1,26 @@
 
 import { Component } from 'react';
+import db from '../util/db';
 
 import Item from "./Item";
 
 class CompareGral extends Component {
-  render() {
+  constructor(){
+    super();
+    this.state = {
+      items: []
+    }
+  }
+
+  componentDidMount(){
+    db.getCompareGral().then(items=>{
+      //console.log('el items', items)
+      this.setState({ items })
+    })
+  }
+
+  render(){
+    //const { items=[] } = props;
     return (
       <div className="CompareGral container-blur">
         <div className="card card-compare">
@@ -35,23 +51,25 @@ class CompareGral extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  {this.state.items.map((i,k)=>
+                  <tr key={k}>
                     <td>
-                      <span className="badge">10 x</span>
+                      <span className="badge">{i.cant_a} x</span>
                     </td>
                     <td>
-                      <Item item={{}}></Item>
+                      <Item item={i.item_a}></Item>
                     </td>
                     <td>
                       <b style={{color:'white'}}>=</b>
                     </td>
                     <td>
-                      <span className="badge">100 x</span>
+                      <span className="badge">{i.cant_b} x</span>
                     </td>
                     <td>
-                      <Item item={{}}></Item>
+                      <Item item={i.item_b}></Item>
                     </td>
                   </tr>
+                  )}
                 </tbody>
               </table>
             </div>

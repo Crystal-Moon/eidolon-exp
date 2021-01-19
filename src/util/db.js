@@ -24,16 +24,24 @@ const EXP = Promise.resolve(exp); // GO('exp')
 //----------------------------------------------------------------
 
 export default {
-	getCrystals: () => CRYSTALS,
+	getCrystals: id => !id? CRYSTALS : CRYSTALS.then(cc=>cc.find(c=>c.id==id)),
 
 	getCrystalsUser: () => CRYSTALS.then(cc=>{
 		let ids = userConfig.getCrystals();
 		let crystals = cc.filter(c=> ids.includes(String(c.id))).sort((a,b)=> b.id - a.id)
-		//console.log('los crys del user', crystals)
+		console.log('los crys del user', crystals)
 		return crystals;
 	}),
 
 	getExp: ()=> EXP,
+
+	getCompareGral: ()=> CRYSTALS.then(cc=>
+	  COMPARE_GRAL.then(arr=>arr.map(x=>
+	    ({ ...x, 
+	  	  item_a: cc.find(c=>c.id==x.item_a),
+	  	  item_b: cc.find(c=>c.id==x.item_b)
+	  	}))
+	)),
 
 /*
 	getById: id => ITEMS.then(d=>{
