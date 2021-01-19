@@ -9,6 +9,7 @@ import '../assets/css/mobile.css';
 import cm_logo from '../assets/imgs/CM_logo.svg';
 import bootstrap_logo from '../assets/imgs/Bootstrap.svg';
 import react_logo from '../assets/imgs/React.svg';
+import github_logo from '../assets/imgs/github.svg';
 
 class Footer extends Component {
   render() {
@@ -35,13 +36,37 @@ class Footer extends Component {
               </p>
             </div>
             <div data-lang="fr">
-              <p />
+              <p>
+                Todo el contenido y los activos del juego son marcas comerciales
+                y derechos de autor de X-Legend® o Aeria Games®. Este sitio no
+                está afiliado a X-Legend o Aeria Games.
+              </p>
+              <p>
+                Toda información es tomada de{" "}
+                <a href="https://www.aurakingdom-db.com/">aurakingdom-db.com</a>
+              </p>
             </div>
             <div data-lang="de">
-              <p />
+              <p>
+                Todo el contenido y los activos del juego son marcas comerciales
+                y derechos de autor de X-Legend® o Aeria Games®. Este sitio no
+                está afiliado a X-Legend o Aeria Games.
+              </p>
+              <p>
+                Toda información es tomada de{" "}
+                <a href="https://www.aurakingdom-db.com/">aurakingdom-db.com</a>
+              </p>
             </div>
             <div data-lang="br">
-              <p />
+              <p>
+                Todo el contenido y los activos del juego son marcas comerciales
+                y derechos de autor de X-Legend® o Aeria Games®. Este sitio no
+                está afiliado a X-Legend o Aeria Games.
+              </p>
+              <p>
+                Toda información es tomada de{" "}
+                <a href="https://www.aurakingdom-db.com/">aurakingdom-db.com</a>
+              </p>
             </div>
           </div>
           <div className="container">
@@ -51,11 +76,8 @@ class Footer extends Component {
                 <div className="contador" id="elContadorEnSi">
                   <img
                     src="https://www.contadorvisitasgratis.com/cache_image/176.png"
-                    alt
-                    style={{
-                      height: "24px",
-                      width: "64px"
-                    }}
+                    alt="contador_demo"
+                    style={{ height: "24px", width: "64px" }}
                   />
                 </div>
                 <span>Gracias &#128156;!</span>
@@ -66,14 +88,7 @@ class Footer extends Component {
                 <p>
                   Las traducciones de este sitio fueron realizadas con
                   herramientas de internet. Cualquier inconsitencia que
-                  encuentres no dudes reportarla a{" "}
-                  <span
-                    style={{
-                      color: "#673AB7"
-                    }}
-                  >
-                    crystal.marino345@gmail.com
-                  </span>
+                  encuentres no dudes reportarla a <span style={{color:"#673AB7"}}>crystal.marino345@gmail.com</span>
                 </p>
               </div>
             </div>
@@ -105,11 +120,16 @@ class Footer extends Component {
                   alt="B"
                   title="Bootstrap"
                 />
+                <img
+                  className="icon_logo"
+                  src={github_logo}
+                  alt="gh"
+                  title="gh-pages"
+                />
               </div>
             </div>
           </div>
         </div>
-        {}
       </footer>
     );
   }
