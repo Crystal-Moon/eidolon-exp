@@ -105,9 +105,14 @@ class Footer extends Component {
                   alt="CM"
                 />
                 <span className="name_logo">CrystaIMoon [AKES]</span>
+                <img
+                  className="icon_logo cm_logo"
+                  src="https://restcountries.eu/data/arg.svg"
+                  alt="arg"
+                />
               </div>
               <div className="col-auto">
-                <span className="expand-sm-hidden">Powered By </span>
+                <span className="expand-sm-hidden">Powered By</span>
                 <img
                   className="icon_logo"
                   src={react_logo}

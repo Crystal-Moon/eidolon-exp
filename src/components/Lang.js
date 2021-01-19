@@ -49,22 +49,22 @@ class Lang extends Component {
           <span data-lang="br" className="col-sm">Línguas</span>
 
           <div className="col-sm-auto" role="group" aria-label="Languages">
-            {
-              LANG.map(({ lang, flag },k)=> <>
-                <input type="radio" className="lang-input" key={k}
-                  name="lang" id={"lang1"+lang} autoComplete="off" value={lang}
+            <div className="row">
+            {LANG.map(({ lang, flag },k)=> <div className="col-auto" key={k}>
+                <input type="radio" className="lang-input" name="lang"
+                  id={"lang1"+lang} autoComplete="off" value={lang}
                   onChange={this.changeLang} checked={Boolean(this.state.lang==lang)}
                 />
                 <label className="lang-lbl" htmlFor={"lang1"+lang}>
-                  
                   <img
                     className="img-thumbnail fs-2 lang-flag"
                     src={`https://restcountries.eu/data/${flag}.svg`}
                     alt={lang}
                   />
                 </label>
-              </>
+              </div>
             )}
+            </div>
 
 
           {/*  <input type="radio" className="lang-input"
