@@ -1,7 +1,9 @@
 
+import { Component } from 'react';
+import { Event } from './util/Event';
+
 // styles
 import './assets/css/gral.css';
-//import './assets/css/mobile.css'; // se fue al footer
 
 // componenst
 import Header from './components/Header';
@@ -10,18 +12,35 @@ import SectionCalc from './components/SectionCalc';
 import SectionCompare from './components/SectionCompare';
 import Footer from './components/Footer';
 
-function App() {
-  return (
+class App extends Component {
+  constructor(){
+    super();
+    this.changeTab = this.changeTab.bind(this);
+    this.state={
+      tab: 'manual'
+    }
+    Event.on('changeTab', this.changeTab)
+  }
+
+  changeTab({ tab }){
+    this.setState({ tab })
+  }
+
+  render(){
+   return (
     <div className="App">
       <Header />
       <main>
-        <SectionManual />
-        <SectionCalc />
-        <SectionCompare />
+      { 
+        (this.state.tab=='calculator')? <SectionCalc />
+        : (this.state.tab=='compare')? <SectionCompare />
+        : <SectionManual />
+      }
       </main>
       <Footer />
     </div>
-  );
+   );
+  }
 }
 
 export default App;
