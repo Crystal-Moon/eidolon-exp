@@ -59,9 +59,9 @@ class Compare extends Component {
         <div className="card card-compare">
           <div className="card-header text-center">
             <h5 data-lang="es" className="card-title">Comparar</h5>
-            <h5 data-lang="en" className="card-title">Comparar</h5>
-            <h5 data-lang="fr" className="card-title">Comparar</h5>
-            <h5 data-lang="de" className="card-title">Comparar</h5>
+            <h5 data-lang="en" className="card-title">Compare</h5>
+            <h5 data-lang="fr" className="card-title">Comparer</h5>
+            <h5 data-lang="de" className="card-title">Vergleichen</h5>
             <h5 data-lang="br" className="card-title">Comparar</h5>
             <h6 data-lang="es" className="card-subtitle mb-2 small">
               Puedes calcular equivalencias entre cristales

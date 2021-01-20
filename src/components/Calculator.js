@@ -2,8 +2,8 @@
 import { Component } from 'react';
 import { Event } from '../util/Event';
 import db from '../util/db';
-import calculator from '../util/calculator';
 
+// components
 import SpecialInput from './SpecialInput';
 
 class Calculator extends Component {

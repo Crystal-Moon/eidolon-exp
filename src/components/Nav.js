@@ -20,7 +20,7 @@ class Nav extends Component {
   }
 
   selectTab(e){
-    Array.from(document.getElementsByClassName('active'))
+    Array.from(document.getElementsByClassName('nav-link active'))
       .forEach(x=>x.classList.remove('active'));
 
     let tab = e.currentTarget.dataset.to;

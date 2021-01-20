@@ -1,7 +1,7 @@
 
 import { Component } from 'react';
 import { Event } from '../util/Event';
-import calculator from '../util/calculator';
+//import calculator from '../util/calculator';
 import db from '../util/db';
 
 // component
