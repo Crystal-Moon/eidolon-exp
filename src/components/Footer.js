@@ -1,6 +1,9 @@
 
 //import { Component } from 'react';
 
+//lang
+import LANG from '../lang/footer.json';
+
 // style
 import '../assets/css/Footer.css';
 import '../assets/css/mobile.css';
@@ -11,7 +14,8 @@ import bootstrap_logo from '../assets/imgs/Bootstrap.svg';
 import react_logo from '../assets/imgs/React.svg';
 import github_logo from '../assets/imgs/github.svg';
 
-function Footer() {
+function Footer(props) {
+  const lang = props.lang;
   return (
       <footer className="Footer">
         <div className="nav navbar">

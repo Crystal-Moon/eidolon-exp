@@ -1,11 +1,15 @@
 
 import { Component } from 'react';
 
+// lang
+import LANG from '../lang/manual.json';
+
 // style
 import '../assets/css/manual.css';
 
-class Manual extends Component {
-  render() {
+function Manual(props) {
+//  render() {
+    const lang = props.lang;
     return (
       <div className="col-lg-10 col-md-11 col-sm-12 container-blur">
         <div className="card card-manual text-dark">
@@ -25,7 +29,7 @@ class Manual extends Component {
         </div>
       </div>
     );
-  }
+//  }
 }
 
 export default Manual;

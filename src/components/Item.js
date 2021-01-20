@@ -8,7 +8,7 @@ class Item extends Component {
   render() {
     //console.log('props',this.props)
     const { icon='', name={}, id=0, qlty='white' } = this.props.item;
-    const lang = this.props.lang || 'en';
+    const lang = this.props.lang;
 
     return (
       <div className={`row ${qlty}`}>

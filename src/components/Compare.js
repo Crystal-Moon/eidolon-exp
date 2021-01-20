@@ -3,6 +3,9 @@ import { Component } from 'react';
 import { Event } from '../util/Event';
 import db from '../util/db';
 
+// lang
+import LANG from '../lang/compare.json';
+
 // component
 import ComboboxItems from "./ComboboxItems";
 import IsEqualsTo from "./IsEqualsTo";
@@ -54,6 +57,7 @@ class Compare extends Component {
   }
 
   render() {
+    const lang = this.props.lang;
     return (
       <div className="Compare container-blur">
         <div className="card card-compare">
@@ -112,12 +116,12 @@ class Compare extends Component {
                     </select>
                   </div>
                   <div className="col-md-7 col-sm-7 btn-group">
-                    <ComboboxItems items={this.state.items} lado="A"/>
+                    <ComboboxItems items={this.state.items} lado="A" lang={lang}/>
                   </div>
                 </div>
               </div>
               <div className="col-md-1">
-                <IsEqualsTo />
+                <IsEqualsTo lang={lang}/>
               </div>
               <div className="col-md-5">
                 <div className="input-group">
@@ -125,7 +129,7 @@ class Compare extends Component {
                     <United cant={this.state.cantFinal}/>
                   </div>
                   <div className="col-md-8 col-sm-8 btn-group">
-                    <ComboboxItems items={this.state.items} lado="B"/>
+                    <ComboboxItems items={this.state.items} lado="B" lang={lang}/>
                   </div>
                 </div>
               </div>

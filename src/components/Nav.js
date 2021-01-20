@@ -35,6 +35,7 @@ class Nav extends Component {
   }
 
   render() {
+    const lang = this.props.lang;
     return (
       <nav className={`Navv navbar navbar-expand-md navbar-light ${this.state.tab}`}>
         <div className="container-fluid justify-content-start">

@@ -1,9 +1,11 @@
 
 import { Component } from 'react';
+import LANG from '../lang/mini.json';
 
 function United(props) {
 
   	//const unit='unit';
+  const lang = props.lang;
     let { cant=1 } = props;
     let pack = Boolean(cant>=100)
     cant= pack? Math.trunc(cant/100) : cant

@@ -3,6 +3,9 @@ import { Component } from 'react';
 import { Event } from '../util/Event';
 import db from '../util/db';
 
+// lang
+import LANG from '../lang/calculator.json';
+
 // components
 import SpecialInput from './SpecialInput';
 
@@ -134,6 +137,7 @@ class Calculator extends Component {
   }
 
   render() {
+    const { lang } = this.props;
     return (
       <div className="col-lg-5 container-blur">
         <div className="card card-calc text-light">

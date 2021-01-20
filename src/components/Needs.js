@@ -4,6 +4,9 @@ import { Event } from '../util/Event';
 //import calculator from '../util/calculator';
 import db from '../util/db';
 
+// lang
+import LANG from '../lang/need.json';
+
 // component
 import United from "./United";
 import Item from "./Item";
@@ -193,6 +196,7 @@ class Needs extends Component {
   }
 
   render() {
+    const { lang } = this.props;
     return (
       <div className="col-lg-5 container-blur">
         <div className="card card-calc text-light">
@@ -245,10 +249,10 @@ class Needs extends Component {
                   <div className="col-9">
                     <div className="justify-content-around align-items-center row">
                       <div className="col-sm3">
-                        <United cant={i.cant} />
+                        <United cant={i.cant} lang={lang} />
                       </div>
                       <div className="col-sm-9">
-                        <Item item={i.item}></Item>
+                        <Item item={i.item} lang={lang} />
                       </div>
                     </div>
                   </div>

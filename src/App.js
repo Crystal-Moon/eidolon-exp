@@ -7,37 +7,29 @@ import './assets/css/gral.css';
 
 // componenst
 import Header from './components/Header';
-import SectionManual from './components/SectionManual';
-import SectionCalc from './components/SectionCalc';
-import SectionCompare from './components/SectionCompare';
+import Main from './components/Main';
 import Footer from './components/Footer';
 
 class App extends Component {
   constructor(){
     super();
-    this.changeTab = this.changeTab.bind(this);
+    this.changeLang = this.changeLang.bind(this);
     this.state={
-      tab: 'manual'
+      lang: 'es',
     }
-    Event.on('changeTab', this.changeTab)
+    Event.on('lang', this.changeLang)
   }
 
-  changeTab({ tab }){
-    this.setState({ tab })
+  changeLang({ lang }){
+    this.setState({ lang })
   }
 
   render(){
    return (
     <div className="App">
-      <Header />
-      <main>
-      { 
-        (this.state.tab=='calculator')? <SectionCalc />
-        : (this.state.tab=='compare')? <SectionCompare />
-        : <SectionManual />
-      }
-      </main>
-      <Footer />
+      <Header lang={this.state.lang} />
+      <Main lang={this.state.lang} />
+      <Footer lang={this.state.lang} />
     </div>
    );
   }

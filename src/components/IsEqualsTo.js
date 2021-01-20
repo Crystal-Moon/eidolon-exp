@@ -1,8 +1,10 @@
 
 //import { Component } from 'react';
+import LANG from '../lang/mini.json';
 
-function IsEqualsTo() {
+function IsEqualsTo(props) {
   //render() {
+  const lang = props.lang;
     return (
       <div className="IsEqualsTo text-center mb-2 mt-2">
         <span data-lang="es" className="badge equals-to-text">

@@ -2,6 +2,10 @@
 import { Component } from 'react';
 import db from '../util/db';
 
+// lang
+import LANG from '../lang/compare.json';
+
+// components
 import Item from "./Item";
 
 class CompareGral extends Component {
@@ -21,6 +25,7 @@ class CompareGral extends Component {
 
   render(){
     //const { items=[] } = props;
+    const lang = this.props.lang;
     return (
       <div className="CompareGral container-blur">
         <div className="card card-compare">
@@ -57,7 +62,7 @@ class CompareGral extends Component {
                       <span className="badge">{i.cant_a} x</span>
                     </td>
                     <td>
-                      <Item item={i.item_a}></Item>
+                      <Item item={i.item_a} lang={lang} />
                     </td>
                     <td>
                       <b style={{color:'white'}}>=</b>
@@ -66,7 +71,7 @@ class CompareGral extends Component {
                       <span className="badge">{i.cant_b} x</span>
                     </td>
                     <td>
-                      <Item item={i.item_b}></Item>
+                      <Item item={i.item_b} lang={lang} />
                     </td>
                   </tr>
                   )}
