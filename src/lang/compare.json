@@ -1,39 +1,51 @@
 {
 	"title": {
-		"es": "",
-		"en": "",
-		"fr": "",
-		"de": "",
-		"br": ""
+		"es": "Comparar",
+		"en": "Compare",
+		"fr": "Comparer",
+		"de": "Vergleichen",
+		"br": "Comparar"
 	},
 	"subTitle": {
-		"es": "",
-		"en": "",
-		"fr": "",
-		"de": "",
-		"br": ""
+		"es": "Puedes calcular equivalencias entre cristales",
+		"en": "You can calculate equivalences between crystals",
+		"fr": "Vous pouvez calculer les équivalences entre les cristaux",
+		"de": "Sie können Äquivalenzen zwischen Kristallen berechnen",
+		"br": "Você pode calcular equivalências entre cristais"
 	},
 	"p1": {
-		"es": "",
-		"en": "",
-		"fr": "",
-		"de": "",
-		"br": ""
+		"es": "Indica el nivel actual del Eidolon y el nivel a cual quieres llegar para saber cuales y cuantos cristales necesitas",
+		"en": "Indicate the current level of the Eidolon and the level you want to reach to know which and how many crystals you need",
+		"fr": "Indiquez le niveau actuel de l'Eidolon et le niveau que vous souhaitez atteindre pour savoir de quels cristaux et combien de cristaux vous avez besoin",
+		"de": "Geben Sie die aktuelle Stufe des Eidolons und die Stufe an, die Sie erreichen möchten, um zu wissen, welche und wie viele Kristalle Sie benötigen",
+		"br": "Indique o nível atual do Eidolon e o nível que você deseja atingir para saber quais e quantos cristais você precisa"
 	},
-	
 	"option": {
-		"es": "",
-		"en": "",
-		"fr": "",
-		"de": "",
-		"br": ""
+		"es": "Unidades",
+		"en": "Units",
+		"fr": "Unités",
+		"de": "Einheiten",
+		"br": "Unidades"
 	},
-
+	"gralTitle": {
+		"es": "Generales",
+		"en": "General",
+		"fr": "Général",
+		"de": "Verbreitet",
+		"br": "Comum"
+	},
+	"gralSubTitle": {
+		"es": "Aqui tienes algunas equivalencias generales",
+		"en": "Here are some general equivalences",
+		"fr": "Voici quelques équivalences générales",
+		"de": "Hier sind einige allgemeine Äquivalenzen",
+		"br": "Aqui estão algumas equivalências gerais"
+	},
 	"noteTable": {
-		"es": "",
-		"en": "",
-		"fr": "",
-		"de": "",
-		"br": ""
+		"es": "Las cantidades se expresan en unidades",
+		"en": "Quantities are expressed in units",
+		"fr": "Les quantités sont exprimées en unités",
+		"de": "Mengen werden in Einheiten ausgedrückt",
+		"br": "Quantidades são expressas em unidades"
 	}
 }

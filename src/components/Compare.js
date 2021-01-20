@@ -4,7 +4,7 @@ import { Event } from '../util/Event';
 import db from '../util/db';
 
 // lang
-import LANG from '../lang/compare.json';
+import TXT from '../lang/compare.json';
 
 // component
 import ComboboxItems from "./ComboboxItems";
@@ -62,33 +62,11 @@ class Compare extends Component {
       <div className="Compare container-blur">
         <div className="card card-compare">
           <div className="card-header text-center">
-            <h5 data-lang="es" className="card-title">Comparar</h5>
-            <h5 data-lang="en" className="card-title">Compare</h5>
-            <h5 data-lang="fr" className="card-title">Comparer</h5>
-            <h5 data-lang="de" className="card-title">Vergleichen</h5>
-            <h5 data-lang="br" className="card-title">Comparar</h5>
-            <h6 data-lang="es" className="card-subtitle mb-2 small">
-              Puedes calcular equivalencias entre cristales
-            </h6>
-            <h6 data-lang="en" className="card-subtitle mb-2 small">
-              Puedes calcular equivalencias entre cristales
-            </h6>
-            <h6 data-lang="fr" className="card-subtitle mb-2 small">
-              Puedes calcular equivalencias entre cristales
-            </h6>
-            <h6 data-lang="de" className="card-subtitle mb-2 small">
-              Puedes calcular equivalencias entre cristales
-            </h6>
-            <h6 data-lang="br" className="card-subtitle mb-2 small">
-              Puedes calcular equivalencias entre cristales
-            </h6>
+            <h5 className="card-title">{ TXT.title[lang] }</h5>
+            <h6 className="card-subtitle mb-2 small">{ TXT.subTitle[lang] }</h6>
           </div>
           <div className="card-body">
-            <p>
-              Indica el nivel actual del Eidolon y el nivel a cual quieres
-              llegar para saber cuales y cuantos cristales necesitas (emoji)
-            </p>
-            <p>Distintos p con explcaciones</p>
+            <p>{ TXT.p1[lang] } (emoji)</p>
             <div className="row align-items-center">
               <div className="col-md-6">
                 <div className="input-group">
@@ -107,11 +85,7 @@ class Compare extends Component {
                       name="unit"
                       onChange={this.handlerChange}
                     >
-                      <option value="unit" data-lang="es">Unidades</option>
-                      <option value="unit" data-lang="en">Units</option>
-                      <option value="unit" data-lang="fr">Unités</option>
-                      <option value="unit" data-lang="de">Einheiten</option>
-                      <option value="unit" data-lang="br">Unidades</option>
+                      <option value="unit">{ TXT.option[lang] }</option>
                       <option value="pack" selected>Packs</option>
                     </select>
                   </div>
@@ -126,7 +100,7 @@ class Compare extends Component {
               <div className="col-md-5">
                 <div className="input-group">
                   <div className="input-group-text col-md-4 col-sm-4" style={{backgroundColor:'white'}}>
-                    <United cant={this.state.cantFinal}/>
+                    <United cant={this.state.cantFinal} lang={lang}/>
                   </div>
                   <div className="col-md-8 col-sm-8 btn-group">
                     <ComboboxItems items={this.state.items} lado="B" lang={lang}/>

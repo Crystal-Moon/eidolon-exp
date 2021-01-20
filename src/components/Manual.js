@@ -2,7 +2,7 @@
 import { Component } from 'react';
 
 // lang
-import LANG from '../lang/manual.json';
+import TXT from '../lang/manual.json';
 
 // style
 import '../assets/css/manual.css';

@@ -4,7 +4,7 @@ import userConfig from '../util/userConfig';
 import db from '../util/db';
 
 // lang
-import LANG from '../lang/header.json';
+import TXT from '../lang/header.json';
 
 // components
 import Item from "./Item";
@@ -60,11 +60,7 @@ class ItemConfig extends Component {
               aria-expanded="false"
               aria-controls="accordionItemOne"
             >
-              <span data-lang="es">Cristales a usar</span>
-              <span data-lang="en">Crystals to use</span>
-              <span data-lang="fr">Cristaux à utiliser</span>
-              <span data-lang="de">Kristalle zu verwenden</span>
-              <span data-lang="br">Cristais para usar</span>
+              <span>{ TXT.crystals[lang] }</span>
             </button>
           </h2>
           <div
@@ -78,11 +74,7 @@ class ItemConfig extends Component {
               <div class="alert-container">
                 <div class="alert-div">
                   <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <span data-lang="es">Debes seleccionar al menos un item.</span>
-                    <span data-lang="en">You must select at least one item.</span>
-                    <span data-lang="de">Sie müssen mindestens einen Artikel auswählen.</span>
-                    <span data-lang="fr">Vous devez sélectionner au moins un élément.</span>
-                    <span data-lang="br">Você deve selecionar pelo menos um item.</span>
+                    <span>{ TXT.crystalsAlert[lang] }</span>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>
                 </div>

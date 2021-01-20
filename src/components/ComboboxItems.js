@@ -40,7 +40,7 @@ class ComboboxItems extends Component {
           aria-expanded="false"
         >
           <div className="select-item small">
-            <Item item={this.state.selected}></Item>
+            <Item item={this.state.selected} lang={lang} />
           </div>
         </button>
         <ul className="dropdown-menu">

@@ -1,3 +1,37 @@
 {
-	
+	"p1": {
+		"es": "Todo el contenido y los activos del juego son marcas comerciales y derechos de autor de X-Legend® o Aeria Games®. Este sitio no está afiliado a X-Legend o Aeria Games.",
+		"en": "All game content and assets are trademarks and copyrights of X-Legend® or Aeria Games®. This site is not affiliated with X-Legend or Aeria Games.",
+		"fr": "Tous les contenus et ressources du jeu sont des marques commerciales et des droits d'auteur de X-Legend® ou Aeria Games®. Ce site n'est pas affilié à X-Legend ou Aeria Games.",
+		"de": "Alle Spielinhalte und Vermögenswerte sind Marken und Urheberrechte von X-Legend® oder Aeria Games®. Diese Seite ist nicht mit X-Legend oder Aeria Games verbunden.",
+		"br": "Todo o conteúdo e ativos do jogo são marcas comerciais e direitos autorais da X-Legend® ou Aeria Games®. Este site não é afiliado a X-Legend ou Aeria Games."
+	},
+	"p2":{
+		"es": "Aplicación web creada sin fines de lucro. Toda información fue tomada de",
+		"en": "Non-profit web application created. All information was taken from",
+		"fr": "Application Web à but non lucratif créée. Toutes les informations ont été tirées de",
+		"de": "Gemeinsame Webanwendung erstellt. Alle Informationen stammen von",
+		"br": "Aplicativo da web sem fins lucrativos criado. Todas as informações foram retiradas de"
+	},
+	"p3":{
+		"es": "Las traducciones de este sitio fueron realizadas con herramientas de internet. Cualquier inconsitencia que encuentres no dudes reportarla a",
+		"en": "The translations of this site were made with internet tools. Any inconsistencies you find do not hesitate to report them to",
+		"fr": "Les traductions de ce site ont été réalisées avec des outils Internet. Si vous constatez des incohérences, n'hésitez pas à les signaler à",
+		"de": "Die Übersetzungen dieser Website wurden mit Internet-Tools erstellt. Bei Inkonsistenzen können Sie diese jederzeit an",
+		"br": "As traduções deste site foram feitas com ferramentas da internet. Quaisquer inconsistências que você encontrar, não hesite em relatá-las para"
+	},
+	"number":{
+		"es": "Número de visitas",
+		"en": "Visits",
+		"fr": "Nombre de visites",
+		"de": "Besuche",
+		"br": "Número de visitas"
+	},
+	"thank":{
+		"es": "Gracias",
+		"en": "Thank you",
+		"fr": "Merci",
+		"de": "Danke",
+		"br": "Obrigado"
+	}
 }
