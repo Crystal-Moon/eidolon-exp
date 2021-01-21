@@ -18,7 +18,8 @@ class Calculator extends Component {
     this.state = {
       lvl: '',
       percent: 0,
-      lvlTo: ''
+      lvlTo: '',
+      noLvl: false
     }
     Event.on('percent', this.setPercent);
   }
@@ -57,6 +58,7 @@ class Calculator extends Component {
     let key='';
     let c=0;
     let needMore = false;
+    this.setState({ noLvl: Boolean(xpNeed<=0) })
 
     while(xpNeed > 0){
       if(!user[c]){
@@ -146,7 +148,7 @@ class Calculator extends Component {
             <h6 className="card-subtitle mb-2 small">{TXT.subTitle[lang]}</h6>
           </div>
           <div className="card-body">
-            <p>{ TXT.p1[lang] } (emoji)</p>
+            <p>&#10145; { TXT.p1[lang] } &#128142;</p>
             <form onSubmit={this.handlerSubmit}>
               <div className="row g-3 mb-2 align-items-center">
                 <div className="col-auto">
@@ -199,11 +201,17 @@ class Calculator extends Component {
                 </div>
               </div>
               <div className="text-center">
-                <button className="btn btn-primary" type="submit">
+                <button className="btn btn-primary mb-3" type="submit">
                   <span>{ TXT.btn[lang] }</span>
                 </button>
               </div>
             </form>
+            { this.state.noLvl?
+              <div className="alert alert-danger" role="alert" style={{borderLeft: '3px solid #c80202'}}>
+                <span>{ TXT.alert[lang] } &#128547; </span>
+              </div>
+              : <div></div>
+            }
           </div>
         </div>
       </div>

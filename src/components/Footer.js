@@ -44,7 +44,7 @@ function Footer(props) {
         </div>
         <div className="footer_me small">
           <div className="nav navbar">
-            <div className="container-fluid">
+            <div className="container-fluid justify-content-center justify-content-sm-between">
               <div className="col-auto">
                 <span>Made with &#10084; by</span>
                 <img
@@ -54,13 +54,13 @@ function Footer(props) {
                 />
                 <span className="name_logo">CrystaIMoon [AKES]</span>
                 <img
-                  className="icon_logo cm_logo"
+                  className="icon_logo cm_logo" style={{width:'1em'}}
                   src="https://restcountries.eu/data/arg.svg"
-                  alt="arg"
+                  alt="arg" title="Argentina"
                 />
               </div>
               <div className="col-auto">
-                <span className="expand-sm-hidden">Powered By</span>
+                <span style={{marginLeft:'0.8em'}}>Powered By</span>
                 <img
                   className="icon_logo"
                   src={react_logo}

@@ -14,7 +14,7 @@
 		"br": "Calcule quantos cristais você precisa"
 	},
 	"p1": {
-		"es": "Indica el nivel actual del Eidolon y el nivel a cual quieres llegar para saber cuales y cuantos cristales necesitas",
+		"es": "Indica el nivel actual del Eidolon y el nivel al cual quieres llegar para saber cuales y cuantos cristales necesitas",
 		"en": "Indicate the current level of the Eidolon and the level you want to reach to know which and how many crystals you need",
 		"fr": "Indiquez le niveau actuel de l'Eidolon et le niveau que vous souhaitez atteindre pour savoir de quels cristaux et combien de cristaux vous avez besoin",
 		"de": "Geben Sie die aktuelle Stufe des Eidolons und die Stufe an, die Sie erreichen möchten, um zu wissen, welche und wie viele Kristalle Sie benötigen",
@@ -47,5 +47,12 @@
 		"fr": "Calculer",
 		"de": "Berechnen",
 		"br": "Calcular"
+	},
+	"alert": {
+		"es": "El nivel a alcanzar no puede ser menor al actual",
+		"en": "The level to be reached cannot be lower than the current level",
+		"fr": "Le niveau à atteindre ne peut être inférieur au niveau actuel",
+		"de": "Das zu erreichende Niveau darf nicht niedriger als das aktuelle Niveau sein",
+		"br": "O nível a ser alcançado não pode ser inferior ao nível atual"
 	}
 }

@@ -206,11 +206,11 @@ class Needs extends Component {
           <div className="card-body">
           { this.state.need.length==0?
             <div>
-              <p>{ TXT.p0[lang] }</p>
+              <p>&#10145; { TXT.p0[lang] }</p>
             </div>
             :
             <div>
-              <p>{ TXT.p1[lang] } (emoji)</p>
+              <p>{ TXT.p1[lang] } &#128170;</p>
               <p>{ TXT.p2[lang] }</p>
             </div>
           }

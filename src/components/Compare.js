@@ -84,9 +84,10 @@ class Compare extends Component {
                       className="form-select rounded-0 h-100"
                       name="unit"
                       onChange={this.handlerChange}
+                      defaultValue={'pack'}
                     >
-                      <option value="unit">{ TXT.option[lang] }</option>
                       <option value="pack" selected>Packs</option>
+                      <option value="unit">{ TXT.option[lang] }</option>
                     </select>
                   </div>
                   <div className="col-md-7 col-sm-7 btn-group">

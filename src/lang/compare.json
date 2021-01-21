@@ -14,11 +14,11 @@
 		"br": "Você pode calcular equivalências entre cristais"
 	},
 	"p1": {
-		"es": "Indica el nivel actual del Eidolon y el nivel a cual quieres llegar para saber cuales y cuantos cristales necesitas",
-		"en": "Indicate the current level of the Eidolon and the level you want to reach to know which and how many crystals you need",
-		"fr": "Indiquez le niveau actuel de l'Eidolon et le niveau que vous souhaitez atteindre pour savoir de quels cristaux et combien de cristaux vous avez besoin",
-		"de": "Geben Sie die aktuelle Stufe des Eidolons und die Stufe an, die Sie erreichen möchten, um zu wissen, welche und wie viele Kristalle Sie benötigen",
-		"br": "Indique o nível atual do Eidolon e o nível que você deseja atingir para saber quais e quantos cristais você precisa"
+		"es": "Ingrese la cantidad de unidades o packs del cristal que quiere comparar en el primer cuadro y veras sus equivalentes en el segundo cuadro",
+		"en": "",
+		"fr": "",
+		"de": "",
+		"br": ""
 	},
 	"option": {
 		"es": "Unidades",

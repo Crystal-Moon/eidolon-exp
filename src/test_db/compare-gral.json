@@ -18,6 +18,18 @@
     "item_b": 8
   },
   {
+    "cant_a": 100,
+    "item_a": 7,
+    "cant_b": 10,
+    "item_b": 8
+  },
+  {
+    "cant_a": 200,
+    "item_a": 6,
+    "cant_b": 10,
+    "item_b": 8
+  },
+  {
     "cant_a": 2,
     "item_a": 6,
     "cant_b": 1,
@@ -28,11 +40,5 @@
     "item_a": 4,
     "cant_b": 1,
     "item_b": 6
-  },
-  {
-    "cant_a": 2,
-    "item_a": 1,
-    "cant_b": 1,
-    "item_b": 2
   }
 ]
