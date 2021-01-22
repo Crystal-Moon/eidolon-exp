@@ -1,8 +1,6 @@
 
 import userConfig from './userConfig';
 
-//--------------------------------------------------------------
-/*
 const GO = (file) => new Promise(done=>{
 	fetch(`https://raw.githubusercontent.com/Crystal-Moon/eidolon-exp/master/database/${file}.json`)
 	.then(r=> done(r.json()))
@@ -11,16 +9,6 @@ const GO = (file) => new Promise(done=>{
 const CRYSTALS = GO('crystals')
 const COMPARE_GRAL = GO('compare-gral')
 const EXP = GO('exp')
-*/
-//----------------------------------------------------------------
-import crystals from '../test_db/crystals.json';
-import compare from '../test_db/compare-gral.json';
-import exp from '../test_db/exp.json';
-
-const CRYSTALS = Promise.resolve(crystals); // GO('crystals')
-const COMPARE_GRAL = Promise.resolve(compare); // GO('')
-const EXP = Promise.resolve(exp); // GO('exp')
-//----------------------------------------------------------------
 
 export default {
 	getCrystals: id => !id? CRYSTALS : CRYSTALS.then(cc=>cc.find(c=>c.id==id)),
