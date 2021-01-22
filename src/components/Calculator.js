@@ -3,6 +3,9 @@ import { Component } from 'react';
 import { Event } from '../util/Event';
 import db from '../util/db';
 
+// lang
+import TXT from '../lang/calculator.json';
+
 // components
 import SpecialInput from './SpecialInput';
 
@@ -15,7 +18,8 @@ class Calculator extends Component {
     this.state = {
       lvl: '',
       percent: 0,
-      lvlTo: ''
+      lvlTo: '',
+      noLvl: false
     }
     Event.on('percent', this.setPercent);
   }
@@ -54,6 +58,7 @@ class Calculator extends Component {
     let key='';
     let c=0;
     let needMore = false;
+    this.setState({ noLvl: Boolean(xpNeed<=0) })
 
     while(xpNeed > 0){
       if(!user[c]){
@@ -134,49 +139,21 @@ class Calculator extends Component {
   }
 
   render() {
+    const { lang } = this.props;
     return (
       <div className="col-lg-5 container-blur">
         <div className="card card-calc text-light">
-          <div data-lang="es" className="card-header text-center">
-            <h5 className="card-title">Calculadora</h5>
-            <h6 className="card-subtitle mb-2 small">Calcula cuántos cristales necesitas</h6>
-          </div>
-          <div data-lang="en" className="card-header text-center">
-            <h5 className="card-title">Calculator</h5>
-            <h6 className="card-subtitle mb-2 small">Calculate how many crystals you need</h6>
-          </div>
-          <div data-lang="fr" className="card-header text-center">
-            <h5 className="card-title">Calculatrice</h5>
-            <h6 className="card-subtitle mb-2 small">Calculez le nombre de cristaux dont vous avez besoin</h6>
-          </div>
-          <div data-lang="de" className="card-header text-center">
-            <h5 className="card-title">Taschenrechner</h5>
-            <h6 className="card-subtitle mb-2 small">Berechnen Sie, wie viele Kristalle Sie benötigen</h6>
-          </div>
-          <div data-lang="br" className="card-header text-center">
-            <h5 className="card-title">Calculadora</h5>
-            <h6 className="card-subtitle mb-2 small">Calcule quantos cristais você precisa</h6>
+          <div className="card-header text-center">
+            <h5 className="card-title">{TXT.title[lang]}</h5>
+            <h6 className="card-subtitle mb-2 small">{TXT.subTitle[lang]}</h6>
           </div>
           <div className="card-body">
-            <p data-lang="es">Indica el nivel actual del Eidolon y el nivel a cual quieres
-              llegar para saber cuales y cuantos cristales necesitas (emoji)</p>
-            <p data-lang="en">Indicate the current level of the Eidolon and the level you want 
-              to reach to know which and how many crystals you need (emoji)</p>
-            <p data-lang="fr">Indiquez le niveau actuel de l'Eidolon et le niveau que vous 
-            souhaitez atteindre pour savoir de quels cristaux et combien de cristaux vous avez besoin (emoji)</p>
-            <p data-lang="de">Geben Sie die aktuelle Stufe des Eidolons und die Stufe an, 
-              die Sie erreichen möchten, um zu wissen, welche und wie viele Kristalle Sie benötigen (emoji)</p>
-            <p data-lang="br">Indique o nível atual do Eidolon e o nível que você deseja atingir 
-              para saber quais e quantos cristais você precisa (emoji)</p>
+            <p>&#10145; { TXT.p1[lang] } &#128142;</p>
             <form onSubmit={this.handlerSubmit}>
               <div className="row g-3 mb-2 align-items-center">
                 <div className="col-auto">
                   <label htmlFor="lvl" className="col-form-label">
-                    <span data-lang="es">Nivel del Eidolon:</span>
-                    <span data-lang="en">Level of Eidolon:</span>
-                    <span data-lang="de">Eidolon-Spiegel:</span>
-                    <span data-lang="fr">Niveau d'Eidolon:</span>
-                    <span data-lang="br">Nível de Eidolon:</span>
+                    <span>{ TXT.lbl1[lang] }:</span>
                   </label>
                 </div>
                 <div className="col-sm-3">
@@ -195,20 +172,8 @@ class Calculator extends Component {
               <div className="row g-3 mb-2 align-items-center">
                 <div className="col-auto">
                   <label htmlFor="percent" className="col-form-label">
-                    <span data-lang="es">Porcentaje del nivel:
-                      <span id="passwordHelpInline" className="small"> (opcional)</span>
-                    </span>
-                    <span data-lang="en">Percentage of level:
+                    <span>{ TXT.lbl2[lang] }:
                       <span id="passwordHelpInline" className="small"> (optional)</span>
-                    </span>
-                    <span data-lang="fr">Pourcentage du niveau:
-                      <span id="passwordHelpInline" className="small"> (optionnel)</span>
-                    </span>
-                    <span data-lang="de">Prozentsatz des Niveaus:
-                      <span id="passwordHelpInline" className="small"> (freiwillig)</span>
-                    </span>
-                    <span data-lang="br">Porcentagem de nível:
-                      <span id="passwordHelpInline" className="small"> (opcional)</span>
                     </span>
                   </label>
                 </div>
@@ -219,11 +184,7 @@ class Calculator extends Component {
               <div className="row g-3 mb-3 align-items-center">
                 <div className="col-auto">
                   <label htmlFor="lvlTo" className="col-form-label">
-                    <span data-lang="es">Nivel a alcanzar:</span>
-                    <span data-lang="en">Level to reach:</span>
-                    <span data-lang="fr">Niveau à atteindre:</span>
-                    <span data-lang="de">Level zu erreichen:</span>
-                    <span data-lang="br">Nível para alcançar:</span>
+                    <span>{ TXT.lbl3[lang] }:</span>
                   </label>
                 </div>
                 <div className="col-sm-3">
@@ -240,15 +201,17 @@ class Calculator extends Component {
                 </div>
               </div>
               <div className="text-center">
-                <button className="btn btn-primary" type="submit">
-                  <span data-lang="es">Calcular</span>
-                  <span data-lang="en">Calculate</span>
-                  <span data-lang="fr">Calculer</span>
-                  <span data-lang="de">Berechnen</span>
-                  <span data-lang="br">Calcular</span>
+                <button className="btn btn-primary mb-3" type="submit">
+                  <span>{ TXT.btn[lang] }</span>
                 </button>
               </div>
             </form>
+            { this.state.noLvl?
+              <div className="alert alert-danger" role="alert" style={{borderLeft: '3px solid #c80202'}}>
+                <span>{ TXT.alert[lang] } &#128547; </span>
+              </div>
+              : <div></div>
+            }
           </div>
         </div>
       </div>

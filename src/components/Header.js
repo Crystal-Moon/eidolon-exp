@@ -1,5 +1,5 @@
 
-import { Component } from 'react';
+//import { Component } from 'react';
 
 // style
 import '../assets/css/Header.css';
@@ -8,15 +8,16 @@ import '../assets/css/Header.css';
 import Nav from './Nav';
 import Config from './Config';
 
-class Header extends Component {
-  render() {
+function Header(props) {
+//  render() {
+	const lang = props.lang;
     return (
       <header className="Header">
-        <Nav></Nav>
-        <Config></Config>
+        <Nav lang={lang} />
+        <Config lang={lang} />
       </header>
     );
-  }
+//  }
 }
 
 export default Header;

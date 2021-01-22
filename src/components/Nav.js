@@ -2,10 +2,13 @@
 import { Component, createRef } from 'react';
 import { Event } from '../util/Event';
 
+// lang
+import TXT from '../lang/header';
+
 const routes = [
-  { name: { es: 'Home', en: 'Home', fr: 'Home', de:'Home', br: 'Home' }, url: 'manual' },
-  { name: { es: 'Calculadora', en: 'Calculator', fr: 'Calculatrice', de:'Taschenrechner', br: 'Calculadora' }, url: 'calculator' },
-  { name: { es: 'Comparar', en: 'Compare', fr: 'Comparer', de:'Vergleichen', br: 'Comparar' }, url: 'compare' }
+  { name: 'navHome', url: 'manual' },
+  { name: 'navCalc', url: 'calculator' },
+  { name: 'navComp', url: 'compare' }
 ];
 
 
@@ -35,6 +38,7 @@ class Nav extends Component {
   }
 
   render() {
+    const lang = this.props.lang;
     return (
       <nav className={`Navv navbar navbar-expand-md navbar-light ${this.state.tab}`}>
         <div className="container-fluid justify-content-start">
@@ -55,23 +59,15 @@ class Nav extends Component {
             data-content="Logo"
           >
             <img src alt="logo" />
-            <span data-lang="es">Nombre</span>
-            <span data-lang="en">Nombre</span>
-            <span data-lang="fr">Nombre</span>
-            <span data-lang="de">Nombre</span>
-            <span data-lang="br">Nombre</span>
+            <span>{ TXT.name[lang] }</span>
           </div>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
               {routes.map((l,k)=>
-                <li className="nav-link" aria-current="page" 
+                <span className="nav-link" aria-current="page" 
                   data-to={l.url} key={k} onClick={this.selectTab}>
-                  <span data-lang="es">{l.name.es}</span>
-                  <span data-lang="en">{l.name.en}</span>
-                  <span data-lang="fr">{l.name.fr}</span>
-                  <span data-lang="de">{l.name.de}</span>
-                  <span data-lang="br">{l.name.br}</span>
-                </li>
+                  { TXT[l.name][lang] }
+                </span>
               )}
             </div>
           </div>

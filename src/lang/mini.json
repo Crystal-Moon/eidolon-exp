@@ -1,0 +1,16 @@
+{
+	"united": {
+		"es": "unidades",
+		"en": "inuts",
+		"fr": "unités",
+		"de": "einheiten",
+		"br": "unidades"
+	},
+	"isEquals": {
+		"es": "es igual a",
+		"en": "equals",
+		"fr": "est égal à",
+		"de": "entspricht",
+		"br": "es igual a"
+	}
+}

@@ -1,0 +1,51 @@
+{
+	"title": {
+		"es": "Comparar",
+		"en": "Compare",
+		"fr": "Comparer",
+		"de": "Vergleichen",
+		"br": "Comparar"
+	},
+	"subTitle": {
+		"es": "Puedes calcular equivalencias entre cristales",
+		"en": "You can calculate equivalences between crystals",
+		"fr": "Vous pouvez calculer les équivalences entre les cristaux",
+		"de": "Sie können Äquivalenzen zwischen Kristallen berechnen",
+		"br": "Você pode calcular equivalências entre cristais"
+	},
+	"p1": {
+		"es": "Ingresa la cantidad, el tipo de unidad (unidades o packs) y el cristal a comparar. En el segundo cuadro verás la equivalencia.",
+		"en": "",
+		"fr": "",
+		"de": "",
+		"br": ""
+	},
+	"option": {
+		"es": "Unidades",
+		"en": "Units",
+		"fr": "Unités",
+		"de": "Einheiten",
+		"br": "Unidades"
+	},
+	"gralTitle": {
+		"es": "Generales",
+		"en": "General",
+		"fr": "Général",
+		"de": "Verbreitet",
+		"br": "Comum"
+	},
+	"gralSubTitle": {
+		"es": "Aqui tienes algunas equivalencias generales",
+		"en": "Here are some general equivalences",
+		"fr": "Voici quelques équivalences générales",
+		"de": "Hier sind einige allgemeine Äquivalenzen",
+		"br": "Aqui estão algumas equivalências gerais"
+	},
+	"noteTable": {
+		"es": "Las cantidades se expresan en unidades",
+		"en": "Quantities are expressed in units",
+		"fr": "Les quantités sont exprimées en unités",
+		"de": "Mengen werden in Einheiten ausgedrückt",
+		"br": "Quantidades são expressas em unidades"
+	}
+}

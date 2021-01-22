@@ -4,6 +4,9 @@ import { Event } from '../util/Event';
 //import calculator from '../util/calculator';
 import db from '../util/db';
 
+// lang
+import TXT from '../lang/need.json';
+
 // component
 import United from "./United";
 import Item from "./Item";
@@ -193,37 +196,22 @@ class Needs extends Component {
   }
 
   render() {
+    const { lang } = this.props;
     return (
       <div className="col-lg-5 container-blur">
         <div className="card card-calc text-light">
           <div className="card-header text-center">
-            <h5 data-lang="es" className="card-title">Cristales necesarios</h5>
-            <h5 data-lang="en" className="card-title">Cristales necesarios</h5>
-            <h5 data-lang="fr" className="card-title">Cristales necesarios</h5>
-            <h5 data-lang="de" className="card-title">Cristales necesarios</h5>
-            <h5 data-lang="br" className="card-title">Cristales necesarios</h5>
-            <h6 data-lang="es" className="card-subtitle mb-2 small"> Necesitarás todos los siguientes items para llegar al nivel deseado</h6>
-            <h6 data-lang="en" className="card-subtitle mb-2 small"> Necesitarás todos los siguientes items para llegar al nivel deseado</h6>
-            <h6 data-lang="fr" className="card-subtitle mb-2 small"> Necesitarás todos los siguientes items para llegar al nivel deseado</h6>
-            <h6 data-lang="de" className="card-subtitle mb-2 small"> Necesitarás todos los siguientes items para llegar al nivel deseado</h6>
-            <h6 data-lang="br" className="card-subtitle mb-2 small"> Necesitarás todos los siguientes items para llegar al nivel deseado</h6>
+            <h5 className="card-title">{ TXT.title[lang] }</h5>
           </div>
           <div className="card-body">
-          { this.state.need.length?
+          { this.state.need.length==0?
             <div>
-              <p data-lang="es">Aumenta o disminuye según lo que ya tengas en tu inventario, el sistema calculará nuevamente según tus preferencias.</p>
-              <p data-lang="en">Aumenta o disminuye según lo que ya tengas en tu inventario, el sistema calculará nuevamente según tus preferencias.</p>
-              <p data-lang="de">Aumenta o disminuye según lo que ya tengas en tu inventario, el sistema calculará nuevamente según tus preferencias.</p>
-              <p data-lang="fr">Aumenta o disminuye según lo que ya tengas en tu inventario, el sistema calculará nuevamente según tus preferencias.</p>
-              <p data-lang="br">Aumenta o disminuye según lo que ya tengas en tu inventario, el sistema calculará nuevamente según tus preferencias.</p>
+              <p>&#10145; { TXT.p0[lang] }</p>
             </div>
             :
             <div>
-              <p data-lang="es">Aquí verás los items que necesitas para subir de nivel tu Eidolon (emoji)</p>
-              <p data-lang="en">Aquí verás los items que necesitas para subir de nivel tu Eidolon (emoji)</p>
-              <p data-lang="de">Aquí verás los items que necesitas para subir de nivel tu Eidolon (emoji)</p>
-              <p data-lang="fr">Aquí verás los items que necesitas para subir de nivel tu Eidolon (emoji)</p>
-              <p data-lang="br">Aquí verás los items que necesitas para subir de nivel tu Eidolon (emoji)</p>
+              <p>{ TXT.p1[lang] } &#128170;</p>
+              <p>{ TXT.p2[lang] }</p>
             </div>
           }
             <ul className="list-group mb-3">
@@ -233,22 +221,24 @@ class Needs extends Component {
                   <div className="col-3">
                     <div className="justify-content-around row need-btns">
                       <button
-                        type="button" data-action={i.cant>=100?100:1} data-id={i.id} onClick={this.handlerBtn}
                         className="btn col-auto col-sm-auto need-btn btn-primary"
+                        type="button" data-action={i.cant>=100?100:1} 
+                        data-id={i.id} onClick={this.handlerBtn}
                       >+</button>
                       <button
-                        type="button" data-action={(i.cant>100?(100):(1))*(-1)} data-id={i.id} onClick={this.handlerBtn}
                         className="btn col-auto col-sm-auto need-btn btn-primary"
+                        type="button" data-action={(i.cant>100?100:1)*(-1)} 
+                        data-id={i.id} onClick={this.handlerBtn}
                       >-</button>
                     </div>
                   </div>
                   <div className="col-9">
                     <div className="justify-content-around align-items-center row">
                       <div className="col-sm3">
-                        <United cant={i.cant} />
+                        <United cant={i.cant} lang={lang} />
                       </div>
                       <div className="col-sm-9">
-                        <Item item={i.item}></Item>
+                        <Item item={i.item} lang={lang} />
                       </div>
                     </div>
                   </div>
@@ -258,19 +248,11 @@ class Needs extends Component {
             </ul>
 
             { this.state.needMore?
-              <div className="alert-div">
-                <div className="alert alert-warning alert-dismissible fade show" role="alert">
-                  <span data-lang="es">Estos cristales no serán suficientes para el nivel que buscas. Aumenta alguno o selecciona más tipos en las configuraciones. (emoji)</span>
-                  <span data-lang="en">Estos cristales no serán suficientes para el nivel que buscas. Aumenta alguno o selecciona más tipos en las configuraciones. (emoji)</span>
-                  <span data-lang="de">Estos cristales no serán suficientes para el nivel que buscas. Aumenta alguno o selecciona más tipos en las configuraciones. (emoji)</span>
-                  <span data-lang="fr">Estos cristales no serán suficientes para el nivel que buscas. Aumenta alguno o selecciona más tipos en las configuraciones. (emoji)</span>
-                  <span data-lang="br">Estos cristales no serán suficientes para el nivel que buscas. Aumenta alguno o selecciona más tipos en las configuraciones. (emoji)</span>
-                  <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
+              <div className="alert alert-warning" role="alert" style={{borderLeft: '3px solid #f9b115'}}>
+                <span>{ TXT.alert[lang] } &#x2699;</span>
               </div>
               : <div></div>
             }
-
           </div>
         </div>
       </div>

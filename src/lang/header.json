@@ -1,0 +1,51 @@
+{
+	"crystals": {
+		"es": "Cristales a usar",
+		"en": "Crystals to use",
+		"fr": "Cristaux à utiliser",
+		"de": "Kristalle zu verwenden",
+		"br": "Cristais para usar"
+	},
+	"crystalsAlert": {
+		"es": "Debes seleccionar al menos un item.",
+		"en": "You must select at least one item.",
+		"fr": "Sie müssen mindestens einen Artikel auswählen.",
+		"de": "Vous devez sélectionner au moins un élément.",
+		"br": "Você deve selecionar pelo menos um item."
+	},
+	"lang": {
+		"es": "Idioma",
+		"en": "Languages",
+		"fr": "Langues",
+		"de": "Sprachen",
+		"br": "Línguas"
+	},
+	"name": {
+		"es": "Nombre",
+		"en": "Nombre",
+		"fr": "Nombre",
+		"de": "Nombre",
+		"br": "Nombre"
+	},
+	"navHome": { 
+		"es": "Home",
+		"en": "Home",
+		"fr": "Home",
+		"de": "Home",
+		"br": "Home" 
+	},
+	"navCalc": {
+		"es": "Calculadora",
+		"en": "Calculator",
+		"fr": "Calculatrice",
+		"de": "Taschenrechner",
+		"br": "Calculadora"
+	},
+	"navComp": {
+		"es": "Comparar",
+		"en": "Compare",
+		"fr": "Comparer",
+		"de": "Vergleichen",
+		"br": "Comparar"
+	}
+}

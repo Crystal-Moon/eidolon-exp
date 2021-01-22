@@ -21,6 +21,7 @@ class Config extends Component {
   }
 
   render() {
+    const lang = this.props.lang;
     return (
       <div className={`Config container rounded-start ${this.state.hidden?'hidden':''}`}>
         <div className="align-items-end">
@@ -28,8 +29,8 @@ class Config extends Component {
             onClick={this.handlerConfig} />
         </div>
         <div className="row list-group rounded-0">
-          <ItemConfig></ItemConfig>
-          <Lang></Lang>
+          <ItemConfig lang={lang} />
+          <Lang lang={lang} />
         </div>
         {}
       </div>

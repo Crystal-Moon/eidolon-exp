@@ -3,6 +3,10 @@ import { Component } from 'react';
 import userConfig from '../util/userConfig';
 import db from '../util/db';
 
+// lang
+import TXT from '../lang/header.json';
+
+// components
 import Item from "./Item";
 
 class ItemConfig extends Component {
@@ -11,19 +15,19 @@ class ItemConfig extends Component {
     this.handlerItem = this.handlerItem.bind(this);
     this.state = {
       items: [],
-      lang: 'es',
+      //lang: 'es',
       empty_arr: 0
     }
   }
 
   componentDidMount(){
     let ids = userConfig.getCrystals();
-    let lang = userConfig.get('lang');
+    //let lang = userConfig.get('lang');
     db.getCrystals().then(items=>{
       items.forEach(c=>{ c.selected = ids.includes(String(c.id)) });
       items=items.sort((a,b)=> b.id - a.id)
       //console.log('items para lista', items)
-      this.setState({ items, lang })
+      this.setState({ items/*, lang*/ })
     })
   }
 
@@ -40,6 +44,7 @@ class ItemConfig extends Component {
   }
 
   render() {
+    const lang = this.props.lang;
     return (
       <div
         className="ItemConfig accordion accordion-flush container list-group-item"
@@ -55,11 +60,7 @@ class ItemConfig extends Component {
               aria-expanded="false"
               aria-controls="accordionItemOne"
             >
-              <span data-lang="es">Cristales a usar</span>
-              <span data-lang="en">Crystals to use</span>
-              <span data-lang="fr">Cristaux à utiliser</span>
-              <span data-lang="de">Kristalle zu verwenden</span>
-              <span data-lang="br">Cristais para usar</span>
+              <span>{ TXT.crystals[lang] }</span>
             </button>
           </h2>
           <div
@@ -73,11 +74,7 @@ class ItemConfig extends Component {
               <div class="alert-container">
                 <div class="alert-div">
                   <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <span data-lang="es">Debes seleccionar al menos un item.</span>
-                    <span data-lang="en">You must select at least one item.</span>
-                    <span data-lang="de">Sie müssen mindestens einen Artikel auswählen.</span>
-                    <span data-lang="fr">Vous devez sélectionner au moins un élément.</span>
-                    <span data-lang="br">Você deve selecionar pelo menos um item.</span>
+                    <span>{ TXT.crystalsAlert[lang] }</span>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>
                 </div>
@@ -96,7 +93,7 @@ class ItemConfig extends Component {
                   onChange={this.handlerItem}
                 />
                 <label className="form-check-label" htmlFor={"flexCheckDefault"+i.id}>
-                  <Item item={i} lang={this.state.lang} />
+                  <Item item={i} lang={lang} />
                 </label>
               </div>
               )}

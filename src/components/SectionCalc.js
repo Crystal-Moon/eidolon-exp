@@ -8,21 +8,21 @@ import '../assets/css/calculator.css';
 import Calculator from './Calculator';
 import Needs from './Needs';
 
-class SectionCalc extends Component {
-  render() {
+function SectionCalc(props){
+//  render() {
     return (
       <section className="SectionCalc align-items-start bg-image row">
         <div className="bg-image-pa row justify-content-center">
           <div className="bg-image-pa col-12 justify-content-center row">
             <div className="bg-image-pa container-content container-lg justify-content-around row">
-              <Calculator></Calculator>
-              <Needs></Needs>
+              <Calculator lang={props.lang}/>
+              <Needs lang={props.lang}/>
             </div>
           </div>
         </div>
       </section>
     );
-  }
+//  }
 }
 
 export default SectionCalc;

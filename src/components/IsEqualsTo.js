@@ -1,22 +1,13 @@
 
 //import { Component } from 'react';
+import TXT from '../lang/mini.json';
 
-function IsEqualsTo() {
+function IsEqualsTo(props) {
   //render() {
+  const lang = props.lang;
     return (
       <div className="IsEqualsTo text-center mb-2 mt-2">
-        <span data-lang="es" className="badge equals-to-text">
-          es igual a
-        </span>
-        <span data-lang="en" className="badge equals-to-text">
-          equals
-        </span>
-        <span data-lang="fr" className="badge equals-to-text">
-          est égal à
-        </span>
-        <span data-lang="de" className="badge equals-to-text">
-          entspricht
-        </span>
+        <span className="badge equals-to-text">{ TXT.isEquals[lang] }</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={16}

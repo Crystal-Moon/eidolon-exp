@@ -30,7 +30,7 @@ class ComboboxItems extends Component {
   }
 
   render() {
-    const { lado ='A', items=[] } = this.props;
+    const { lado ='A', items=[], lang } = this.props;
     return (
       <div className="btn-group w-100">
         <button
@@ -40,7 +40,7 @@ class ComboboxItems extends Component {
           aria-expanded="false"
         >
           <div className="select-item small">
-            <Item item={this.state.selected}></Item>
+            <Item item={this.state.selected} lang={lang} />
           </div>
         </button>
         <ul className="dropdown-menu">
@@ -48,7 +48,7 @@ class ComboboxItems extends Component {
           <li className="dropdown-item small" key={k} 
             onClick={this.handlerChange} 
             data-id={i.id} data-lado={lado}>
-            <Item item={i} />
+            <Item item={i} lang={lang} />
           </li>
           )}
         </ul>
