@@ -1,5 +1,5 @@
 
-import { Component } from 'react';
+//import { Component } from 'react';
 
 // style
 import '../assets/css/Header.css';

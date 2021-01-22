@@ -21,7 +21,7 @@ function Footer(props) {
         <div className="nav navbar">
           <div className="container">
             <p>{ TXT.p1[lang] }</p>
-            <p>{ TXT.p2[lang] } <a href="https://www.aurakingdom-db.com/" target="_blank">aurakingdom-db.com</a></p>
+            <p>{ TXT.p2[lang] } <a href="https://www.aurakingdom-db.com/" target="_blank" rel="noreferrer">aurakingdom-db.com</a></p>
           </div>
           <div className="container">
             <div className="col-md-4 mb-3">

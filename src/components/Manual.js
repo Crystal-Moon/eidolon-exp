@@ -1,5 +1,5 @@
 
-import { Component } from 'react';
+//import { Component } from 'react';
 
 // lang
 import TXT from '../lang/manual.json';

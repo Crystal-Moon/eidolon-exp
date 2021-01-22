@@ -1,5 +1,5 @@
 
-import { Component } from 'react';
+//import { Component } from 'react';
 
 function Item(props) {
 //  constructor(){

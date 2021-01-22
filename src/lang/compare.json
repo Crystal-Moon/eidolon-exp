@@ -14,7 +14,7 @@
 		"br": "Você pode calcular equivalências entre cristais"
 	},
 	"p1": {
-		"es": "Ingrese la cantidad de unidades o packs del cristal que quiere comparar en el primer cuadro y veras sus equivalentes en el segundo cuadro",
+		"es": "Ingresa la cantidad, el tipo de unidad (unidades o packs) y el cristal a comparar. En el segundo cuadro verás la equivalencia.",
 		"en": "",
 		"fr": "",
 		"de": "",
