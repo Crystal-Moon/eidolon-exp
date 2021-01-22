@@ -4,9 +4,20 @@
 	background-position: right center;
 }
 
+.SectionManual h1, .SectionManual h4, .SectionManual h6{
+	padding-left: 1rem;
+}
+
 .card-manual{
 	background-color: rgba(255,255,255,0.3);
 }
 .card-manual .card-header{
 	background-color: rgba(170,170,170,.2);
+}
+
+.SectionManual img{
+	display: block;
+    /*height: 10rem;*/
+    border: 2px solid #141619;
+    margin: auto;
 }

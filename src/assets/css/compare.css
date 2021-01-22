@@ -66,6 +66,8 @@
 	height: 2em;
 	width: 2em;
 	margin-bottom: .5em;
+	color: white;
+    margin-left: 0.2em;
 }
 .equals-to-arrow-down{display: none;margin: auto;}
 .equals-to-arrow-right{}
