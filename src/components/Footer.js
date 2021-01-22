@@ -38,7 +38,7 @@ function Footer(props) {
               </div>
             </div>
             <div className="col-md-6">
-              <p>{ TXT.p3[lang] }<span style={{color:"#673AB7"}}>crystal.marino345@gmail.com</span></p>
+              <p>*{ TXT.p3[lang] } <span style={{color:"#673AB7"}}>crystal.marino345@gmail.com</span></p>
             </div>
           </div>
         </div>
