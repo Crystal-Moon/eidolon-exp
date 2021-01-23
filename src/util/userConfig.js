@@ -1,6 +1,6 @@
 
 const DEFAULTS = {
-	lang: 'de',
+	lang: 'es',
 	crystals: '6,7,8,9',
 
 }

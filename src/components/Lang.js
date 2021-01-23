@@ -1,6 +1,5 @@
 
 import { Component } from 'react';
-//import { Helmet } from 'react-helmet';
 import userConfig from '../util/userConfig';
 import { Event } from '../util/Event';
 
@@ -31,23 +30,16 @@ class Lang extends Component {
   }
 
   changeLang(e){
-    console.log('clck en cambiar')
     let lang = e.currentTarget.value;
     this.setState({ lang })
     userConfig.set('lang',lang)
+    userConfig.set('hasLang',true)
     Event.emit('lang',{ lang })
   }
 
   render() {
-    //const lang = this.props.lang;
     return (
       <div className="Lang container list-group-item">
-
-      {/*  <Helmet>
-          <link rel="stylesheet" type="text/css" href={`/assets/css/lang/${this.state.lang}.css`} />
-           luego quedara: '/eidolon-exp/assets/css/lang/${this.state.lang}.css' 
-        </Helmet>  */}
-
         <div className="row justify-content-center col-sm-12">
           <span className="col-sm">{ TXT.lang[this.state.lang] }</span>
           <div className="col-sm-auto" role="group" aria-label="Languages">
@@ -67,7 +59,6 @@ class Lang extends Component {
               </div>
             )}
             </div>
-
           </div>
         </div>
       </div>
