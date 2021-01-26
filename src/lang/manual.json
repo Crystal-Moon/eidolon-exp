@@ -7,59 +7,80 @@
 		"br": "Bem-vinda"
 	},
 	"h4": {
-		"es": "",
-		"en": "",
-		"fr": "",
-		"de": "",
-		"br": ""
+		"es": "En este sitio web podrás calcular lo que necesites para subir el nivel de tus compañeros de batalla!",
+		"en": "On this website you can calculate what you need to level up your battle mates!",
+		"fr": "Sur ce site Web vous pouvez calculer ce dont vous avez besoin pour améliorer vos partenaires de combat!",
+		"de": "Auf dieser Website können Sie berechnen, was Sie benötigen, um Ihre Eidolons zu verbessern!",
+		"br": "Neste site você pode calcular o que precisa para melhorar seus parceiros de batalha!"
 	},
 	"h6": {
-		"es": "",
-		"en": "",
-		"fr": "",
-		"de": "",
-		"br": ""
-	},
-	"subTitle": {
-		"es": "",
-		"en": "",
-		"fr": "",
-		"de": "",
-		"br": ""
+		"es": "He aquí un resumen de cómo utilizarlo.",
+		"en": "Here's a summary of how to use it.",
+		"fr": "Voici un résumé de son utilisation.",
+		"de": "Hier ist eine Zusammenfassung seiner Verwendung.",
+		"br": "Aqui está um resumo de como usá-lo."
 	},
 	"title1": {
-		"es": "",
-		"en": "",
-		"fr": "",
-		"de": "",
-		"br": ""
+		"es": "Sección Calculadora (segunda pestaña del menu)",
+		"en": "Calculator section (second menu tab)",
+		"fr": "Section Calculatrice (deuxième onglet de menu)",
+		"de": "Rechner Abschnitt (zweite Menü Registerkarte)",
+		"br": "Seção da calculadora (segunda guia do menu)"
 	},
-	"sub1": {
-		"es": "",
-		"en": "",
-		"fr": "",
-		"de": "",
-		"br": ""
+	"p1_1": {
+		"es": "Completa los campos con los valores actuales del Eidolon, su nivel y el porcentaje ya adquirido de dicho nivel. El porcentaje es opcional pero en niveles superiores hará una gran diferencia en el resultado final.",
+		"en": "Fill the fields with the current values ​​of the Eidolon, its level, and the percentage already acquired from that level. The percentage is optional but at higher levels it will make a big difference in the final result.",
+		"fr": "Remplissez les champs avec les valeurs actuelles de l'Eidolon, son niveau et le pourcentage déjà acquis à partir de ce niveau. Le pourcentage est facultatif, mais à des niveaux plus élevés, il fera une grande différence dans le résultat final.",
+		"de": "Füllen Sie die Felder mit den aktuellen Werten des Eidolon, seiner Stufe und dem Prozentsatz, der bereits von dieser Stufe erfasst wurde. Der Prozentsatz ist optional, aber auf höheren Ebenen macht er einen großen Unterschied im Endergebnis.",
+		"br": "Preencha os campos com os valores atuais do Eidolon, seu nível e a porcentagem já adquirida daquele nível. A porcentagem é opcional, mas em níveis mais altos fará uma grande diferença no resultado final."
 	},
-	"p1": {
-		"es": "",
-		"en": "",
-		"fr": "",
-		"de": "",
-		"br": ""
+	"p1_2": {
+		"es": "Al hacer click en el boton 'calcular' verás una lista de items y sus cantidades necesarias para llegar al objetivo deseado.",
+		"en": "By clicking on the 'calculate' button you will see a list of items and their quantities needed to reach the desired goal.",
+		"fr": "En cliquant sur le bouton «calculer», vous verrez une liste d'articles et leurs quantités nécessaires pour atteindre l'objectif souhaité.",
+		"de": "Wenn Sie auf die Schaltfläche 'Berechnen' klicken, wird eine Liste der Artikel und ihrer Mengen angezeigt, die zum Erreichen des gewünschten Ziels erforderlich sind.",
+		"br": "Ao clicar no botão Calcular, aparecerá uma lista dos itens e suas quantidades necessárias para atingir a meta desejada."
+	},
+	"p1_3": {
+		"es": "Para una simplificación de lectura las cantidades se agrupan en unidades o pack, teniendo en cuenta el modo que estos suelen encontrarse o intercambiarse en la comunidad dentro el juego. 100 unidades siempre equivale a 1 pack (o stack)",
+		"en": "For a simplification of reading the quantities are grouped in units or packs, considering the way these are usually found or trade in the community within the game. 100 units always correspond to 1 pack (or stack)",
+		"fr": "Pour simplifier la lecture, les quantités sont regroupées en unités ou en paquets, en tenant compte de la manière dont elles sont généralement trouvées ou échangées dans la communauté au sein du jeu. 100 unités correspondent toujours à 1 pack (ou pile)",
+		"de": "Um das Lesen zu vereinfachen, werden die Mengen in Einheiten oder Paketen gruppiert, wobei berücksichtigt wird, wie sie im Allgemeinen in der Community innerhalb des Spiels gefunden oder ausgetauscht werden. 100 Einheiten entsprechen immer 1 Pack (oder Stack)",
+		"br": "Para uma simplificação da leitura as quantidades são agrupadas em unidades ou pack, tendo em conta a forma como são normalmente encontradas ou trocadas na comunidade dentro do jogo. 100 unidades sempre correspondem a 1 Pack (ou Stack)"
+	},
+	"p1_4": {
+		"es": "Dichas cantidades pueden que supere lo que ya tienes en tu mochila. Puedes aumentar o disminuir las cantidades de cada item para que se ajuste a tus posibilidades. Con cada cambio que realices el sistema re-calculará según las equivalencias entre los cristales por lo que algunas cantidades se verán fuertemente afectadas.",
+		"en": "These amounts may exceed what you already have in your backpack. You can increase or decrease the quantities of each item to adjust to your possibilities. With each change you make, the system recalculated according to the equivalences between the crystals, so some quantities will be strongly affected.",
+		"fr": "Ces montants peuvent dépasser ce que vous avez déjà dans votre sac à dos. Vous pouvez augmenter ou diminuer les quantités de chaque article pour vous adapter à vos possibilités. À chaque modification que vous effectuez, le système recalculera en fonction des équivalences entre les cristaux, de sorte que certaines quantités seront fortement affectées.",
+		"de": "Diese Beträge können über dem liegen, was Sie bereits in Ihrem Rucksack haben. Sie können die Mengen jedes Artikels erhöhen oder verringern, um sie an Ihre Möglichkeiten anzupassen. Bei jeder Änderung wird das System entsprechend den Äquivalenzen zwischen den Kristallen neu berechnet, sodass einige Mengen stark beeinflusst werden.",
+		"br": "Esses valores podem exceder o que você já tem em sua mochila. Você pode aumentar ou diminuir as quantidades de cada item para se ajustar às suas possibilidades. A cada alteração feita, o sistema recalcula de acordo com as equivalências entre os cristais, portanto, algumas quantidades serão fortemente afetadas."
+	},
+	"p1_5": {
+		"es": "¿No tienes o no te interesan los items elejidos? No hay problema. Puedes elegir que cristales usan en el proceso, seleccionandolos desde las configuraciones en la esquina superior derecha de la pagina.",
+		"en": "You do not have or are not interested in the selected items? No problem. You can choose which crystals to use in the process, selecting them from the settings in the upper right corner of the page.",
+		"fr": "Vous n'avez pas les articles choisis? Pas de problème. Vous pouvez choisir les cristaux à utiliser dans le processus, en les sélectionnant dans les paramètres dans le coin supérieur droit de la page.",
+		"de": "Haben Sie die ausgewählten Artikel nicht? Kein Problem. Sie können auswählen, welche Kristalle im Prozess verwendet werden sollen, indem Sie sie in den Einstellungen oben rechts auswählen.",
+		"br": "Não tem os itens selecionados? Sem problemas. Você pode escolher quais cristais usar no processo, selecionando-os nas configurações no canto superior direito."
 	},
 	"title2": {
-		"es": "",
-		"en": "",
-		"fr": "",
-		"de": "",
-		"br": ""
+		"es": "Sección Comparador (tercera pestaña del menu)",
+		"en": "Comparator section (third menu tab)",
+		"fr": "Section Comparateur (troisième onglet de menu)",
+		"de": "Komparator Abschnitt (dritte Menü Registerkarte)",
+		"br": "Seção comparador (terceira guia do menu)"
 	},
-	"sub2": {
-		"es": "",
-		"en": "",
-		"fr": "",
-		"de": "",
-		"br": ""
+	"p2_1": {
+		"es": "Te interesa conocer cuanto equivale la experiencia de un cristal en comparación a otro? Puedes utilizar este comparador.",
+		"en": "Are you interested in knowing how much the experience of one crystal is compared to another? Use this comparator.",
+		"fr": "Êtes-vous intéressé à savoir à quel point l'expérience d'un cristal est comparée à un autre? Utilisez ce comparateur.",
+		"de": "Möchten Sie wissen, wie sehr die Erfahrung eines Kristalls mit der eines anderen vergleichbar ist? Verwenden Sie diese Vergleiche.",
+		"br": "Você gostaria de saber como a experiência de um cristal se compara a outro? Use este comparador."
+	},
+	"p2_2": {
+		"es": "En el primer cuadro ingresa la cantidad, el tipo de unidad (unidades o pack) y el cristal que deseas comparar. En el segundo cuadro verás el resultado de la equivalencia en el cristal que hayas seleccionado.",
+		"en": "In the first box write the quantity, the type of unit (units or pack) and the crystal you want to compare. In the second box, you will see the result of the equivalence in the crystal you have selected.",
+		"fr": "Dans la première case, écrivez la quantité, le type d'unité (unités ou pack) et le cristal que vous souhaitez comparer. Dans la deuxième case, vous verrez le résultat de l'équivalence dans le cristal que vous avez sélectionné.",
+		"de": "Schreiben Sie in das erste Feld die Menge, den Einheitentyp (Einheiten oder Packung) und den Kristall, den Sie vergleichen möchten. Im zweiten Feld sehen Sie das Ergebnis der Äquivalenz in dem von Ihnen ausgewählten Kristall.",
+		"br": "Na primeira caixa, escreva a quantidade, o tipo de unidade (unidades ou packs) e o cristal que deseja comparar. No segundo campo você pode ver o resultado da equivalência no cristal que você selecionou."
 	}
 }
