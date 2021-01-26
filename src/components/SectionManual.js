@@ -5,9 +5,6 @@ import '../assets/css/manual.css';
 // lang
 import TXT from '../lang/manual.json';
 
-// components
-import configIcon from '../assets/imgs/config.svg';
-
 function SectionManual(props) {
   const lang = props.lang;
   return (
@@ -16,7 +13,6 @@ function SectionManual(props) {
 
       <h1 className="col-md-8">{ TXT.welcome[lang] }</h1>
       <h4 className="col-md-8">{ TXT.h4[lang] }(emoji feliz)</h4>
-
       <h6 className="col-md-8">{ TXT.h6[lang] }</h6>
 
        <div className="col-lg-10 col-md-11 col-sm-12 container-blur">
@@ -36,7 +32,6 @@ function SectionManual(props) {
         </div>
        </div>
 
-
        <div className="col-lg-10 col-md-11 col-sm-12 container-blur">
         <div className="card card-manual text-dark">
           <div className="card-header">
@@ -50,11 +45,9 @@ function SectionManual(props) {
         </div>
        </div>
 
-
       </div>
     </section>
   );
-//  }
 }
 
 export default SectionManual;

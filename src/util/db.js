@@ -16,7 +16,6 @@ export default {
 	getCrystalsUser: () => CRYSTALS.then(cc=>{
 		let ids = userConfig.getCrystals();
 		let crystals = cc.filter(c=> ids.includes(String(c.id))).sort((a,b)=> b.id - a.id)
-		console.log('los crys del user', crystals)
 		return crystals;
 	}),
 

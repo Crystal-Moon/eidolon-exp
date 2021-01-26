@@ -1,15 +1,15 @@
 
-import { Component, createRef } from 'react';
+import { Component } from 'react';
 import { Event } from '../util/Event';
 import db from '../util/db';
 
+// components
 import Item from "./Item";
 
 class ComboboxItems extends Component {
   constructor(props){
     super(props);
     this.handlerChange = this.handlerChange.bind(this);
-    this.refLi = createRef();
     this.state = {
       selected: {}
     }

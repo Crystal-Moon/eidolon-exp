@@ -25,9 +25,7 @@ class Calculator extends Component {
   }
 
   setPercent({ value }){
-    //console.log('el valuee q llega', value, typeof value, value.length)
     let percent = parseInt(value.split('').concat(new Array(5 - value.length).fill('0')).join(''))
-    //console.log('el value a state', percent)
     this.setState({ percent })
   }
 
@@ -35,105 +33,54 @@ class Calculator extends Component {
     let name = e.target.name;
     let value = (e.target.validity.valid) ? e.target.value : this.state[name];
 
-    //console.log('el name', name, 'el value', value);
-
     this.setState({ [name]: value })
   }
 
   async handlerSubmit(e){
     e.preventDefault();
 
-    let lvl = this.state.lvl;
-    let lvlTo = this.state.lvlTo;
-    let percent = this.state.percent;
-
     const user = await db.getCrystalsUser().then(u=>u);
     const exp = await db.getExp().then(x=>x);
+
+    const lvl = this.state.lvl || 1;
+    const lvlTo = this.state.lvlTo || 1;
+    const percent = this.state.percent || 0;
 
     let xpEido = exp[String(lvl)].total + ( exp[String(parseInt(lvl)+1)].xp / 100000 * percent );
     let xpNeed = exp[String(lvlTo)].total - xpEido;
     let expNecesaria = xpNeed;
-    let N = {};
 
-    let key='';
-    let c=0;
-    let needMore = false;
     this.setState({ noLvl: Boolean(xpNeed<=0) })
+
+    let N={}, key='', c=0;
 
     while(xpNeed > 0){
       if(!user[c]){
         xpNeed -= user[c-1].xp
-         N[key].cant++;
-         needMore = Boolean(xpNeed > 0)
-         xpNeed=0;
+        N[key].cant++;
+        xpNeed=0;
       }else{
         key=String(user[c].id);
         if(!N[key]) N[key] = { cant: 0, pack: 0, item: user[c] };
-        //if(xpNeed >= user[c].xp || (change && N[key].cant <= change.cant)){
         if(xpNeed >= user[c].xp){
           N[key].cant++;
           xpNeed -= user[c].xp;
-
-        //  if(change && N[key].cant >= change.cant && parseInt(change.id) >= parseInt(key)) c++;
-         // else if(change && N[key].cant < change.cant && key == change.id){
-       //   console.log('el el nuevo if', key, change)
-          //N[key].cant = change.cant;
-          //c++;
-       // }
-          //if(limits) console.log('el limits key en cada vuelta', limits[key])
-          /*
-          if(limits && N[key].cant>=limits[key].cant){
-            //N[key].pack++;
-            //N[key].cant=0;
-            console.log('dentro de resto',limits[key])
-            console.log('el key',key)
-            console.log('echi string +1 ', (user[c+1]||user[c]).id)
-            limits[String((user[c+1]||user[c]).id)].cant=100;
-            
-            let resto = N[key].cant % 100;
-          console.log('el resto', resto)
-          N[key].cant -= resto;
-
-            xpNeed += user[c].xp * resto;
-
-
-            c++;
-          }*/
         }else if(N[key].cant>100){
           let resto = N[key].cant % 100;
-          //console.log('el resto', resto)
           N[key].cant -= resto;
-
-            xpNeed += user[c].xp * resto
-          //N[key].cant=0;
-            c++
-        //}else if(change && change.cant > N[key].cant && change.id==key){
-          //console.log('en el if',change)
-       //   N[key].cant = change.cant;
-        //  c++;
-
+          xpNeed += user[c].xp * resto
+          c++
         }else c++
-        //console.log('N en cada vuelta',N, expNecesaria)
       }
     }
 
-    /*let obj = await calculator({ 
-      xpEido: xpEido, 
-      xpNeed: expNecesaria, 
-      //percent: this.state.percent
-    })*/
-
-  //  console.log('el objs en calculator', obj)
-    let need = [], limits={}
-  //  let N=obj.need;
+    let need=[], limits={}
     for (let k in N){
       limits[String(k)] = N[k].cant;
-      console.log('limits  en vueltta, calculator', limits)
       need.push({ id: k, cant: N[k].cant, pack: N[k].pack, item: N[k].item })
     }
     need.sort((a,b)=>b.id - a.id)
-
-    console.log('el need ue va desde calcul a need',{ need, limits, needMore})
+    need = need.filter(n=>n.cant>0)
 
     Event.emit('needs', { need, xpEido, xpNeed: expNecesaria, limits });
   }

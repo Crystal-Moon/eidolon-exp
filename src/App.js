@@ -37,10 +37,10 @@ class App extends Component {
     <div className="App">
       {
        !this.state.hasLang?
-        <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <div className="alert alert-info alert-dismissible fade show" role="alert">
           <span>You can select the language in the setting. <img src={configIcon} alt="cfg" className="spin"/></span>
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" 
-            onClick={()=>userConfig.set('hasLang',true)}></button>
+          <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close" 
+            onClick={()=>userConfig.set('hasLang',1)}></button>
         </div> : <div></div>
       }
 

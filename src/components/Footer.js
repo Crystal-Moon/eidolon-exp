@@ -1,6 +1,4 @@
 
-//import { Component } from 'react';
-
 //lang
 import TXT from '../lang/footer.json';
 

@@ -1,16 +1,9 @@
 
-//import { Component } from 'react';
-
 function Item(props) {
-//  constructor(){
-//    super();
-//  }
-//  render() {
-    //console.log('props',this.props)
-    const { icon='', name={}, qlty='white' } = props.item;
-    const lang = props.lang;
+  const { icon='', name={}, qlty='white' } = props.item;
+  const lang = props.lang;
 
-    return (
+  return (
       <div className={`row ${qlty}`}>
         <div className="col-auto col-sm-auto">
           <img src={icon} alt="" className="item_icon" title={name[lang]} />
@@ -19,8 +12,7 @@ function Item(props) {
           <span className="item_name">{name[lang]}</span>
         </div>
       </div>
-    );
-//  }
+  );
 }
 
 export default Item;

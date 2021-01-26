@@ -1,12 +1,11 @@
 
-import { Component } from 'react';
 import TXT from '../lang/mini.json';
 
 function United(props) {
   const lang = props.lang;
   let { cant=1 } = props;
   let pack = Boolean(cant>=100)
-  cant= pack? Math.trunc(cant/100) : cant
+  cant = pack? Math.trunc(cant/100) : cant
   return ( 
     pack?
       <div className="text-center pack">

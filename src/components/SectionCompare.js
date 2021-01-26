@@ -1,7 +1,4 @@
 
-import { Component } from 'react';
-import db from '../util/db';
-
 // style
 import '../assets/css/compare.css';
 
@@ -10,8 +7,7 @@ import Compare from './Compare';
 import CompareGral from './CompareGral';
 
 function SectionCompare(props) {
-//  render() {
-    return (
+  return (
       <section className="SectionCompare bg-image">
         <div className="container-xl bg-image-pa">
           <div className="bg-image-pa justify-content-center row">
@@ -27,7 +23,6 @@ function SectionCompare(props) {
         </div>
       </section>
     );
-//  }
 }
 
 export default SectionCompare;

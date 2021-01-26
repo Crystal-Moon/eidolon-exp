@@ -17,14 +17,10 @@ class CompareGral extends Component {
   }
 
   componentDidMount(){
-    db.getCompareGral().then(items=>{
-      //console.log('el items', items)
-      this.setState({ items })
-    })
+    db.getCompareGral().then(items=> this.setState({ items }))
   }
 
   render(){
-    //const { items=[] } = props;
     const lang = this.props.lang;
     return (
       <div className="CompareGral container-blur">

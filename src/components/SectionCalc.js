@@ -1,6 +1,4 @@
 
-import { Component } from 'react';
-
 // style
 import '../assets/css/calculator.css';
 
@@ -9,8 +7,7 @@ import Calculator from './Calculator';
 import Needs from './Needs';
 
 function SectionCalc(props){
-//  render() {
-    return (
+  return (
       <section className="SectionCalc align-items-start bg-image row">
         <div className="bg-image-pa row justify-content-center">
           <div className="bg-image-pa col-12 justify-content-center row">
@@ -22,7 +19,6 @@ function SectionCalc(props){
         </div>
       </section>
     );
-//  }
 }
 
 export default SectionCalc;

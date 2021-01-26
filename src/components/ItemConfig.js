@@ -15,19 +15,16 @@ class ItemConfig extends Component {
     this.handlerItem = this.handlerItem.bind(this);
     this.state = {
       items: [],
-      //lang: 'es',
       empty_arr: 0
     }
   }
 
   componentDidMount(){
     let ids = userConfig.getCrystals();
-    //let lang = userConfig.get('lang');
     db.getCrystals().then(items=>{
       items.forEach(c=>{ c.selected = ids.includes(String(c.id)) });
-      items=items.sort((a,b)=> b.id - a.id)
-      //console.log('items para lista', items)
-      this.setState({ items/*, lang*/ })
+      items.sort((a,b)=> b.id - a.id)
+      this.setState({ items })
     })
   }
 

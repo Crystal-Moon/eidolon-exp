@@ -3,9 +3,8 @@ import { Component } from 'react';
 
 // component
 import configIcon from '../assets/imgs/config.svg';
-//import ConfigIcon from "./ConfigIcon";
-import ItemConfig from "./ItemConfig";
-import Lang from "./Lang";
+import ItemConfig from './ItemConfig';
+import Lang from './Lang';
 
 class Config extends Component {
   constructor(){
@@ -32,7 +31,6 @@ class Config extends Component {
           <ItemConfig lang={lang} />
           <Lang lang={lang} />
         </div>
-        {}
       </div>
     );
   }
