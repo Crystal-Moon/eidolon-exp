@@ -15,10 +15,10 @@
 	},
 	"p1": {
 		"es": "Ingresa la cantidad, el tipo de unidad (unidades o packs) y el cristal a comparar. En el segundo cuadro verás la equivalencia.",
-		"en": "",
-		"fr": "",
-		"de": "",
-		"br": ""
+		"en": "Enter the quantity, the type of unit (units or packs) and the crystal to compare. In the second field you will see the equivalence.",
+		"fr": "Entrez la quantité, le type d'unité (unités ou packs) et le cristal à comparer. Dans le deuxième champ, vous verrez l'équivalence.",
+		"de": "Geben Sie die Menge, den Einheitentyp (Einheiten oder packs) und den zu vergleichenden Kristall ein. Im zweiten Feld sehen Sie die Äquivalenz.",
+		"br": "Escreva a quantidade, o tipo de unidade (unidades ou pacotes) e o cristal a ser comparado. No segundo campo, você verá a equivalência."
 	},
 	"option": {
 		"es": "Unidades",
