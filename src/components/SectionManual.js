@@ -1,11 +1,12 @@
 
-//import { Component } from 'react';
-
 // style
 import '../assets/css/manual.css';
 
 // lang
 import TXT from '../lang/manual.json';
+
+// components
+import configIcon from '../assets/imgs/config.svg';
 
 function SectionManual(props) {
   const lang = props.lang;
@@ -30,7 +31,7 @@ function SectionManual(props) {
             <p>{ TXT.p1_3[lang] }</p>
             <p>{ TXT.p1_4[lang] }</p>
             <img className="col-lg-6 col-md-6 col-sm-11 col-xl-5 img-fluid mb-3" src="https://imgur.com/qNHZS41.png" alt="tuto2_btn" title="btns_calc"/>
-            <p>{ TXT.p1_5[lang] } IMAGEN DE CONFIG</p>
+            <p>{ TXT.p1_5[lang] } &#x2699;</p>
           </div>
         </div>
        </div>
