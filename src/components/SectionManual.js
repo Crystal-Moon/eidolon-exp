@@ -12,13 +12,13 @@ function SectionManual(props) {
       <div className="bg-image-pa container-content container-md justify-content-lg-start justify-content-md-center">
 
       <h1 className="col-md-8">{ TXT.welcome[lang] }</h1>
-      <h4 className="col-md-8">{ TXT.h4[lang] }(emoji feliz)</h4>
+      <h4 className="col-md-8">{ TXT.h4[lang] } 😗</h4>
       <h6 className="col-md-8">{ TXT.h6[lang] }</h6>
 
        <div className="col-lg-10 col-md-11 col-sm-12 container-blur">
         <div className="card card-manual text-dark">
           <div className="card-header">
-            <h5 className="card-title">{ TXT.title1[lang] }</h5>
+            <h5 className="card-title">📟 { TXT.title1[lang] }</h5>
           </div>
           <div className="card-body">
             <p>{ TXT.p1_1[lang] }</p>
@@ -35,7 +35,7 @@ function SectionManual(props) {
        <div className="col-lg-10 col-md-11 col-sm-12 container-blur">
         <div className="card card-manual text-dark">
           <div className="card-header">
-            <h5 className="card-title">{ TXT.title2[lang] }</h5>
+            <h5 className="card-title">🔄 { TXT.title2[lang] }</h5>
           </div>
           <div className="card-body">
             <p>{ TXT.p2_1[lang] }</p>

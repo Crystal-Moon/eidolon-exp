@@ -29,7 +29,7 @@ class CompareGral extends Component {
             <h5 className="card-title">{ TXT.gralTitle[lang] }</h5>
           </div>
           <div className="card-body">
-            <p>{ TXT.gralSubTitle[lang] } (emoji) (?</p>
+            <p> 📓 { TXT.gralSubTitle[lang] }</p>
             <div className="table-responsive-md" style={{backgroundColor: 'rgb(14,18,19,0.9)'}}>
               <table className="table">
                 <thead>

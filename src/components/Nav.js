@@ -5,6 +5,9 @@ import { Event } from '../util/Event';
 // lang
 import TXT from '../lang/header';
 
+// components
+//import logo from '../assets/imgs/logo.jpg';
+
 const routes = [
   { name: 'navHome', url: 'manual' },
   { name: 'navCalc', url: 'calculator' },
@@ -58,8 +61,7 @@ class Nav extends Component {
             href="#"
             data-content="Logo"
           >
-            <img src alt="logo" />
-            <span>{ TXT.name[lang] }</span>
+            <img src="https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02465.png" alt="logo" />
           </div>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">

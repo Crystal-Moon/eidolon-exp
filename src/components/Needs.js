@@ -101,7 +101,7 @@ class Needs extends Component {
             </div>
             :
             <div>
-              <p>{ TXT.p1[lang] } &#128170;</p>
+              <p>&#128170; { TXT.p1[lang] }</p>
               <p>{ TXT.p2[lang] }</p>
             </div>
           }

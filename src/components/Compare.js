@@ -66,7 +66,7 @@ class Compare extends Component {
             <h6 className="card-subtitle mb-2 small">{ TXT.subTitle[lang] }</h6>
           </div>
           <div className="card-body">
-            <p>{ TXT.p1[lang] } (emoji)</p>
+            <p> 📝 { TXT.p1[lang] }</p>
             <div className="row align-items-center">
               <div className="col-md-6">
                 <div className="input-group">
