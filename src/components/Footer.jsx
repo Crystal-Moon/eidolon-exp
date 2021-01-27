@@ -25,13 +25,7 @@ function Footer(props) {
             <div className="col-md-4 mb-3">
               <div className="contador-container">
                 <span>{ TXT.number[lang] }:</span>
-                <div className="contador" id="elContadorEnSi">
-                  <img
-                    src="https://www.contadorvisitasgratis.com/cache_image/176.png"
-                    alt="contador_demo"
-                    style={{ height: "24px", width: "64px" }}
-                  />
-                </div>
+                <div id="sfckj3hrfmdd23u7s48fyuxp1ajsj1eg5me" className="contador"></div>
                 <span>{ TXT.thank[lang] } &#128156;!</span>
               </div>
             </div>
