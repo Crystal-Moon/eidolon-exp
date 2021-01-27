@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/eidolon-exp/static/css/main.7e02a496.chunk.css",
+    "main.js": "/eidolon-exp/static/js/main.6cf6db5d.chunk.js",
+    "main.js.map": "/eidolon-exp/static/js/main.6cf6db5d.chunk.js.map",
+    "runtime-main.js": "/eidolon-exp/static/js/runtime-main.6e9a486e.js",
+    "runtime-main.js.map": "/eidolon-exp/static/js/runtime-main.6e9a486e.js.map",
+    "static/js/2.b91af0cb.chunk.js": "/eidolon-exp/static/js/2.b91af0cb.chunk.js",
+    "static/js/2.b91af0cb.chunk.js.map": "/eidolon-exp/static/js/2.b91af0cb.chunk.js.map",
+    "index.html": "/eidolon-exp/index.html",
+    "static/css/main.7e02a496.chunk.css.map": "/eidolon-exp/static/css/main.7e02a496.chunk.css.map",
+    "static/js/2.b91af0cb.chunk.js.LICENSE.txt": "/eidolon-exp/static/js/2.b91af0cb.chunk.js.LICENSE.txt",
+    "static/media/Bootstrap.989fc4fd.svg": "/eidolon-exp/static/media/Bootstrap.989fc4fd.svg",
+    "static/media/CM_logo.1b429ef5.svg": "/eidolon-exp/static/media/CM_logo.1b429ef5.svg",
+    "static/media/React.6ce24c58.svg": "/eidolon-exp/static/media/React.6ce24c58.svg",
+    "static/media/compare.css": "/eidolon-exp/static/media/bg-compare.ffff0a3e.jpg",
+    "static/media/manual.css": "/eidolon-exp/static/media/bg-manual.a3092b75.png",
+    "static/media/config.090dcb0a.svg": "/eidolon-exp/static/media/config.090dcb0a.svg",
+    "static/media/github.928b12c5.svg": "/eidolon-exp/static/media/github.928b12c5.svg",
+    "static/media/calculator.css": "/eidolon-exp/static/media/header-bg.f4397451.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6e9a486e.js",
+    "static/js/2.b91af0cb.chunk.js",
+    "static/css/main.7e02a496.chunk.css",
+    "static/js/main.6cf6db5d.chunk.js"
+  ]
+}
