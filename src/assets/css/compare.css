@@ -3,7 +3,6 @@
 	background-image: url('../imgs/bg-compare.jpg');
 	background-position: 23% center;
 }
-
 .card-compare{
 	background-color: rgba(76, 175, 80, 0.3);
 	background-color: rgba(0,0,0,0.3);
@@ -11,40 +10,32 @@
 }
 .card-compare .card-header{
 	background-color: rgba(100,100,100,.2);
-	/* color: black; */
 }
-
 .Compare .Item{
 	font-size: .875em;
 }
-
 .select-item{
 	display: inline-block;
 }
-
 .btn-select-item{
 	background: aliceblue;
     color: blue;
     border-color: #ced4da;
 }
-
 .btn-select-item:hover{
 	background-color:#e9ecef;
 	color: blue;
 }
-
 .Compare.container-blur{
 	overflow: visible;
 }
 .Compare.container-blur:before{
-	height:100%;
-	
+	height:100%;	
 }
 .Compare .pack .badge, .Compare .badge{
 	color:black;
 	font-size: 1em;
 }
-
 .Compare .dropdown-item.active, .dropdown-item:active{
 	background-color:#73c1ff;
 }
@@ -56,8 +47,6 @@
 .IsEqualsTo .badge{
 	color: white;
 }
-
-.equals-to-img{}
 .equals-to-text{
     padding-left: 0;
     padding-right: 0;
@@ -70,12 +59,10 @@
     margin-left: 0.2em;
 }
 .equals-to-arrow-down{display: none;margin: auto;}
-.equals-to-arrow-right{}
 
 .Compare button{
 	background-color:#e9ecef;
 }
-
 .Compare input{
 	font-family: 'Jost', sans-serif;
 }
