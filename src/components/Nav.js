@@ -6,7 +6,7 @@ import { Event } from '../util/Event';
 import TXT from '../lang/header';
 
 // components
-//import logo from '../assets/imgs/logo.jpg';
+import logo from '../assets/imgs/logo.png';
 
 const routes = [
   { name: 'navHome', url: 'manual' },
@@ -56,12 +56,9 @@ class Nav extends Component {
           >
             <span className="navbar-toggler-icon" />
           </button>
-          <div
-            className="Logo navbar-brand col-auto"
-            href="#"
-            data-content="Logo"
-          >
-            <img src="https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02465.png" alt="logo" />
+          <div className="navbar-brand col-auto" href="#" data-content="Logo">
+            <img src={logo} alt="logo" className="Logo col-auto" />
+            <span>eidolon-exp</span>
           </div>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
