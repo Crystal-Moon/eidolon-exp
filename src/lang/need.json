@@ -3,35 +3,35 @@
 		"es": "Cristales necesarios",
 		"en": "Crystals needed",
 		"fr": "Cristaux nécessaires",
-		"de": "Kristalle benötigt",
+		"de": "Benötigte Kristalle",
 		"br": "Cristais necessários"
 	},
 	"p0": {
 		"es": "Aquí verás los items que necesitas para subir de nivel tu Eidolon",
 		"en": "Here you see the items you need to level up your Eidolon",
 		"fr": "Vous voyez ici les éléments dont vous avez besoin pour améliorer votre Eidolon",
-		"de": "Hier sehen Sie die Gegenstände, die Sie benötigen, um Ihren Eidolon zu verbessern",
+		"de": "Hier siehst du die Gegenstände, die du benötigst, um das Eidolon auf das gewünschte Level zu bringen",
 		"br": "Aqui você verá os itens de que precisa para subir de nível seu Eidolon"
 	},
 	"p1": {
 		"es": "Necesitarás todos los siguientes items para llegar al nivel deseado",
 		"en": "You will need all the following items to reach the desired level",
 		"fr": "Vous aurez besoin de tous les éléments suivants pour atteindre le niveau souhaité",
-		"de": "Sie benötigen alle folgenden Elemente, um das gewünschte Level zu erreichen",
+		"de": "Du benötigst die folgenden Gegenstände, um das gewünschte Level zu erreichen",
 		"br": "Você precisará de todos os itens a seguir para atingir o nível desejado"
 	},
 	"p2": {
 		"es": "Aumenta o disminuye según lo que ya tengas en tu inventario, el sistema calculará nuevamente según tus preferencias.",
 		"en": "Increase or decrease according to what you already have in your inventory, the system will calculate again according to your preferences.",
 		"fr": "Augmentez ou diminuez en fonction de ce que vous avez déjà dans votre inventaire, le système calculera à nouveau selon vos préférences.",
-		"de": "Erhöhen oder verringern Sie je nach dem, was Sie bereits in Ihrem Inventar haben. Das System berechnet es erneut nach Ihren Wünschen.",
+		"de": "Erhöhe oder verringere die Anzahl der Kristalle, je nach dem, was du bereits in deinem Inventar hast. Das System berechnet die Mengen dann nach deinen Wünschen.",
 		"br": "Aumente ou diminua de acordo com o que você já tem em seu estoque, o sistema voltará a calcular de acordo com suas preferências."
 	},
 	"alert": {
 		"es": "Estos cristales no serán suficientes para el nivel que buscas. Aumenta alguno o selecciona más tipos en las configuraciones",
 		"en": "These crystals are not enough for the level you are looking for. Increase some or select more types in the settings",
 		"fr": "Ces cristaux ne sont pas suffisants pour le niveau que vous recherchez. Augmentez certains types ou sélectionnez plus de types dans les paramètres",
-		"de": "Diese Kristalle reichen nicht für das Level, das Sie suchen. Erhöhen Sie einige oder wählen Sie weitere Typen in den Einstellungen aus",
+		"de": "Diese Kristalle reichen nicht für das Level, das du gewählt hast, aus. Erhöhe die Anzahl einiger oder wähle weitere Typen in den Einstellungen aus",
 		"br": "Esses cristais não são suficientes para o nível que você está procurando. Aumente alguns ou selecione mais tipos nas configurações"
 	}
 }

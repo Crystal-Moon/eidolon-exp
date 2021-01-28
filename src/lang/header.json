@@ -3,14 +3,14 @@
 		"es": "Cristales a usar",
 		"en": "Crystals to use",
 		"fr": "Cristaux à utiliser",
-		"de": "Kristalle zu verwenden",
+		"de": "Zu verwendende Kristalle",
 		"br": "Cristais para usar"
 	},
 	"crystalsAlert": {
 		"es": "Debes seleccionar al menos un item.",
 		"en": "You must select at least one item.",
 		"fr": "Vous devez sélectionner au moins un élément.",
-		"de": "Sie müssen mindestens einen Artikel auswählen.",
+		"de": "Du musst mindestens einen Kristall-Typen auswählen.",
 		"br": "Você deve selecionar pelo menos um item."
 	},
 	"lang": {
@@ -31,7 +31,7 @@
 		"es": "Calculadora",
 		"en": "Calculator",
 		"fr": "Calculatrice",
-		"de": "Taschenrechner",
+		"de": "Rechner",
 		"br": "Calculadora"
 	},
 	"navComp": {

@@ -3,42 +3,42 @@
 		"es": "Calculadora",
 		"en": "Calculator",
 		"fr": "Calculatrice",
-		"de": "Taschenrechner",
+		"de": "Rechner",
 		"br": "Calculadora"
 	},
 	"subTitle": {
 		"es": "Calcula cuántos cristales necesitas",
 		"en": "Calculate how many crystals you need",
 		"fr": "Calculez le nombre de cristaux dont vous avez besoin",
-		"de": "Berechnen Sie, wie viele Kristalle Sie benötigen",
+		"de": "Berechne, wie viele Kristalle benötigt werden",
 		"br": "Calcule quantos cristais você precisa"
 	},
 	"p1": {
 		"es": "Indica el nivel actual del Eidolon y el nivel al cual quieres llegar para saber cuales y cuantos cristales necesitas",
 		"en": "Indicate the current level of the Eidolon and the level you want to reach to know which and how many crystals you need",
 		"fr": "Indiquez le niveau actuel de l'Eidolon et le niveau que vous souhaitez atteindre pour savoir de quels cristaux et combien de cristaux vous avez besoin",
-		"de": "Geben Sie die aktuelle Stufe des Eidolons und die Stufe an, die Sie erreichen möchten, um zu wissen, welche und wie viele Kristalle Sie benötigen",
+		"de": "Gib das aktuelle und das gewünschte Level des Eidolons an, um zu berechnen, wie viele Kristalle von welcher Sorte benötigt werden",
 		"br": "Indique o nível atual do Eidolon e o nível que você deseja atingir para saber quais e quantos cristais você precisa"
 	},
 	"lbl1": {
 		"es": "Nivel del Eidolon",
 		"en": "Level of Eidolon",
 		"fr": "Niveau d'Eidolon",
-		"de": "Eidolon-Spiegel",
+		"de": "Aktuelles Eidolon Level",
 		"br": "Nível de Eidolon"
 	},
 	"lbl2": {
 		"es": "Porcentaje del nivel",
 		"en": "Percentage of level",
 		"fr": "Pourcentage du niveau",
-		"de": "Prozentsatz des Niveaus",
+		"de": "Prozentsatz des aktuellen Levels",
 		"br": "Porcentagem de nível"
 	},
 	"lbl3": {
 		"es": "Nivel a alcanzar",
 		"en": "Level to reach",
 		"fr": "Niveau à atteindre",
-		"de": "Level zu erreichen",
+		"de": "Gewünschtes Level",
 		"br": "Nível para alcançar"
 	},
 	"btn": {
@@ -52,7 +52,7 @@
 		"es": "El nivel a alcanzar no puede ser menor al actual",
 		"en": "The level to be reached cannot be lower than the current level",
 		"fr": "Le niveau à atteindre ne peut être inférieur au niveau actuel",
-		"de": "Das zu erreichende Niveau darf nicht niedriger als das aktuelle Niveau sein",
+		"de": "Das gewünschte Level darf nicht niedriger als das aktuelle Level sein",
 		"br": "O nível a ser alcançado não pode ser inferior ao nível atual"
 	}
 }
