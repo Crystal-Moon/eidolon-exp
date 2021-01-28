@@ -3,28 +3,28 @@
 		"es": "Todo el contenido y los activos del juego son marcas comerciales y derechos de autor de X-Legend® o Aeria Games®. Este sitio no está afiliado a X-Legend o Aeria Games.",
 		"en": "All game content and assets are trademarks and copyrights of X-Legend® or Aeria Games®. This site is not affiliated with X-Legend or Aeria Games.",
 		"fr": "Tous les contenus et ressources du jeu sont des marques commerciales et des droits d'auteur de X-Legend® ou Aeria Games®. Ce site n'est pas affilié à X-Legend ou Aeria Games.",
-		"de": "Alle Spielinhalte und Vermögenswerte sind Marken und Urheberrechte von X-Legend® oder Aeria Games®. Diese Seite ist nicht mit X-Legend oder Aeria Games verbunden.",
+		"de": "Alle Spielinhalte und Bilder sind Eigentum von X-Legend® oder Aeria Games®. Diese Seite ist nicht X-Legend oder Aeria Games zugehörig.",
 		"br": "Todo o conteúdo e ativos do jogo são marcas comerciais e direitos autorais da X-Legend® ou Aeria Games®. Este site não é afiliado a X-Legend ou Aeria Games."
 	},
 	"p2":{
 		"es": "Aplicación web creada sin fines de lucro. Toda información fue tomada de",
 		"en": "Non-profit web application created. All information was taken from",
 		"fr": "Application Web à but non lucratif créée. Toutes les informations ont été tirées de",
-		"de": "Gemeinsame Webanwendung erstellt. Alle Informationen stammen von",
+		"de": "Dies ist eine gemeinnützige Webanwendung. Alle Informationen stammen von",
 		"br": "Aplicativo da web sem fins lucrativos criado. Todas as informações foram retiradas de"
 	},
 	"p3":{
 		"es": "Las traducciones de este sitio fueron realizadas con herramientas de internet. Cualquier error de traducción que encuentres no dudes reportarla a",
 		"en": "The translations of this site were made with internet tools. Any translation error that you find do not hesitate to report it to",
 		"fr": "Les traductions de ce site ont été réalisées avec des outils Internet. Toute erreur de traduction que vous constatez, n'hésitez pas à la signaler à",
-		"de": "Die Übersetzungen dieser Website wurden mit Internet-Tools erstellt. Wenn Sie Übersetzungsfehler finden, zögern Sie nicht, diese an",
+		"de": "Die Übersetzungen dieser Website wurden mit Internet-Tools erstellt. Wenn du Übersetzungsfehler findest, zögere nicht, diese zu senden an",
 		"br": "As traduções deste site foram feitas com ferramentas da internet. Quaisquer erros de tradução que encontrar, não hesite em relatá-los para"
 	},
 	"number":{
 		"es": "Número de visitas",
 		"en": "Visits",
 		"fr": "Nombre de visites",
-		"de": "Besuche",
+		"de": "Aufrufe",
 		"br": "Número de visitas"
 	},
 	"thank":{
