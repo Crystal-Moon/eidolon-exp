@@ -86,7 +86,7 @@ class Compare extends Component {
                       onChange={this.handlerChange}
                       defaultValue={'pack'}
                     >
-                      <option value="pack" selected>Packs</option>
+                      <option value="pack" selected>{ TXT.pack[lang] }</option>
                       <option value="unit">{ TXT.option[lang] }</option>
                     </select>
                   </div>

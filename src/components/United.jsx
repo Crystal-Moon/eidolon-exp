@@ -10,7 +10,7 @@ function United(props) {
     pack?
       <div className="text-center pack">
         <span className="badge">{cant}</span>
-        <span className="badge">packs</span>
+        <span className="badge">{ TXT.pack[lang] }</span>
       </div>
       :
       <div className="text-center">

@@ -27,6 +27,13 @@
 		"de": "Einheiten",
 		"br": "Unidades"
 	},
+	"pack": {
+		"es": "Packs",
+		"en": "Packs",
+		"fr": "Empiler",
+		"de": "Stapel",
+		"br": "Packs"
+	},
 	"gralTitle": {
 		"es": "Generales",
 		"en": "General",

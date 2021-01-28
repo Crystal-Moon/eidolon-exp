@@ -6,6 +6,13 @@
 		"de": "Einheiten",
 		"br": "unidades"
 	},
+	"pack": {
+		"es": "packs",
+		"en": "packs",
+		"fr": "empiler",
+		"de": "Stapel",
+		"br": "packs"
+	},
 	"isEquals": {
 		"es": "es igual a",
 		"en": "equals",
