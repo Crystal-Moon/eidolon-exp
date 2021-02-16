@@ -4,7 +4,7 @@
 
 ![status](https://img.shields.io/badge/status-OK-green) ![readme](https://img.shields.io/badge/readme-OK-green) ![version](https://img.shields.io/badge/version-v0.1.0-blue) ![techs](https://img.shields.io/badge/techs-React--Bootstrap-f394f3)  
 
-Click [here](README_EN.md) for the english version of this readme.
+### Click [here](README_EN.md) for the english version of this readme.
 
 ---
 
