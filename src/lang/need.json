@@ -10,14 +10,14 @@
 		"es": "Aquí verás los items que necesitas para subir de nivel tu Eidolon",
 		"en": "Here you see the items you need to level up your Eidolon",
 		"fr": "Vous voyez ici les éléments dont vous avez besoin pour améliorer votre Eidolon",
-		"de": "Hier siehst du die Gegenstände, die du benötigst, um das Eidolon auf das gewünschte Level zu bringen",
+		"de": "Hier siehst du die Gegenstände, die du benötigst, um das Eidolon auf das gewünschte Level zu bringen:",
 		"br": "Aqui você verá os itens de que precisa para subir de nível seu Eidolon"
 	},
 	"p1": {
 		"es": "Necesitarás todos los siguientes items para llegar al nivel deseado",
 		"en": "You will need all the following items to reach the desired level",
 		"fr": "Vous aurez besoin de tous les éléments suivants pour atteindre le niveau souhaité",
-		"de": "Du benötigst die folgenden Gegenstände, um das gewünschte Level zu erreichen",
+		"de": "Du benötigst die folgenden Gegenstände, um das gewünschte Level zu erreichen:",
 		"br": "Você precisará de todos os itens a seguir para atingir o nível desejado"
 	},
 	"p2": {
@@ -31,7 +31,7 @@
 		"es": "Estos cristales no serán suficientes para el nivel que buscas. Aumenta alguno o selecciona más tipos en las configuraciones",
 		"en": "These crystals are not enough for the level you are looking for. Increase some or select more types in the settings",
 		"fr": "Ces cristaux ne sont pas suffisants pour le niveau que vous recherchez. Augmentez certains types ou sélectionnez plus de types dans les paramètres",
-		"de": "Diese Kristalle reichen nicht für das Level, das du gewählt hast, aus. Erhöhe die Anzahl einiger oder wähle weitere Typen in den Einstellungen aus",
+		"de": "Diese Kristalle reichen nicht für das Level, das du gewählt hast, aus. Erhöhe die Anzahl einiger oder wähle weitere Typen in den Einstellungen aus.",
 		"br": "Esses cristais não são suficientes para o nível que você está procurando. Aumente alguns ou selecione mais tipos nas configurações"
 	}
 }
