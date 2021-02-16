@@ -68,4 +68,5 @@ In this project you can find the `Lang` component which is basically a` <select>
 ---
 
 :carousel_horse: Every project of my authorship is for free use and improve for whoever wants to do so :octocat:
+
 _Made with love by [**CrystalMoon**](https://www.linkedin.com/in/perla-stto/)_ :heart:
