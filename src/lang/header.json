@@ -3,7 +3,7 @@
 		"es": "Cristales a usar",
 		"en": "Crystals to use",
 		"fr": "Cristaux à utiliser",
-		"de": "Zu verwendende Kristalle",
+		"de": "Zu verwendende Kristalle:",
 		"br": "Cristais para usar"
 	},
 	"crystalsAlert": {
@@ -20,12 +20,12 @@
 		"de": "Sprachen",
 		"br": "Línguas"
 	},
-	"navHome": { 
+	"navHome": {
 		"es": "Home",
 		"en": "Home",
 		"fr": "Home",
 		"de": "Home",
-		"br": "Home" 
+		"br": "Home"
 	},
 	"navCalc": {
 		"es": "Calculadora",

@@ -17,7 +17,7 @@
 		"es": "He aquí un resumen de cómo utilizarlo.",
 		"en": "Here's a summary of how to use it.",
 		"fr": "Voici un résumé de son utilisation.",
-		"de": "Hier ist eine kurze Anleitung.",
+		"de": "Hier ist eine kurze Anleitung:",
 		"br": "Aqui está um resumo de como usá-lo."
 	},
 	"title1": {
@@ -45,7 +45,7 @@
 		"es": "Para una simplificación de lectura las cantidades se agrupan en unidades o pack, teniendo en cuenta el modo que estos suelen encontrarse o intercambiarse en la comunidad dentro el juego. 100 unidades siempre equivale a 1 pack (o stack)",
 		"en": "For a simplification of reading the quantities are grouped in units or packs, considering the way these are usually found or trade in the community within the game. 100 units always correspond to 1 pack (or stack)",
 		"fr": "Pour simplifier la lecture, les quantités sont regroupées en unités ou en paquets, en tenant compte de la manière dont elles sont généralement trouvées ou échangées dans la communauté au sein du jeu. 100 unités correspondent toujours à 1 pack (ou pile)",
-		"de": "Um das Lesen zu vereinfachen, werden die Mengen in einzelne Einheiten oder Stapel eingeordnet. Dabei wird berücksichtigt, wie sie im Allgemeinen in der Community innerhalb des Spiels verkauft werden. 100 Einheiten entsprechen immer einem Stapel",
+		"de": "Um das Lesen zu vereinfachen, werden die Mengen in einzelne Einheiten oder Stapel eingeordnet. Dabei wird berücksichtigt, wie sie im Allgemeinen in der Community innerhalb des Spiels verkauft werden. 100 Einheiten entsprechen immer einem Stapel.",
 		"br": "Para uma simplificação da leitura as quantidades são agrupadas em unidades ou pack, tendo em conta a forma como são normalmente encontradas ou trocadas na comunidade dentro do jogo. 100 unidades sempre correspondem a 1 Pack (ou Stack)"
 	},
 	"p1_4": {

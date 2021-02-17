@@ -31,7 +31,7 @@ function Footer(props) {
             </div>
             <div className="col-md-6">
               <p>*{ TXT.p3[lang] } <span style={{color:"#673AB7"}}>crystal.marino345@gmail.com</span></p>
-              <p>Thanks <a className="thanks" href="https://github.com/haruka98" target="_blank" rel="noreferrer">Heruka</a> for the german corrections.</p>
+              <p>Thanks <a className="thanks" href="https://github.com/haruka98" target="_blank" rel="noreferrer">Haruka</a> for the german corrections.</p>
             </div>
           </div>
         </div>
