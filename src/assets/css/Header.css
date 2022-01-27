@@ -108,9 +108,6 @@
 	padding-left: 0.1em;
 	padding-right: 0.1em;
 }
-.lang-flag{
-	height: 1em;
-}
 .lang-input{
 	position: absolute;
     clip: rect(0,0,0,0);
@@ -121,12 +118,14 @@
 	border-color: var(--bs-primary);
 	margin:0;
 	padding-top: 0;
+	padding-bottom: 0;
 }
 .lang-lbl{
-	border: none;
-	box-sizing: border-box;
+	cursor: pointer;
+	border: 0.1rem solid #9e9e9e;
+	box-sizing: content-box;
 	margin-left:0.3em;
 	margin-right:0.3em;
-	padding-top: 0.2em;
+	padding-bottom: 0.1rem;
 	border-radius: .5rem;
 }

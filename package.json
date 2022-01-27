@@ -1,7 +1,7 @@
 {
   "name": "eido-exp",
   "homepage": "https://crystal-moon.github.io/eidolon-exp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "react": "^17.0.1",
