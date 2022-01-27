@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/eidolon-exp/static/css/main.1e391131.chunk.css",
-    "main.js": "/eidolon-exp/static/js/main.de257ae8.chunk.js",
-    "main.js.map": "/eidolon-exp/static/js/main.de257ae8.chunk.js.map",
+    "main.css": "/eidolon-exp/static/css/main.45cbe2ef.chunk.css",
+    "main.js": "/eidolon-exp/static/js/main.173c5193.chunk.js",
+    "main.js.map": "/eidolon-exp/static/js/main.173c5193.chunk.js.map",
     "runtime-main.js": "/eidolon-exp/static/js/runtime-main.6e9a486e.js",
     "runtime-main.js.map": "/eidolon-exp/static/js/runtime-main.6e9a486e.js.map",
     "static/js/2.46ba3766.chunk.js": "/eidolon-exp/static/js/2.46ba3766.chunk.js",
     "static/js/2.46ba3766.chunk.js.map": "/eidolon-exp/static/js/2.46ba3766.chunk.js.map",
     "index.html": "/eidolon-exp/index.html",
-    "static/css/main.1e391131.chunk.css.map": "/eidolon-exp/static/css/main.1e391131.chunk.css.map",
+    "static/css/main.45cbe2ef.chunk.css.map": "/eidolon-exp/static/css/main.45cbe2ef.chunk.css.map",
     "static/js/2.46ba3766.chunk.js.LICENSE.txt": "/eidolon-exp/static/js/2.46ba3766.chunk.js.LICENSE.txt",
     "static/media/Bootstrap.989fc4fd.svg": "/eidolon-exp/static/media/Bootstrap.989fc4fd.svg",
     "static/media/CM_logo.1b429ef5.svg": "/eidolon-exp/static/media/CM_logo.1b429ef5.svg",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.6e9a486e.js",
     "static/js/2.46ba3766.chunk.js",
-    "static/css/main.1e391131.chunk.css",
-    "static/js/main.de257ae8.chunk.js"
+    "static/css/main.45cbe2ef.chunk.css",
+    "static/js/main.173c5193.chunk.js"
   ]
 }
