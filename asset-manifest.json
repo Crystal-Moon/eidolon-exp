@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/eidolon-exp/static/css/main.45cbe2ef.chunk.css",
-    "main.js": "/eidolon-exp/static/js/main.173c5193.chunk.js",
-    "main.js.map": "/eidolon-exp/static/js/main.173c5193.chunk.js.map",
+    "main.js": "/eidolon-exp/static/js/main.2805c3bb.chunk.js",
+    "main.js.map": "/eidolon-exp/static/js/main.2805c3bb.chunk.js.map",
     "runtime-main.js": "/eidolon-exp/static/js/runtime-main.6e9a486e.js",
     "runtime-main.js.map": "/eidolon-exp/static/js/runtime-main.6e9a486e.js.map",
     "static/js/2.46ba3766.chunk.js": "/eidolon-exp/static/js/2.46ba3766.chunk.js",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.6e9a486e.js",
     "static/js/2.46ba3766.chunk.js",
     "static/css/main.45cbe2ef.chunk.css",
-    "static/js/main.173c5193.chunk.js"
+    "static/js/main.2805c3bb.chunk.js"
   ]
 }
