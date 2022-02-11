@@ -45,10 +45,10 @@ function Footer(props) {
                   src={cm_logo}
                   alt="CM"
                 />
-                <span className="name_logo">CrystaIMoon [AKES]</span>
+                <span className="name_logo">CrystalMoon [AKES]</span>
                 <img
                   className="icon_logo cm_logo" style={{width:'1em'}}
-                  src="https://restcountries.eu/data/arg.svg"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/320px-Flag_of_Argentina.svg.png"
                   alt="arg" title="Argentina"
                 />
               </div>

@@ -51,7 +51,7 @@ class Lang extends Component {
                 />
                 <label className="lang-lbl" htmlFor={"lang1"+lang}>
                   <span className="btn badge badge-light text-primary" title={label}>
-                    {lang.toUpperCase()}
+                    {lang === 'br' ? 'PT' : lang.toUpperCase()}
                   </span>
                 </label>
               </div>
