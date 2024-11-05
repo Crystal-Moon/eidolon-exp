@@ -27,7 +27,7 @@
 	transition: all 0.5s ease;
 	z-index:5;
 	margin-left: 184px;
-    width: 68px;
+    width: 103px;
 }
 .Navv.manual{
 	border-color: var(--nav-manual);;
