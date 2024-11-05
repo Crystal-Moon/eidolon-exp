@@ -65,8 +65,8 @@ class Calculator extends Component {
         if(xpNeed >= user[c].xp){
           N[key].cant++;
           xpNeed -= user[c].xp;
-        }else if(N[key].cant>100){
-          let resto = N[key].cant % 100;
+        }else if(N[key].cant>999){
+          let resto = N[key].cant % 999;
           N[key].cant -= resto;
           xpNeed += user[c].xp * resto
           c++

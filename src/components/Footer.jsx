@@ -53,6 +53,9 @@ function Footer(props) {
                 />
               </div>
               <div className="col-auto">
+                <span>2021 v{process.env.REACT_APP_VERSION}</span>
+              </div>
+              <div className="col-auto">
                 <span style={{marginLeft:'0.8em'}}>Powered By</span>
                 <img
                   className="icon_logo"

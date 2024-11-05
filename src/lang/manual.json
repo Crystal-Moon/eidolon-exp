@@ -42,11 +42,11 @@
 		"br": "Ao clicar no botão Calcular, aparecerá uma lista dos itens e suas quantidades necessárias para atingir a meta desejada."
 	},
 	"p1_3": {
-		"es": "Para una simplificación de lectura las cantidades se agrupan en unidades o pack, teniendo en cuenta el modo que estos suelen encontrarse o intercambiarse en la comunidad dentro el juego. 100 unidades siempre equivale a 1 pack (o stack)",
-		"en": "For a simplification of reading the quantities are grouped in units or packs, considering the way these are usually found or trade in the community within the game. 100 units always correspond to 1 pack (or stack)",
-		"fr": "Pour simplifier la lecture, les quantités sont regroupées en unités ou en paquets, en tenant compte de la manière dont elles sont généralement trouvées ou échangées dans la communauté au sein du jeu. 100 unités correspondent toujours à 1 pack (ou pile)",
-		"de": "Um das Lesen zu vereinfachen, werden die Mengen in einzelne Einheiten oder Stapel eingeordnet. Dabei wird berücksichtigt, wie sie im Allgemeinen in der Community innerhalb des Spiels verkauft werden. 100 Einheiten entsprechen immer einem Stapel.",
-		"br": "Para uma simplificação da leitura as quantidades são agrupadas em unidades ou pack, tendo em conta a forma como são normalmente encontradas ou trocadas na comunidade dentro do jogo. 100 unidades sempre correspondem a 1 Pack (ou Stack)"
+		"es": "Para una simplificación de lectura las cantidades se agrupan en unidades o pack, teniendo en cuenta el modo que estos suelen encontrarse o intercambiarse en la comunidad dentro el juego. 999 unidades siempre equivale a 1 pack (o stack)",
+		"en": "For a simplification of reading the quantities are grouped in units or packs, considering the way these are usually found or trade in the community within the game. 999 units always correspond to 1 pack (or stack)",
+		"fr": "Pour simplifier la lecture, les quantités sont regroupées en unités ou en paquets, en tenant compte de la manière dont elles sont généralement trouvées ou échangées dans la communauté au sein du jeu. 999 unités correspondent toujours à 1 pack (ou pile)",
+		"de": "Um das Lesen zu vereinfachen, werden die Mengen in einzelne Einheiten oder Stapel eingeordnet. Dabei wird berücksichtigt, wie sie im Allgemeinen in der Community innerhalb des Spiels verkauft werden. 999 Einheiten entsprechen immer einem Stapel.",
+		"br": "Para uma simplificação da leitura as quantidades são agrupadas em unidades ou pack, tendo em conta a forma como são normalmente encontradas ou trocadas na comunidade dentro do jogo. 999 unidades sempre correspondem a 1 Pack (ou Stack)"
 	},
 	"p1_4": {
 		"es": "Dichas cantidades pueden que supere lo que ya tienes en tu mochila. Puedes aumentar o disminuir las cantidades de cada item para que se ajuste a tus posibilidades. Con cada cambio que realices el sistema re-calculará según las equivalencias entre los cristales por lo que algunas cantidades se verán fuertemente afectadas.",

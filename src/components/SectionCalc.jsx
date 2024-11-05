@@ -9,14 +9,14 @@ import Needs from './Needs';
 function SectionCalc(props){
   return (
       <section className="SectionCalc align-items-start bg-image row">
-        <div className="bg-image-pa row justify-content-center">
+        
           <div className="bg-image-pa col-12 justify-content-center row">
             <div className="bg-image-pa container-content container-lg justify-content-around row">
               <Calculator lang={props.lang}/>
               <Needs lang={props.lang}/>
             </div>
           </div>
-        </div>
+       
       </section>
     );
 }

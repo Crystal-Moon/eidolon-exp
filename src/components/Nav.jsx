@@ -9,9 +9,9 @@ import TXT from '../lang/header';
 import logo from '../assets/imgs/logo.png';
 
 const routes = [
-  { name: 'navHome', url: 'manual' },
   { name: 'navCalc', url: 'calculator' },
-  { name: 'navComp', url: 'compare' }
+  { name: 'navComp', url: 'compare' },
+  { name: 'navInfo', url: 'manual' },
 ];
 
 
@@ -21,7 +21,7 @@ class Nav extends Component {
     this.floor = createRef();
     this.selectTab = this.selectTab.bind(this);
     this.state = {
-      tab: 'manual'
+      tab: 'calculator'
     }
   }
 
@@ -58,7 +58,7 @@ class Nav extends Component {
           </button>
           <div className="navbar-brand col-auto" href="#" data-content="Logo">
             <img src={logo} alt="logo" className="Logo col-auto" />
-            <span>eidolon-exp</span>
+            <span>Eidolon Exp</span>
           </div>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">

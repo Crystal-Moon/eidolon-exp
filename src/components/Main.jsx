@@ -12,7 +12,7 @@ class Main extends Component {
     super();
     this.changeTab = this.changeTab.bind(this);
     this.state={
-      tab: 'manual'
+      tab: 'calculator'
     }
     Event.on('changeTab', this.changeTab);
   }

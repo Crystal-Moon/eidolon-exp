@@ -20,12 +20,12 @@
 		"de": "Sprachen",
 		"br": "Línguas"
 	},
-	"navHome": {
-		"es": "Home",
-		"en": "Home",
-		"fr": "Home",
-		"de": "Home",
-		"br": "Home"
+	"navInfo": {
+		"es": "Information",
+		"en": "Information",
+		"fr": "Information",
+		"de": "Information",
+		"br": "Information"
 	},
 	"navCalc": {
 		"es": "Calculadora",

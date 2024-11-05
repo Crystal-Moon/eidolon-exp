@@ -65,7 +65,7 @@ html,body, #root, .App{
 
 /**************** MAIN *****************/
 main{
-	height:100%;
+	height: max-content;
 	width:100%;
 	position: fixed;
 	margin: 0 !important;
@@ -74,9 +74,10 @@ main{
 }
 section{
 	width:100%;
+	min-height: 90vh;
 	margin:0 !important;
 	padding:0 !important;
-	padding-top: 10% !important;
+	padding-top: 5% !important;
 	overflow: auto;
 	padding-bottom: 3em !important;
 }
@@ -98,7 +99,8 @@ section{
  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
  background: inherit;
  overflow: hidden;
- margin: 1em;
+ margin-top: 1em;
+ margin-bottom: 1em;
  padding: 0;
 }
 .container-blur:before {

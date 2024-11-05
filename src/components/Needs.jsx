@@ -62,8 +62,8 @@ class Needs extends Component {
         if(N[k].cant < limits[k] || (xpNeed >= user[c].xp && N[k].cant < limits[k])){
           N[k].cant++;
           xpNeed -= user[c].xp;
-        }else if(N[k].cant>100){
-          let resto = N[k].cant % 100;
+        }else if(N[k].cant>999){
+          let resto = N[k].cant % 999;
           N[k].cant -= resto;
           xpNeed += user[c].xp * resto
           c++
@@ -113,12 +113,12 @@ class Needs extends Component {
                     <div className="justify-content-around row need-btns">
                       <button
                         className="btn col-auto col-sm-auto need-btn btn-primary"
-                        type="button" data-action={i.cant>=100?100:1} 
+                        type="button" data-action={i.cant>=999?999:1} 
                         data-id={i.id} onClick={this.handlerBtn}
                       >+</button>
                       <button
                         className="btn col-auto col-sm-auto need-btn btn-primary"
-                        type="button" data-action={(i.cant>100?100:1)*(-1)} 
+                        type="button" data-action={(i.cant>999?999:1)*(-1)} 
                         data-id={i.id} onClick={this.handlerBtn}
                       >-</button>
                     </div>

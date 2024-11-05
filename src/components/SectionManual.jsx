@@ -11,7 +11,6 @@ function SectionManual(props) {
     <section className="SectionManual row bg-image">
       <div className="bg-image-pa container-content container-md justify-content-lg-start justify-content-md-center">
 
-      <h1 className="col-md-8">{ TXT.welcome[lang] }</h1>
       <h4 className="col-md-8">{ TXT.h4[lang] } 😗</h4>
       <h6 className="col-md-8">{ TXT.h6[lang] }</h6>
 
